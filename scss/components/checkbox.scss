@@ -1,0 +1,78 @@
+.checkbox {
+  --back-bg: var(--gray);
+  --back-border: var(--black);
+
+  span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: var(--border-radius);
+    position: relative;
+    background-color: var(--white);
+    border: 2px solid var(--back-border);
+    cursor: pointer;
+    transition: 0.15s;
+    transform: translate3d(2px, -2px, 0);
+    transform-style: preserve-3d;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      transition: inherit;
+      border-radius: inherit;
+      background-color: var(--back-bg);
+      border: 2px solid var(--back-border);
+      transform: translate3d(-2px, 2px, -0.1px);
+    }
+  }
+
+  input {
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked + span {
+      transform: translate3d(-2px, 2px, 0);
+      background: var(--back-bg);
+
+      &::before {
+        transform: translate3d(2px, -2px, -0.1px);
+      }
+    }
+  }
+
+  &.checkbox-green {
+    border-color: var(--green-dark);
+    --back-bg: var(--green);
+    --back-border: var(--green-dark);
+  }
+  &.checkbox-orange {
+    border-color: var(--orange-dark);
+    --back-bg: var(--orange);
+    --back-border: var(--orange-dark);
+  }
+  &.checkbox-red {
+    border-color: var(--red-dark);
+    --back-bg: var(--red);
+    --back-border: var(--red-dark);
+  }
+  &.checkbox-pink {
+    border-color: var(--pink-dark);
+    --back-bg: var(--pink);
+    --back-border: var(--pink-dark);
+  }
+  &.checkbox-blue {
+    border-color: var(--blue-dark);
+    --back-bg: var(--blue);
+    --back-border: var(--blue-dark);
+  }
+  &.checkbox-yellow {
+    border-color: var(--yellow-dark);
+    --back-bg: var(--yellow);
+    --back-border: var(--yellow-dark);
+  }
+}
