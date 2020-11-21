@@ -1,11 +1,12 @@
 :root {
   --border-radius: 4px;
-  --transition: 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+  --transition: 0.15s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 
   // colors
   --black: #000;
   --white: #fff;
   --gray: #c4c4c4;
+  --gray-light: #f0f0f0;
   --green: #b0e9bd;
   --green-dark: #328845;
   --orange: #f0d092;
@@ -21,4 +22,7 @@
 
   // text
   --text-color: #000;
+
+  // slider
+  --slider-button-size: 50px;
 }

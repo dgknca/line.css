@@ -6,9 +6,10 @@
   border: 2px solid var(--black);
   cursor: pointer;
   font-size: 15px;
-  transition: 0.15s;
+  transition: var(--transition);
   transform: translate3d(3px, -3px, 0);
   transform-style: preserve-3d;
+  transform-origin: center;
   --back-bg: var(--gray);
   --back-border: var(--black);
 
@@ -28,19 +29,14 @@
   }
 
   &:hover {
-    transform: translate3d(5px, -5px, 0);
-
-    &::before {
-      transform: translate3d(-5px, 5px, -0.1px);
-    }
-  }
-
-  &:active {
     transform: translate3d(-2px, 2px, 0);
 
     &::before {
       transform: translate3d(2px, -2px, -0.1px);
     }
+  }
+  &:active {
+    transform: translate3d(-2px, 2px, 0) scale(0.95);
   }
 
   &#{&}-green {

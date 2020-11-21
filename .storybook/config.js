@@ -13,17 +13,4 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
-const options = [
-  { name: 'Blue', value: 'blue' },
-  { name: 'Green', value: 'green' },
-  { name: 'Yellow', value: 'yellow' },
-  { name: 'Orange', value: 'orange' },
-  { name: 'Red', value: 'red' },
-  { name: 'Purple', value: 'purple' },
-  { name: 'Black', value: 'black' },
-  { name: 'White', value: 'white', default: true },
-];
-
-addParameters({ backgrounds: options });
-
 configure(loadStories, module);
