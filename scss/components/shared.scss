@@ -1,0 +1,10 @@
+.btn,
+.input span,
+.accordion-container,
+.dropdown-menu,
+.slider,
+.card {
+  &::before {
+    box-sizing: content-box;
+  }
+}

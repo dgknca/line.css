@@ -3,6 +3,6 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 import Slider from './slider.template';
 
-storiesOf('Sliders', module)
+storiesOf('Others', module)
   .addDecorator(withKnobs)
   .add('Slider', () => Slider());

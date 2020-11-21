@@ -1,6 +1,9 @@
-import { select } from '@storybook/addon-knobs';
+import { select, boolean } from '@storybook/addon-knobs';
+import classNames from 'classnames';
 
 export default () => {
+  const noShadow = boolean('no-shadow', false);
+  const noTransition = boolean('no-transition', false);
 
   const accordionClasses = select('Accordion Classes', {
     default: '',
@@ -12,8 +15,15 @@ export default () => {
     'accordion-yellow': 'accordion-yellow',
   }, '');
 
+  const containerClasses = classNames(
+    {
+      'no-shadow': noShadow,
+      'no-transition': noTransition,
+    },
+  );
+
   return `
-  <div class="accordion ${accordionClasses}">
+  <div class="accordion ${accordionClasses}${containerClasses}">
     <input type="checkbox" class="accordion-checkbox" id="accordion-checkbox-1"/>
     <div class="accordion-container">
       <label for="accordion-checkbox-1" class="accordion-button">

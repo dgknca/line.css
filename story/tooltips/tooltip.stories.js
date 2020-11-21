@@ -3,6 +3,6 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 import Tooltip from './tooltip.template';
 
-storiesOf('Tooltip', module)
+storiesOf('Others', module)
   .addDecorator(withKnobs)
   .add('Tooltip', () => Tooltip());

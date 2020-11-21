@@ -23,7 +23,6 @@
       height: 100%;
       border-radius: inherit;
       transition: inherit;
-      border-radius: inherit;
       background-color: var(--back-bg);
       border: 2px solid var(--back-border);
       transform: translate3d(-3px, 3px, -0.1px);
@@ -45,6 +44,8 @@
     align-items: center;
     background-color: var(--white);
     border-radius: var(--border-radius);
+    position: relative;
+    z-index: 2;
   }
 
   &-title {
@@ -129,5 +130,36 @@
     --border-color: var(--yellow-dark);
     --back-bg: var(--yellow);
     --back-border: var(--yellow-dark);
+  }
+
+  &.no-shadow {
+    .accordion-container {
+      transform: translate3d(0, 0, 0);
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+
+  &.no-transition {
+    .accordion-content {
+      height: auto;
+      display: none;
+      transition: none;
+    }
+
+    .accordion-chevron {
+      transition: none;
+    }
+
+    .accordion-checkbox:checked {
+      & ~ .accordion-container {
+        .accordion-content {
+          display: block;
+          transition: none;
+        }
+      }
+    }
   }
 }

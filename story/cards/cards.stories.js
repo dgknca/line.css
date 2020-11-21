@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/html';
 import { withKnobs } from '@storybook/addon-knobs';
 
-import Accordion from './accordion.template';
+import Cards from './cards.template';
 
-storiesOf('Others', module)
+storiesOf('Cards', module)
   .addDecorator(withKnobs)
-  .add('Accordion', () => Accordion());
+  .add('Cards', () => Cards());

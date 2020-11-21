@@ -1,20 +1,18 @@
-import { select } from '@storybook/addon-knobs';
+import { boolean } from '@storybook/addon-knobs';
+import classNames from 'classnames';
 
 export default () => {
+  const noShadow = boolean('no-shadow', false);
 
-  // const accordionClasses = select('Accordion Classes', {
-  //   default: '',
-  //   'accordion-orange': 'accordion-orange',
-  //   'accordion-green': 'accordion-green',
-  //   'accordion-red': 'accordion-red',
-  //   'accordion-pink': 'accordion-pink',
-  //   'accordion-blue': 'accordion-blue',
-  //   'accordion-yellow': 'accordion-yellow',
-  // }, '');
+  const containerClasses = classNames(
+    {
+      'no-shadow': noShadow,
+    },
+  );
 
   return `
-  <div class="dropdown">
-    <a href="#0" class="dropdown-trigger">inline dropdown menu</a>
+  <div class="dropdown ${containerClasses}">
+    <a href="#0" class="dropdown-trigger">dropdown menu</a>
     <div class="dropdown-container">
       <ul class="dropdown-menu">
         <li class="dropdown-item"><button class="dropdown-link">Action</button>

@@ -3,6 +3,6 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 import Dropdown from './dropdown.template';
 
-storiesOf('Dropdown', module)
+storiesOf('Others', module)
   .addDecorator(withKnobs)
   .add('Dropdown', () => Dropdown());

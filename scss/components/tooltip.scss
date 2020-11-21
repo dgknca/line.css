@@ -22,7 +22,12 @@
     width: var(--caret-width);
     height: var(--caret-width);
     border: 2px solid var(--black);
-    background: var(--white);
+    background: linear-gradient(
+        to right bottom,
+        transparent 0 50%,
+        var(--white) 50% 100%
+      )
+      0 0 / contain no-repeat;
     position: absolute;
     transform-origin: center;
     border-left-color: transparent;
