@@ -20,7 +20,7 @@
 
   &-menu,
   &-sub-list {
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: var(--border-radius);
     border: 2px solid var(--black);
     position: absolute;
@@ -29,7 +29,6 @@
 
   &-menu {
     width: 100%;
-    transform: translate3d(3px, -3px, 0);
     transform-style: preserve-3d;
     transform-origin: center;
     --back-bg: var(--gray);

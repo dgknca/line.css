@@ -35,9 +35,6 @@
       transform: translate3d(2px, -2px, -0.1px);
     }
   }
-  &:active {
-    transform: translate3d(-2px, 2px, 0) scale(0.95);
-  }
 
   &#{&}-green {
     border-color: var(--green-dark);
