@@ -1,0 +1,89 @@
+.img {
+  --border: var(--black);
+  --back-bg: var(--gray);
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+  border: 2px solid var(--border);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  transform-style: preserve-3d;
+  transform-origin: center;
+  @include component-colors;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    transition: inherit;
+    border-radius: inherit;
+    background-color: var(--back-bg);
+    border: 2px solid var(--border);
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &#{&}-sm {
+    --size: 200px;
+    transform: translate3d(3px, -3px, 0);
+
+    &::before {
+      transform: translate3d(-3px, 3px, -0.1px);
+    }
+
+    &:hover {
+      transform: translate3d(-2px, 2px, 0);
+
+      &::before {
+        transform: translate3d(2px, -2px, -0.1px);
+      }
+    }
+  }
+  &#{&}-md {
+    --size: 350px;
+    transform: translate3d(5px, -5px, 0);
+
+    &::before {
+      transform: translate3d(-5px, 5px, -0.1px);
+    }
+
+    &:hover {
+      transform: translate3d(-2px, 2px, 0);
+
+      &::before {
+        transform: translate3d(2px, -2px, -0.1px);
+      }
+    }
+  }
+  &#{&}-l {
+    --size: 500px;
+    transform: translate3d(8px, -8px, 0);
+
+    &::before {
+      transform: translate3d(-8px, 8px, -0.1px);
+    }
+
+    &:hover {
+      transform: translate3d(-2px, 2px, 0);
+
+      &::before {
+        transform: translate3d(2px, -2px, -0.1px);
+      }
+    }
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
