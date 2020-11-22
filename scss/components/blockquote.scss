@@ -1,14 +1,15 @@
 .blockquote {
+  --border: var(--black);
+  --back-bg: var(--gray);
   border-radius: var(--border-radius);
-  border: 2px solid var(--black);
+  border: 2px solid var(--border);
   background-color: var(--white);
   padding: 20px;
   line-height: 1.5;
   position: relative;
   transform-style: preserve-3d;
-  --back-bg: var(--gray);
-  --border: var(--black);
   display: flex;
+  @include component-colors;
 
   &::before {
     content: attr(data-title);
