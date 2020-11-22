@@ -1,5 +1,4 @@
 export default () => {
-
   return `
     <div class="slider">
         <input type="radio" name="slide" checked id="slide-1" />
@@ -9,7 +8,7 @@ export default () => {
                 <label class="slider-next" for="slide-2"></label>
             </div>
         </div>
-        
+
         <input type="radio" name="slide" id="slide-2" />
         <div class="slider-item">
             <img src="https://images.unsplash.com/photo-1604596024460-4d0bfd12bda9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2145&q=80" />
@@ -45,5 +44,5 @@ export default () => {
             </div>
         </div>
     </div>
-  `;
-};
+  `
+}

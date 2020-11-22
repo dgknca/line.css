@@ -1,11 +1,15 @@
-import { select } from '@storybook/addon-knobs';
+import { select } from '@storybook/addon-knobs'
 
 export default () => {
-  const cardClasses = select('Card Classes', {
-    default: 'card-v',
-    'vertical (card-v)': 'card-v',
-    'horizontal (card-h)': 'card-h',
-  }, 'card-v');
+  const cardClasses = select(
+    'Card Classes',
+    {
+      default: 'card-v',
+      'vertical (card-v)': 'card-v',
+      'horizontal (card-h)': 'card-h'
+    },
+    'card-v'
+  )
 
   return `
     <div class="card ${cardClasses}">
@@ -17,5 +21,5 @@ export default () => {
         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit purus mauris tellus eget. Justo elementum leo orci eget aliquet nunc. Arcu pharetra ultrices eu vitae, rutrum dictum purus et. Ac mauris in luctus nunc, sagittis.</p>
       </div>
     </div>
-  `;
-};
+  `
+}

@@ -1,0 +1,40 @@
+.breadcrumb {
+  ul {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  li {
+    align-items: center;
+    display: flex;
+
+    &:not(:first-child) {
+      &::before {
+        color: var(--gray);
+        content: '\0002f';
+      }
+    }
+
+    &.active {
+      a {
+        pointer-events: none;
+        color: var(--black);
+      }
+    }
+  }
+
+  a {
+    color: var(--blue-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.75em;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

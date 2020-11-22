@@ -1,14 +1,12 @@
-import { boolean } from '@storybook/addon-knobs';
-import classNames from 'classnames';
+import { boolean } from '@storybook/addon-knobs'
+import classNames from 'classnames'
 
 export default () => {
-  const noShadow = boolean('no-shadow', false);
+  const noShadow = boolean('no-shadow', false)
 
-  const containerClasses = classNames(
-    {
-      'no-shadow': noShadow,
-    },
-  );
+  const containerClasses = classNames({
+    'no-shadow': noShadow
+  })
 
   return `
   <div class="dropdown ${containerClasses}">
@@ -26,5 +24,5 @@ export default () => {
       </ul>
     </div>
   </div>
-  `;
-};
+  `
+}
