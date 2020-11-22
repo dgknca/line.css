@@ -24,3 +24,24 @@
     --border: var(--yellow-dark);
   }
 }
+
+@mixin component-colors-only-border($el: &) {
+  &#{$el}-green {
+    --border: var(--green-dark);
+  }
+  &#{$el}-orange {
+    --border: var(--orange-dark);
+  }
+  &#{$el}-red {
+    --border: var(--red-dark);
+  }
+  &#{$el}-pink {
+    --border: var(--pink-dark);
+  }
+  &#{$el}-blue {
+    --border: var(--blue-dark);
+  }
+  &#{$el}-yellow {
+    --border: var(--yellow-dark);
+  }
+}

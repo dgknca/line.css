@@ -7,7 +7,7 @@
 
   &-container {
     width: 200px;
-    background-color: var(--items-background);
+    background-color: var(--white);
     border-radius: var(--border-radius);
     border: 2px solid var(--border);
     position: relative;
@@ -74,6 +74,7 @@
   &-content {
     height: 0;
     overflow: hidden;
+    background-color: var(--items-background);
     transition: height 0.3s ease-in;
     --accordion-item-height: 35px;
   }

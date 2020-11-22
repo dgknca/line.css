@@ -1,0 +1,69 @@
+.progress {
+  --border: var(--gray-dark);
+  background-color: var(--white);
+  border: 2px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  @include component-colors-only-border;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: calc(var(--progress) * 1%);
+    transition: 0.3s linear;
+    background-color: var(--border);
+  }
+
+  &#{&}-sm {
+    $h: 20px;
+    height: $h;
+    border-radius: #{$h / 2};
+
+    &::before {
+      border-radius: #{$h / 2};
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 5px,
+        rgba(255, 255, 255, 0.2) 5px,
+        rgba(255, 255, 255, 0.2) 10px
+      );
+    }
+  }
+  &#{&}-md {
+    $h: 30px;
+    height: $h;
+    border-radius: #{$h / 2};
+
+    &::before {
+      border-radius: #{$h / 2};
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.2) 10px,
+        rgba(255, 255, 255, 0.2) 20px
+      );
+    }
+  }
+  &#{&}-l {
+    $h: 40px;
+    height: $h;
+    border-radius: #{$h / 2};
+
+    &::before {
+      border-radius: #{$h / 2};
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 15px,
+        rgba(255, 255, 255, 0.2) 15px,
+        rgba(255, 255, 255, 0.2) 30px
+      );
+    }
+  }
+}

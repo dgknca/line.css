@@ -2,12 +2,12 @@ import { select } from '@storybook/addon-knobs'
 
 export default () => {
   const inputType = select(
-    'Color Class',
+    'Type',
     {
-      default: 'drag drop',
-      button: 'button'
+      default: 'button',
+      'drag drop': 'drag drop'
     },
-    'drag drop'
+    'button'
   )
 
   return inputType === 'drag drop'
