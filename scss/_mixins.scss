@@ -1,0 +1,26 @@
+@mixin component-colors($el: &) {
+  &#{$el}-green {
+    --back-bg: var(--green);
+    --border: var(--green-dark);
+  }
+  &#{$el}-orange {
+    --back-bg: var(--orange);
+    --border: var(--orange-dark);
+  }
+  &#{$el}-red {
+    --back-bg: var(--red);
+    --border: var(--red-dark);
+  }
+  &#{$el}-pink {
+    --back-bg: var(--pink);
+    --border: var(--pink-dark);
+  }
+  &#{$el}-blue {
+    --back-bg: var(--blue);
+    --border: var(--blue-dark);
+  }
+  &#{$el}-yellow {
+    --back-bg: var(--yellow);
+    --border: var(--yellow-dark);
+  }
+}

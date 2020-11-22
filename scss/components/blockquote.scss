@@ -3,12 +3,11 @@
   border: 2px solid var(--black);
   background-color: var(--white);
   padding: 20px;
-  font-style: italic;
   line-height: 1.5;
   position: relative;
   transform-style: preserve-3d;
   --back-bg: var(--gray);
-  --back-border: var(--black);
+  --border: var(--black);
   display: flex;
 
   &::before {
@@ -22,12 +21,13 @@
   &::after {
     content: '';
     position: absolute;
+    z-index: 1;
     height: 100%;
     border-radius: inherit;
     transition: inherit;
     border-radius: inherit;
     background-color: var(--back-bg);
-    border: 2px solid var(--back-border);
+    border: 2px solid var(--border);
   }
 
   &::after {
@@ -35,5 +35,11 @@
     width: calc(100% - 20px);
     left: 10px;
     transform: translate3d(0, 0, -0.1px);
+  }
+
+  &-text {
+    font-style: italic;
+    position: relative;
+    z-index: 2;
   }
 }

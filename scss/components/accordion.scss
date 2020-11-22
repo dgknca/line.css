@@ -1,13 +1,15 @@
 .accordion {
   --back-bg: var(--gray);
-  --back-border: var(--black);
+  --border: var(--black);
   --items-background: var(--gray-light);
+
+  @include component-colors;
 
   &-container {
     width: 200px;
     background-color: var(--items-background);
     border-radius: var(--border-radius);
-    border: 2px solid var(--back-border);
+    border: 2px solid var(--border);
     position: relative;
     transition: var(--transition);
     transform: translate3d(3px, -3px, 0);
@@ -24,7 +26,7 @@
       border-radius: inherit;
       transition: inherit;
       background-color: var(--back-bg);
-      border: 2px solid var(--back-border);
+      border: 2px solid var(--border);
       transform: translate3d(-3px, 3px, -0.1px);
     }
 
@@ -99,37 +101,6 @@
     display: flex;
     align-items: center;
     border-top: 1px solid #a8a8a8;
-  }
-
-  &#{&}-green {
-    --border-color: var(--green-dark);
-    --back-bg: var(--green);
-    --back-border: var(--green-dark);
-  }
-  &#{&}-orange {
-    --border-color: var(--orange-dark);
-    --back-bg: var(--orange);
-    --back-border: var(--orange-dark);
-  }
-  &#{&}-red {
-    --border-color: var(--red-dark);
-    --back-bg: var(--red);
-    --back-border: var(--red-dark);
-  }
-  &#{&}-pink {
-    --border-color: var(--pink-dark);
-    --back-bg: var(--pink);
-    --back-border: var(--pink-dark);
-  }
-  &#{&}-blue {
-    --border-color: var(--blue-dark);
-    --back-bg: var(--blue);
-    --back-border: var(--blue-dark);
-  }
-  &#{&}-yellow {
-    --border-color: var(--yellow-dark);
-    --back-bg: var(--yellow);
-    --back-border: var(--yellow-dark);
   }
 
   &.no-shadow {

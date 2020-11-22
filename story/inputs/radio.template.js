@@ -2,7 +2,7 @@ import { select } from '@storybook/addon-knobs';
 
 export default () => {
 
-  const inputClasses = select('Input Classes', {
+  const inputClasses = select('Color Class', {
     default: '',
     'input-orange': 'input-orange',
     'input-green': 'input-green',
@@ -12,5 +12,5 @@ export default () => {
     'input-yellow': 'input-yellow',
   }, '');
 
-  return `<label class="input ${inputClasses}"><input type="radio" name="radioInput" /><span></span></label><label class="input ${inputClasses}"><input type="radio" name="radioInput" /><span></span></label>`;
+  return `<label class="input-container input-check ${inputClasses}"><input type="radio" name="radioInput" /><span></span></label><label class="input-container input-check ${inputClasses}"><input type="radio" name="radioInput" /><span></span></label>`;
 };

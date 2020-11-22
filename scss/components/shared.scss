@@ -1,9 +1,11 @@
 .btn,
-.input span,
+.input-container,
+.input-container span,
 .accordion-container,
 .dropdown-menu,
 .slider,
-.card {
+.card,
+.tooltip {
   &::before {
     box-sizing: content-box;
   }

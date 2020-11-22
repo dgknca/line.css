@@ -1,17 +1,36 @@
 .btn {
+  --border: var(--black);
+  --back-bg: var(--gray);
+  @include component-colors;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: var(--border-radius);
   position: relative;
   padding: 6px 12px;
   background-color: var(--white);
-  border: 2px solid var(--black);
+  border: 2px solid var(--border);
   cursor: pointer;
-  font-size: 15px;
   transition: var(--transition);
   transform: translate3d(3px, -3px, 0);
   transform-style: preserve-3d;
   transform-origin: center;
-  --back-bg: var(--gray);
-  --back-border: var(--black);
+
+  &-text {
+    font-size: 15px;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+
+    &.btn-icon-right {
+      margin-left: 10px;
+    }
+    &.btn-icon-left {
+      margin-right: 10px;
+    }
+  }
 
   &::before {
     content: '';
@@ -24,7 +43,7 @@
     transition: inherit;
     border-radius: inherit;
     background-color: var(--back-bg);
-    border: 2px solid var(--back-border);
+    border: 2px solid var(--border);
     transform: translate3d(-3px, 3px, -0.1px);
   }
 
@@ -34,36 +53,5 @@
     &::before {
       transform: translate3d(2px, -2px, -0.1px);
     }
-  }
-
-  &#{&}-green {
-    border-color: var(--green-dark);
-    --back-bg: var(--green);
-    --back-border: var(--green-dark);
-  }
-  &#{&}-orange {
-    border-color: var(--orange-dark);
-    --back-bg: var(--orange);
-    --back-border: var(--orange-dark);
-  }
-  &#{&}-red {
-    border-color: var(--red-dark);
-    --back-bg: var(--red);
-    --back-border: var(--red-dark);
-  }
-  &#{&}-pink {
-    border-color: var(--pink-dark);
-    --back-bg: var(--pink);
-    --back-border: var(--pink-dark);
-  }
-  &#{&}-blue {
-    border-color: var(--blue-dark);
-    --back-bg: var(--blue);
-    --back-border: var(--blue-dark);
-  }
-  &#{&}-yellow {
-    border-color: var(--yellow-dark);
-    --back-bg: var(--yellow);
-    --back-border: var(--yellow-dark);
   }
 }

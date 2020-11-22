@@ -5,25 +5,26 @@ export default () => {
   const noShadow = boolean('no-shadow', false);
   const noTransition = boolean('no-transition', false);
 
-  const accordionClasses = select('Accordion Classes', {
+  const accordionClasses = select('Color Class', {
     default: '',
     'accordion-orange': 'accordion-orange',
     'accordion-green': 'accordion-green',
     'accordion-red': 'accordion-red',
     'accordion-pink': 'accordion-pink',
     'accordion-blue': 'accordion-blue',
-    'accordion-yellow': 'accordion-yellow',
+    'accordion-yellow': 'accordion-yellow'
   }, '');
 
   const containerClasses = classNames(
     {
       'no-shadow': noShadow,
-      'no-transition': noTransition,
+      'no-transition': noTransition
     },
+    accordionClasses
   );
 
   return `
-  <div class="accordion ${accordionClasses}${containerClasses}">
+  <div class="accordion ${containerClasses}">
     <input type="checkbox" class="accordion-checkbox" id="accordion-checkbox-1"/>
     <div class="accordion-container">
       <label for="accordion-checkbox-1" class="accordion-button">

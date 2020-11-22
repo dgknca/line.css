@@ -2,9 +2,10 @@ import { select } from '@storybook/addon-knobs';
 
 export default () => {
   const cardClasses = select('Card Classes', {
-    default: '',
-    'card-orange': 'card-orange',
-  }, '');
+    default: 'card-v',
+    'vertical (card-v)': 'card-v',
+    'horizontal (card-h)': 'card-h',
+  }, 'card-v');
 
   return `
     <div class="card ${cardClasses}">

@@ -10,8 +10,10 @@
   transform-origin: center center;
   transform-style: preserve-3d;
   --back-bg: var(--gray);
-  --back-border: var(--black);
+  --border: var(--black);
   --items-background: var(--gray-light);
+
+  @include component-colors;
 
   &::before {
     content: '';
@@ -20,19 +22,25 @@
     top: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
     border-radius: inherit;
     transition: inherit;
     background-color: var(--back-bg);
-    border: 2px solid var(--back-border);
+    border: 2px solid var(--border);
     transform: translate3d(-3px, 3px, -0.1px);
   }
 
-  &-image {
+  &-image,
+  &-content {
     position: relative;
-    height: 200px;
+    z-index: 2;
+  }
+
+  &-image {
     border-radius: var(--border-radius);
     overflow: hidden;
     border: 2px solid var(--black);
+    margin-bottom: 20px;
 
     img {
       position: absolute;
@@ -47,12 +55,34 @@
   &-title {
     font-weight: 700;
     font-size: 1.4rem;
-    margin-top: 20px;
   }
 
   &-text {
     font-size: 1rem;
     line-height: 1.5;
     margin-top: 10px;
+  }
+
+  &#{&}-v {
+    .card {
+      &-image {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+
+  &#{&}-h {
+    display: flex;
+    max-width: 100%;
+    .card {
+      &-image {
+        flex-shrink: 0;
+        width: var(--card-image-width, 100px);
+        height: var(--card-image-height, 100px);
+        margin-bottom: 0;
+        margin-right: 20px;
+      }
+    }
   }
 }
