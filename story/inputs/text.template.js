@@ -12,5 +12,5 @@ export default () => {
     'input-yellow': 'input-yellow',
   }, '');
 
-  return `<div class="input-container ${colorClass}"><input type="text" placeholder="Name" /></div>`;
+  return `<div class="input-container input-text ${colorClass}"><input type="text" placeholder="Name" /></div>`;
 };

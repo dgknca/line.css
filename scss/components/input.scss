@@ -3,7 +3,7 @@
   --border: var(--black);
   @include component-colors('.input');
 
-  &:not(.input-check) {
+  &.input-text {
     border: 2px solid var(--border);
     border-radius: var(--border-radius);
     background-color: var(--white);
@@ -109,6 +109,102 @@
       }
       &[type='radio'] + span {
         border-radius: 50%;
+      }
+    }
+  }
+
+  &.input-file {
+    position: relative;
+
+    &-drag-drop {
+      width: 100%;
+      height: 70px;
+    }
+
+    .file-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 12px;
+    }
+
+    input[type='file'] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      z-index: 2;
+
+      &::-webkit-file-upload-button {
+        display: none;
+      }
+    }
+
+    .file-dummy {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 2px dashed var(--border);
+      border-radius: var(--border-radius);
+      background-color: var(--gray-light);
+    }
+
+    .file-dummy,
+    .file-button {
+      .file-success {
+        display: none;
+      }
+    }
+
+    .input-file-browse {
+      text-decoration: underline;
+      color: var(--blue-dark);
+    }
+
+    &:hover {
+      .file-dummy {
+        background-color: rgba(196, 196, 196, 0.15);
+      }
+
+      .file-button {
+        transform: translate3d(-2px, 2px, 0);
+
+        &::before {
+          transform: translate3d(2px, -2px, -0.1px);
+        }
+      }
+    }
+
+    input[type='file']:valid + .file-dummy {
+      background-color: var(--green-light);
+      border: 2px solid var(--green-dark);
+    }
+    input[type='file']:valid + .file-button {
+      --border: var(--green-dark);
+      transform: translate3d(-2px, 2px, 0);
+
+      &::before {
+        transform: translate3d(2px, -2px, -0.1px);
+      }
+    }
+
+    input[type='file']:valid + .file-dummy,
+    input[type='file']:valid + .file-button {
+      .file-success {
+        display: inline-block;
+      }
+      .file-default {
+        display: none;
       }
     }
   }
