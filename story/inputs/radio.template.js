@@ -15,5 +15,5 @@ export default () => {
     ''
   )
 
-  return `<label class="input-container input-check ${colorClass}"><input type="radio" name="radioInput" /><span></span></label><label class="input-container input-check ${inputClasses}"><input type="radio" name="radioInput" /><span></span></label>`
+  return `<label class="input-container input-check ${colorClass}"><input type="radio" name="radioInput" /><span></span></label><label class="input-container input-check ${colorClass}"><input type="radio" name="radioInput" /><span></span></label>`
 }

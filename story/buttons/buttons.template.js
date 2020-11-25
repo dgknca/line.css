@@ -19,6 +19,7 @@ export default () => {
       'btn-green': 'btn-green',
       'btn-red': 'btn-red',
       'btn-pink': 'btn-pink',
+      'btn-purple': 'btn-purple',
       'btn-blue': 'btn-blue',
       'btn-yellow': 'btn-yellow'
     },

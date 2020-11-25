@@ -15,6 +15,10 @@
     --back-bg: var(--pink);
     --border: var(--pink-dark);
   }
+  &#{$el}-purple {
+    --back-bg: var(--purple);
+    --border: var(--purple-dark);
+  }
   &#{$el}-blue {
     --back-bg: var(--blue);
     --border: var(--blue-dark);
@@ -37,6 +41,9 @@
   }
   &#{$el}-pink {
     --border: var(--pink-dark);
+  }
+  &#{$el}-purple {
+    --border: var(--purple-dark);
   }
   &#{$el}-blue {
     --border: var(--blue-dark);
