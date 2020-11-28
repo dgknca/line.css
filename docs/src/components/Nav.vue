@@ -2,7 +2,7 @@
   <div>
     <div class="nav">
       <div class="nav-wrp">
-        <a href="#0" class="nav-logo">
+        <router-link to="/" class="nav-logo">
           <!-- prettier-ignore -->
 
           <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +11,7 @@
           <path d="M48 29H53.312V66.44H71.68V70.984H48V29Z" fill="black"/>
         </svg>
           <div>Line.css</div>
-        </a>
+        </router-link>
         <div
           style="flex: 1 1 0%; display: flex; justify-content: center;"
         ></div>
@@ -113,6 +113,7 @@ export default {
       margin-left: 15px;
       color: currentColor;
       font-size: 18px;
+      user-select: none;
     }
   }
 

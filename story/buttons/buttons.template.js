@@ -1,6 +1,10 @@
-import { select } from '@storybook/addon-knobs'
+import { select, boolean } from '@storybook/addon-knobs'
+import classNames from 'classnames'
 
 export default () => {
+  const btnFull = boolean('btn-full', false)
+  const btnLoading = boolean('btn-loading', false)
+
   const buttonTemplate = select(
     'Button Template',
     {
@@ -11,7 +15,7 @@ export default () => {
     'simple'
   )
 
-  const buttonClasses = select(
+  const colorClass = select(
     'Color Class',
     {
       default: '',
@@ -25,14 +29,32 @@ export default () => {
     },
     ''
   )
+  const sizeClass = select(
+    'Size Class',
+    {
+      default: 'btn-sm',
+      'btn-md': 'btn-md',
+      'btn-l': 'btn-l'
+    },
+    'btn-sm'
+  )
+
+  const containerClasses = classNames(
+    {
+      'btn-full': btnFull,
+      'btn-loading': btnLoading
+    },
+    sizeClass,
+    colorClass
+  )
 
   return buttonTemplate === 'simple'
     ? `
-    <button type="button" class="btn ${buttonClasses}"><span class="btn-text">Button</span></button>
+    <button type="button" class="btn ${containerClasses}"><span class="btn-text">Button</span></button>
   `
     : buttonTemplate === 'icon right'
     ? `
-  <button type="button" class="btn ${buttonClasses}">
+  <button type="button" class="btn ${containerClasses}">
     <span class="btn-text">Button</span>
     <span class="btn-icon btn-icon-right">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -41,7 +63,7 @@ export default () => {
 `
     : buttonTemplate === 'icon left'
     ? `
-<button type="button" class="btn ${buttonClasses}">
+<button type="button" class="btn ${containerClasses}">
   <span class="btn-icon btn-icon-left">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
   </span>

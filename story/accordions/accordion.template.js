@@ -1,19 +1,23 @@
-import { select, boolean } from '@storybook/addon-knobs';
-import classNames from 'classnames';
+import { select, boolean } from '@storybook/addon-knobs'
+import classNames from 'classnames'
 
 export default () => {
-  const noShadow = boolean('no-shadow', false);
-  const noTransition = boolean('no-transition', false);
+  const noShadow = boolean('no-shadow', false)
+  const noTransition = boolean('no-transition', false)
 
-  const accordionClasses = select('Color Class', {
-    default: '',
-    'accordion-orange': 'accordion-orange',
-    'accordion-green': 'accordion-green',
-    'accordion-red': 'accordion-red',
-    'accordion-pink': 'accordion-pink',
-    'accordion-blue': 'accordion-blue',
-    'accordion-yellow': 'accordion-yellow'
-  }, '');
+  const accordionClasses = select(
+    'Color Class',
+    {
+      default: '',
+      'accordion-orange': 'accordion-orange',
+      'accordion-green': 'accordion-green',
+      'accordion-red': 'accordion-red',
+      'accordion-pink': 'accordion-pink',
+      'accordion-blue': 'accordion-blue',
+      'accordion-yellow': 'accordion-yellow'
+    },
+    ''
+  )
 
   const containerClasses = classNames(
     {
@@ -21,7 +25,7 @@ export default () => {
       'no-transition': noTransition
     },
     accordionClasses
-  );
+  )
 
   return `
   <div class="accordion ${containerClasses}">
@@ -48,5 +52,5 @@ export default () => {
       </div>
     </div>
   </div>
-  `;
-};
+  `
+}

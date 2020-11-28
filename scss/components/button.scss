@@ -15,8 +15,11 @@
   transform-origin: center;
   color: currentColor;
   text-decoration: none;
-  height: var(--btn-height, auto);
-  width: var(--btn-width, auto);
+  line-height: 1;
+
+  .btn-text {
+    font-size: 1em;
+  }
 
   &-icon {
     display: flex;
@@ -47,40 +50,37 @@
 
   &#{&}-sm {
     padding: 6px 12px;
+    margin-top: 3px;
+    margin-left: 3px;
     transform: translate3d(3px, -3px, 0);
+    font-size: 1rem;
 
     &::before {
       transform: translate3d(-3px, 3px, -0.1px);
-    }
-
-    .btn-text {
-      font-size: 1rem;
     }
   }
 
   &#{&}-md {
     padding: 12px 28px;
+    margin-top: 4px;
+    margin-left: 4px;
     transform: translate3d(4px, -4px, 0);
+    font-size: 1.2rem;
 
     &::before {
       transform: translate3d(-4px, 4px, -0.1px);
     }
-
-    .btn-text {
-      font-size: 1.2rem;
-    }
   }
 
   &#{&}-l {
+    margin-top: 5px;
+    margin-left: 5px;
     padding: 16px 36px;
     transform: translate3d(5px, -5px, 0);
+    font-size: 1.4rem;
 
     &::before {
       transform: translate3d(-5px, 5px, -0.1px);
-    }
-
-    .btn-text {
-      font-size: 1.5rem;
     }
   }
 
@@ -107,6 +107,35 @@
 
       &::before {
         transform: unset;
+      }
+    }
+  }
+
+  &.btn-loading {
+    color: transparent !important;
+    pointer-events: none;
+
+    & > * {
+      opacity: 0 !important;
+    }
+    &::after {
+      content: 'asdas';
+      border: 2px solid #000;
+      border-radius: 50%;
+      width: 1em;
+      height: 1em;
+      flex-shrink: 0;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      animation: loading 0.5s linear infinite;
+      position: absolute;
+      left: calc(50% - 0.5em);
+      top: calc(50% - 0.5em);
+
+      @keyframes loading {
+        100% {
+          transform: rotate(360deg);
+        }
       }
     }
   }
