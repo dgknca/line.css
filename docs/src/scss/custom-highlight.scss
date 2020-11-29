@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 
 .vue-codemirror {
-  margin: 2rem 0 1.5rem 0;
-
   * {
     font-family: 'Fira Code', monospace !important;
   }
@@ -12,7 +10,7 @@
 .CodeMirror {
   height: auto !important;
   padding: 10px 0;
-  border-radius: 4px;
+  border-radius: 0 4px 4px 0;
   --code-gold: #f584ae;
   --code-aqua: #eaca71;
   --code-orange: #ffb457;

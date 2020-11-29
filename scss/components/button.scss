@@ -16,7 +16,20 @@
   color: currentColor;
   text-decoration: none;
   line-height: 1;
+  --shadow-distance: 3px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin-top: var(--shadow-distance);
+  margin-left: var(--shadow-distance);
+  // prettier-ignore
+  transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0);
 
+  &::before {
+    // prettier-ignore
+    transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px);
+  }
+
+  &,
   .btn-text {
     font-size: 1em;
   }
@@ -49,44 +62,53 @@
   }
 
   &#{&}-sm {
+    --shadow-distance: 2px;
     padding: 6px 12px;
-    margin-top: 3px;
-    margin-left: 3px;
-    transform: translate3d(3px, -3px, 0);
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin-top: var(--shadow-distance);
+    margin-left: var(--shadow-distance);
+    // prettier-ignore
+    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0);
 
     &::before {
-      transform: translate3d(-3px, 3px, -0.1px);
+      // prettier-ignore
+      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px);
     }
   }
 
   &#{&}-md {
-    padding: 12px 28px;
-    margin-top: 4px;
-    margin-left: 4px;
-    transform: translate3d(4px, -4px, 0);
-    font-size: 1.2rem;
+    --shadow-distance: 3px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    margin-top: var(--shadow-distance);
+    margin-left: var(--shadow-distance);
+    // prettier-ignore
+    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0);
 
     &::before {
-      transform: translate3d(-4px, 4px, -0.1px);
+      // prettier-ignore
+      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px);
     }
   }
 
   &#{&}-l {
-    margin-top: 5px;
-    margin-left: 5px;
-    padding: 16px 36px;
-    transform: translate3d(5px, -5px, 0);
-    font-size: 1.4rem;
+    --shadow-distance: 4px;
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    margin-top: var(--shadow-distance);
+    margin-left: var(--shadow-distance);
+    // prettier-ignore
+    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0);
 
     &::before {
-      transform: translate3d(-5px, 5px, -0.1px);
+      // prettier-ignore
+      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px);
     }
   }
 
   &.btn-full {
     display: flex;
-    width: 100%;
+    width: calc(100% - var(--shadow-distance));
   }
 
   &:hover {
@@ -98,28 +120,28 @@
   }
 
   &.no-shadow {
+    margin-top: 0;
+    margin-left: 0;
+    transform: translateY(0);
+
+    &:hover {
+      transform: translateY(0);
+    }
     &::before {
       content: none;
-    }
-    transform: translateY(2px);
-    &:hover {
-      transform: translateY(2px);
-
-      &::before {
-        transform: unset;
-      }
     }
   }
 
   &.btn-loading {
     color: transparent !important;
-    pointer-events: none;
+    pointer-events: none !important;
+    user-select: none;
 
     & > * {
       opacity: 0 !important;
     }
     &::after {
-      content: 'asdas';
+      content: '';
       border: 2px solid #000;
       border-radius: 50%;
       width: 1em;
@@ -137,6 +159,21 @@
           transform: rotate(360deg);
         }
       }
+    }
+  }
+}
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  .btn {
+    margin-bottom: 0.75rem;
+
+    &:not(:last-child) {
+      margin-right: 0.75rem;
     }
   }
 }

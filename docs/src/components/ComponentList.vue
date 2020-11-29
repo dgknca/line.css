@@ -11,33 +11,12 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/button" class="size-5 link link-pink">
-          <span>Checkbox</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/button" class="size-5 link link-pink">
-          <span>Radio</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/button" class="size-5 link link-pink">
-          <span>Range</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/button" class="size-5 link link-pink">
+        <router-link
+          to="/docs/slider"
+          class="size-5 link link-pink"
+          active-class="active"
+        >
           <span>Slider</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/button" class="size-5 link link-pink">
-          <span>Accordion</span>
-        </router-link>
-      </li>
-      <li>
-        <router-link to="/button" class="size-5 link link-pink">
-          <span>Accordion</span>
         </router-link>
       </li>
     </ul>
@@ -45,16 +24,12 @@
 </template>
 
 <script>
-export default {
-  setup() {
-    return {}
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 .component-list {
-  width: 250px;
+  width: 200px;
   flex-shrink: 0;
   padding-right: 20px;
 

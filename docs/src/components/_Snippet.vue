@@ -1,11 +1,27 @@
 <template>
-  <div>
-    <div class="codemirror-wrp">
-      <div class="codemirror-btn" @click="runCode">Run</div>
-      <codemirror v-model="code" :options="cmOptionsHTML"></codemirror>
+  <div class="snippet">
+    <div class="preview-cnt" ref="previewWrp">
+      <div ref="preview"></div>
     </div>
-    <div class="preview-container">
-      <iframe ref="preview"></iframe>
+    <div
+      class="codemirror-wrp"
+      :class="{ shrink: isEditorOverlayActive }"
+      :style="{ maxHeight: editorShrinkSize + 'px' }"
+    >
+      <div class="codemirror-btn" @click="runCode">Run</div>
+      <codemirror
+        ref="editor"
+        v-model="code"
+        :options="cmOptionsHTML"
+        @ready="onCmReady"
+      ></codemirror>
+      <div
+        class="expand-overlay"
+        :class="{ active: isEditorOverlayActive }"
+        @click="expandSnippet"
+      >
+        Show Code
+      </div>
     </div>
   </div>
 </template>
@@ -13,12 +29,10 @@
 <script>
 import { codemirror } from 'vue-codemirror'
 import 'codemirror/lib/codemirror.css'
-import 'codemirror/mode/javascript/javascript.js'
 import 'codemirror/mode/htmlmixed/htmlmixed.js'
 import 'codemirror/mode/css/css.js'
 import 'codemirror/addon/edit/matchbrackets.js'
 import 'codemirror/addon/edit/closebrackets.js'
-import defaultEditorSettings from '@/shared/defaultEditorSettings.js'
 
 export default {
   props: {
@@ -31,46 +45,107 @@ export default {
   },
   data() {
     return {
+      defaultEditorSettings: {
+        theme: 'base16-dark',
+        lineWrapping: true,
+        lint: true,
+        lineNumbers: true,
+        styleActiveLine: true,
+        tabSize: 4,
+        indentUnit: 2,
+        matchBrackets: true,
+        autoCloseBrackets: true,
+        autoRefresh: true
+      },
       code: '',
-      cmOptionsCSS: {
-        ...defaultEditorSettings,
-        mode: 'text/css'
-      },
-      cmOptionsHTML: {
-        ...defaultEditorSettings,
+      isEditorOverlayActive: false,
+      editorShrinkSize: 250
+    }
+  },
+  computed: {
+    cmOptionsHTML() {
+      return {
+        ...this.defaultEditorSettings,
         mode: 'text/html'
-      },
-      cmOptionsJS: {
-        ...defaultEditorSettings,
-        mode: 'text/javascript'
       }
     }
   },
   methods: {
     updatePreview() {
-      const previewFrame = this.$refs.preview
-      const preview =
-        previewFrame.contentDocument.body ||
-        previewFrame.contentWindow.document.body
-
+      const preview = this.$refs.preview
       preview.innerHTML = this.code
+    },
+    onCmReady() {
+      this.$nextTick(() => {
+        // this.editorShrinkSize = this.$refs.previewWrp.getBoundingClientRect().height
+
+        // prettier-ignore
+        if (this.$refs.editor.$el.getBoundingClientRect().height > this.editorShrinkSize) {
+          this.isEditorOverlayActive = true
+        }
+      })
     },
     runCode() {
       this.updatePreview()
+    },
+    expandSnippet() {
+      this.isEditorOverlayActive = !this.isEditorOverlayActive
     }
   },
   mounted() {
-    this.$refs.preview.contentWindow.document.head.innerHTML = `<link href="/css/main.min.css" rel="stylesheet">`
     this.code = this._code
     this.updatePreview()
+
+    if (
+      this.$refs.previewWrp.getBoundingClientRect().height >
+      this.editorShrinkSize
+    ) {
+      this.editorShrinkSize = this.$refs.previewWrp.getBoundingClientRect().height
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.snippet {
+  padding: 1.5rem 0 1.5rem 0;
+  display: flex;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+.preview-cnt {
+  padding: 0.5rem;
+  border-radius: 4px 0 0 4px;
+  border: 1px solid #e0e0e0;
+  border-right: none;
+  background-color: #f9f9f9;
+
+  & > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  iframe {
+    width: 100%;
+    display: block;
+  }
+}
+
 .codemirror-wrp {
   position: relative;
+
+  &.shrink {
+    overflow: hidden;
+    border-radius: 4px;
+  }
 }
+
 .codemirror-btn {
   position: absolute;
   z-index: 10;
@@ -88,9 +163,38 @@ export default {
   transition: 0.1s;
 }
 
-.codemirror-wrp:hover {
+.codemirror-wrp:not(.shrink):hover {
   .codemirror-btn {
     opacity: 1;
+  }
+}
+
+.expand-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background: rgba(#fff, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  z-index: 5;
+  display: none;
+  user-select: none;
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 4px;
+
+  &.active {
+    display: flex;
+    transition: 0.3s;
+
+    &:hover {
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
   }
 }
 </style>

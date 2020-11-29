@@ -1,2 +1,32 @@
 .content-wrapper {
 }
+
+.doc-section-title {
+  margin-top: 1.5rem;
+  color: var(--black);
+
+  a {
+    margin-right: 0.35rem;
+    color: var(--orange-dark);
+  }
+}
+
+p {
+  margin-top: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.inline-class {
+  font-weight: 600;
+  background-color: var(--purple-light);
+  padding: 1px 3px;
+  border-radius: 2px;
+}
+.inline-property {
+  font-weight: 600;
+  background-color: var(--pink-light);
+  padding: 1px 3px;
+  border-radius: 2px;
+}

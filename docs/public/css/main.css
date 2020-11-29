@@ -23,6 +23,7 @@
   --pink-light: rgba(173, 69, 163, 0.2);
   --purple: rgb(187, 185, 255);
   --purple-dark: rgb(85, 81, 255);
+  --purple-light: rgba(85, 81, 255, 0.2);
   --red: rgb(252, 166, 166);
   --red-dark: rgb(173, 45, 45);
   --red-light: rgba(173, 45, 45, 0.2);
@@ -258,7 +259,13 @@ a {
   transform-origin: center;
   color: currentColor;
   text-decoration: none;
-  line-height: 1; }
+  line-height: 1;
+  --shadow-distance: 3px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin-top: var(--shadow-distance);
+  margin-left: var(--shadow-distance);
+  transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0); }
   .btn.btn-green {
     --back-bg: var(--green);
     --border: var(--green-dark); }
@@ -280,6 +287,9 @@ a {
   .btn.btn-yellow {
     --back-bg: var(--yellow);
     --border: var(--yellow-dark); }
+  .btn::before {
+    transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px); }
+  .btn,
   .btn .btn-text {
     font-size: 1em; }
   .btn-icon {
@@ -303,51 +313,55 @@ a {
     border: 2px solid var(--border);
     transform: translate3d(-3px, 3px, -0.1px); }
   .btn.btn-sm {
+    --shadow-distance: 2px;
     padding: 6px 12px;
-    margin-top: 3px;
-    margin-left: 3px;
-    transform: translate3d(3px, -3px, 0);
-    font-size: 1rem; }
+    font-size: 0.9rem;
+    margin-top: var(--shadow-distance);
+    margin-left: var(--shadow-distance);
+    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0); }
     .btn.btn-sm::before {
-      transform: translate3d(-3px, 3px, -0.1px); }
+      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px); }
   .btn.btn-md {
-    padding: 12px 28px;
-    margin-top: 4px;
-    margin-left: 4px;
-    transform: translate3d(4px, -4px, 0);
-    font-size: 1.2rem; }
+    --shadow-distance: 3px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    margin-top: var(--shadow-distance);
+    margin-left: var(--shadow-distance);
+    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0); }
     .btn.btn-md::before {
-      transform: translate3d(-4px, 4px, -0.1px); }
+      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px); }
   .btn.btn-l {
-    margin-top: 5px;
-    margin-left: 5px;
-    padding: 16px 36px;
-    transform: translate3d(5px, -5px, 0);
-    font-size: 1.4rem; }
+    --shadow-distance: 4px;
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    margin-top: var(--shadow-distance);
+    margin-left: var(--shadow-distance);
+    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0); }
     .btn.btn-l::before {
-      transform: translate3d(-5px, 5px, -0.1px); }
+      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px); }
   .btn.btn-full {
     display: flex;
-    width: 100%; }
+    width: calc(100% - var(--shadow-distance)); }
   .btn:hover {
     transform: translate3d(-2px, 2px, 0); }
     .btn:hover::before {
       transform: translate3d(2px, -2px, -0.1px); }
   .btn.no-shadow {
-    transform: translateY(2px); }
+    margin-top: 0;
+    margin-left: 0;
+    transform: translateY(0); }
+    .btn.no-shadow:hover {
+      transform: translateY(0); }
     .btn.no-shadow::before {
       content: none; }
-    .btn.no-shadow:hover {
-      transform: translateY(2px); }
-      .btn.no-shadow:hover::before {
-        transform: unset; }
   .btn.btn-loading {
     color: transparent !important;
-    pointer-events: none; }
+    pointer-events: none !important;
+    user-select: none; }
     .btn.btn-loading > * {
       opacity: 0 !important; }
     .btn.btn-loading::after {
-      content: 'asdas';
+      content: '';
       border: 2px solid #000;
       border-radius: 50%;
       width: 1em;
@@ -363,6 +377,16 @@ a {
 @keyframes loading {
   100% {
     transform: rotate(360deg); } }
+
+.buttons {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .buttons .btn {
+    margin-bottom: 0.75rem; }
+    .buttons .btn:not(:last-child) {
+      margin-right: 0.75rem; }
 
 .input-container {
   --back-bg: var(--gray);

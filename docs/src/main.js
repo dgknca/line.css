@@ -5,6 +5,9 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+import Snippet from './components/_Snippet.vue'
+Vue.component('Snippet', Snippet)
+
 new Vue({
   router,
   store,
