@@ -8,13 +8,34 @@ const mixin = {
   <button class="btn btn-l">Large</button>
 </div>`,
       colors: `<div class="buttons">
-  <a href="#0" class="btn btn-green">Button</a>
-  <a href="#0" class="btn btn-orange">Button</a>
-  <a href="#0" class="btn btn-red">Button</a>
-  <a href="#0" class="btn btn-pink">Button</a>
-  <a href="#0" class="btn btn-purple">Button</a>
-  <a href="#0" class="btn btn-blue">Button</a>
-  <a href="#0" class="btn btn-yellow">Button</a>
+  <a href="#0" class="btn">Default</a>
+  <a href="#0" class="btn btn-green">Green</a>
+  <a href="#0" class="btn btn-orange">Orange</a>
+  <a href="#0" class="btn btn-red">Red</a>
+  <a href="#0" class="btn btn-pink">Pink</a>
+  <a href="#0" class="btn btn-purple">Purple</a>
+  <a href="#0" class="btn btn-yellow">Yellow</a>
+  <a href="#0" class="btn btn-blue">Blue</a>
+</div>`,
+      hover: `<div class="buttons">
+  <a href="#0" class="btn hover">Button</a>
+  <a href="#0" class="btn hover btn-green">Button</a>
+  <a href="#0" class="btn hover btn-orange">Button</a>
+  <a href="#0" class="btn hover btn-red">Button</a>
+  <a href="#0" class="btn hover btn-pink">Button</a>
+  <a href="#0" class="btn hover btn-purple">Button</a>
+  <a href="#0" class="btn hover btn-blue">Button</a>
+  <a href="#0" class="btn hover btn-yellow">Button</a>
+</div>`,
+      active: `<div class="buttons">
+  <a href="#0" class="btn active">Button</a>
+  <a href="#0" class="btn active btn-green">Button</a>
+  <a href="#0" class="btn active btn-orange">Button</a>
+  <a href="#0" class="btn active btn-red">Button</a>
+  <a href="#0" class="btn active btn-pink">Button</a>
+  <a href="#0" class="btn active btn-purple">Button</a>
+  <a href="#0" class="btn active btn-blue">Button</a>
+  <a href="#0" class="btn active btn-yellow">Button</a>
 </div>`,
       loading: `<div class="buttons">
   <a href="#0" class="btn btn-loading btn-green">Button</a>
@@ -25,9 +46,25 @@ const mixin = {
   <a href="#0" class="btn btn-loading btn-blue">Button</a>
   <a href="#0" class="btn btn-loading btn-yellow">Button</a>
 </div>`,
-      fullWidth: `<button class="btn btn-md btn-full">Button Full Width</button>`,
+      disabled: `<div class="buttons">
+  <a href="#0" disabled class="btn">Button</a>
+  <a href="#0" disabled class="btn btn-green">Button</a>
+  <a href="#0" disabled class="btn btn-orange">Button</a>
+  <a href="#0" disabled class="btn btn-red">Button</a>
+  <a href="#0" disabled class="btn btn-pink">Button</a>
+  <a href="#0" disabled class="btn btn-purple">Button</a>
+  <a href="#0" disabled class="btn btn-blue">Button</a>
+  <a href="#0" disabled class="btn btn-yellow">Button</a>
+</div>`,
+      fullWidth: `<button class="btn btn-md btn-full">
+  Button Full Width
+</button>`,
       noShadow: `<button class="btn no-shadow">No Shadow</button>`,
-      customShadowDistance: `<button class="btn btn-md" style="--shadow-distance: 7px;">Custom Shadow Distance</button>`,
+      customShadowDistance: `<button
+  class="btn btn-md"
+  style="--shadow-distance: 7px;">
+  Custom Shadow Distance
+</button>`,
       withIcon: `<div class="buttons">
   <button type="button" class="btn btn-sm">
     <span class="btn-icon btn-icon-left">

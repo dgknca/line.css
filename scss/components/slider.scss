@@ -4,9 +4,11 @@
   border: 2px solid var(--black);
   border-radius: var(--border-radius);
   position: relative;
-  transform: translate3d(10px, -10px, 0);
   transform-style: preserve-3d;
   user-select: none;
+  --shadow-distance: 3px;
+  // prettier-ignore
+  transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0);
 
   &::before {
     content: '';
@@ -18,7 +20,8 @@
     border: inherit;
     border-radius: inherit;
     background: var(--gray);
-    transform: translate3d(-10px, 10px, -0.1px);
+    // prettier-ignore
+    transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px);
   }
 
   &-item {

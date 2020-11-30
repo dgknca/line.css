@@ -1,10 +1,10 @@
 <template>
   <div class="page-wrapper">
     <div class="page-container docs">
-      <ComponentList />
       <div class="the-doc">
         <router-view></router-view>
       </div>
+      <ComponentList />
     </div>
   </div>
 </template>

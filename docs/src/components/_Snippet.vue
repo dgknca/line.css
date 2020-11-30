@@ -59,7 +59,7 @@ export default {
       },
       code: '',
       isEditorOverlayActive: false,
-      editorShrinkSize: 250
+      editorShrinkSize: 270
     }
   },
   computed: {
@@ -77,8 +77,6 @@ export default {
     },
     onCmReady() {
       this.$nextTick(() => {
-        // this.editorShrinkSize = this.$refs.previewWrp.getBoundingClientRect().height
-
         // prettier-ignore
         if (this.$refs.editor.$el.getBoundingClientRect().height > this.editorShrinkSize) {
           this.isEditorOverlayActive = true
@@ -90,6 +88,7 @@ export default {
     },
     expandSnippet() {
       this.isEditorOverlayActive = !this.isEditorOverlayActive
+      this.editorShrinkSize = this.$refs.editor.$el.getBoundingClientRect().height
     }
   },
   mounted() {

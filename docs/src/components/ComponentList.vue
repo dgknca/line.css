@@ -4,7 +4,7 @@
       <li>
         <router-link
           to="/docs/button"
-          class="size-5 link link-pink"
+          class="size-6 fw-600 link link-pink"
           active-class="active"
         >
           <span>Buttons</span>
@@ -13,7 +13,7 @@
       <li>
         <router-link
           to="/docs/slider"
-          class="size-5 link link-pink"
+          class="size-6 fw-600 link link-pink"
           active-class="active"
         >
           <span>Slider</span>
@@ -31,7 +31,7 @@ export default {}
 .component-list {
   width: 200px;
   flex-shrink: 0;
-  padding-right: 20px;
+  padding-left: 20px;
 
   ul {
     margin: 0;

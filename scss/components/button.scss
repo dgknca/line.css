@@ -1,6 +1,8 @@
 .btn {
   --border: var(--black);
   --back-bg: var(--gray);
+  --shadow-distance: 3px;
+  --outline-width: 2px;
   @include component-colors;
   display: inline-flex;
   align-items: center;
@@ -16,35 +18,14 @@
   color: currentColor;
   text-decoration: none;
   line-height: 1;
-  --shadow-distance: 3px;
   padding: 8px 16px;
   font-size: 1rem;
   margin-top: var(--shadow-distance);
   margin-left: var(--shadow-distance);
   // prettier-ignore
   transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0);
-
-  &::before {
-    // prettier-ignore
-    transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px);
-  }
-
-  &,
-  .btn-text {
-    font-size: 1em;
-  }
-
-  &-icon {
-    display: flex;
-    align-items: center;
-
-    &.btn-icon-right {
-      margin-left: 10px;
-    }
-    &.btn-icon-left {
-      margin-right: 10px;
-    }
-  }
+  // outline: 1px solid transparent; // to avoid jagge
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0); // to avoid jagge
 
   &::before {
     content: '';
@@ -58,7 +39,8 @@
     border-radius: inherit;
     background-color: var(--back-bg);
     border: 2px solid var(--border);
-    transform: translate3d(-3px, 3px, -0.1px);
+    // prettier-ignore
+    transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px);
   }
 
   &#{&}-sm {
@@ -106,17 +88,46 @@
     }
   }
 
-  &.btn-full {
-    display: flex;
-    width: calc(100% - var(--shadow-distance));
-  }
-
-  &:hover {
+  &.hover,
+  &:hover,
+  &.active,
+  &:active,
+  &[disabled] {
     transform: translate3d(-2px, 2px, 0);
 
     &::before {
       transform: translate3d(2px, -2px, -0.1px);
     }
+  }
+
+  &.active:not([disabled]),
+  &:active:not([disabled]) {
+    transition: none;
+    box-shadow: 0 0 0 var(--outline-width) var(--back-bg);
+  }
+
+  @include component-colors-for-disabled;
+
+  &,
+  .btn-text {
+    font-size: 1em;
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+
+    &.btn-icon-right {
+      margin-left: 10px;
+    }
+    &.btn-icon-left {
+      margin-right: 10px;
+    }
+  }
+
+  &.btn-full {
+    display: flex;
+    width: calc(100% - var(--shadow-distance));
   }
 
   &.no-shadow {

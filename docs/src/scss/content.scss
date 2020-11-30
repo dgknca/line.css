@@ -18,11 +18,11 @@ p {
   color: var(--black);
 }
 
-.inline-class {
-  font-weight: 600;
-  background-color: var(--purple-light);
-  padding: 1px 3px;
+.helper {
+  display: inline-block;
   border-radius: 2px;
+  color: var(--black);
+  margin: 2rem 0 0 0;
 }
 .inline-property {
   font-weight: 600;
