@@ -254,6 +254,14 @@ a {
   --back-bg: var(--gray);
   --shadow-distance: 3px;
   --outline-width: 2px;
+  --is-shadow-right: -1;
+  --is-shadow-top: -1;
+  --reset-shadow-right: auto;
+  --reset-shadow-left: 0;
+  --reset-shadow-top: auto;
+  --reset-shadow-bottom: 0;
+  --computed-shadow-right: calc(var(--is-shadow-right) * -1);
+  --computed-shadow-top: calc(var(--is-shadow-top) * -1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -270,10 +278,10 @@ a {
   line-height: 1;
   padding: 8px 16px;
   font-size: 1rem;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0);
   margin-top: var(--shadow-distance);
   margin-left: var(--shadow-distance);
-  transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0);
-  box-shadow: 0 0 1px rgba(255, 255, 255, 0); }
+  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0); }
   .btn.btn-green {
     --back-bg: var(--green);
     --border: var(--green-dark); }
@@ -297,48 +305,35 @@ a {
     --border: var(--yellow-dark); }
   .btn::before {
     content: '';
+    transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right) * -1), calc(var(--shadow-distance) * var(--computed-shadow-top)), -0.1px);
     position: absolute;
-    right: 0;
-    top: 0;
+    right: var(--reset-shadow-left);
+    top: var(--reset-shadow-bottom);
+    left: var(--reset-shadow-right);
+    bottom: var(--reset-shadow-top);
     width: 100%;
     height: 100%;
     border-radius: inherit;
     transition: inherit;
     border-radius: inherit;
     background-color: var(--back-bg);
-    border: 2px solid var(--border);
-    transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px); }
+    border: 2px solid var(--border); }
   .btn.btn-sm {
     --shadow-distance: 2px;
     padding: 6px 12px;
-    font-size: 0.9rem;
-    margin-top: var(--shadow-distance);
-    margin-left: var(--shadow-distance);
-    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0); }
-    .btn.btn-sm::before {
-      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px); }
+    font-size: 0.9rem; }
   .btn.btn-md {
     --shadow-distance: 3px;
     padding: 12px 20px;
-    font-size: 1.1rem;
-    margin-top: var(--shadow-distance);
-    margin-left: var(--shadow-distance);
-    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0); }
-    .btn.btn-md::before {
-      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px); }
+    font-size: 1.1rem; }
   .btn.btn-l {
     --shadow-distance: 4px;
     padding: 16px 32px;
-    font-size: 1.3rem;
-    margin-top: var(--shadow-distance);
-    margin-left: var(--shadow-distance);
-    transform: translate3d(var(--shadow-distance), calc(var(--shadow-distance) * -1), 0); }
-    .btn.btn-l::before {
-      transform: translate3d(calc(var(--shadow-distance) * -1), var(--shadow-distance), -0.1px); }
+    font-size: 1.3rem; }
   .btn.hover, .btn:hover, .btn.active, .btn:active, .btn[disabled] {
-    transform: translate3d(-2px, 2px, 0); }
+    transform: translate3d(calc(var(--computed-shadow-right) * -2px), calc(var(--computed-shadow-top) * 2px), 0); }
     .btn.hover::before, .btn:hover::before, .btn.active::before, .btn:active::before, .btn[disabled]::before {
-      transform: translate3d(2px, -2px, -0.1px); }
+      transform: translate3d(calc(var(--computed-shadow-right) * 2px), calc(var(--computed-shadow-top) * -2px), -0.1px); }
   .btn.active:not([disabled]), .btn:active:not([disabled]) {
     transition: none;
     box-shadow: 0 0 0 var(--outline-width) var(--active-border-color, var(--back-bg)); }
@@ -383,6 +378,14 @@ a {
       transform: translateY(0); }
     .btn.no-shadow::before {
       content: none; }
+  .btn.shadow-right {
+    --is-shadow-right: 1;
+    --reset-shadow-left: auto;
+    --reset-shadow-right: 0; }
+  .btn.shadow-top {
+    --is-shadow-top: 1;
+    --reset-shadow-top: 0;
+    --reset-shadow-bottom: auto; }
   .btn.btn-loading {
     color: transparent !important;
     pointer-events: none !important;

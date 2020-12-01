@@ -45,6 +45,15 @@
     <a href="#full" id="full" class="helper size-5">Full Width</a>
     <Snippet :_code="fullWidth" />
 
+    <a href="#shadow-right" id="shadow-right" class="helper size-5"
+      >Right Shadow</a
+    >
+    <Snippet :_code="rightShadow" />
+
+    <a href="#shadow-top" id="shadow-top" class="helper size-5">Top Shadow</a>
+    <p>You can use together right and top classes like below.</p>
+    <Snippet :_code="topShadow" />
+
     <!-- Global Helpers -->
 
     <h3 id="global-helpers" class="size-4 fw-600 doc-section-title">
@@ -85,8 +94,8 @@
       >
     </div>
     <p>
-      The button shadow is customizable like in all other components. You can
-      set custom distance using
+      Button shadow and border radius are customizable like in all other
+      components. You can set custom distance using
       <span class="inline-property">--shadow-distance</span>. The other relevant
       properties will be adjusted according to the value you set.
     </p>

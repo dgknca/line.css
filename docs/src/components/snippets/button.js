@@ -76,6 +76,8 @@ const mixin = {
 <button class="btn btn-md my-custom-btn">
   Custom Button
 </button>`,
+      rightShadow: `<a href="#0" class="btn shadow-right btn-green">Green</a>`,
+      topShadow: `<a href="#0" class="btn shadow-top shadow-right btn-pink">Green</a>`,
       withIcon: `<div class="buttons">
   <button type="button" class="btn btn-sm">
     <span class="btn-icon btn-icon-left">
