@@ -60,10 +60,21 @@ const mixin = {
   Button Full Width
 </button>`,
       noShadow: `<button class="btn no-shadow">No Shadow</button>`,
-      customShadowDistance: `<button
+      globalCustomProperties: `<button
   class="btn btn-md"
-  style="--shadow-distance: 7px;">
-  Custom Shadow Distance
+  style="--border-radius: 8px;--shadow-distance: 7px;">
+  Custom Button
+</button>`,
+      localCustomProperties: `<style>
+  .my-custom-btn {
+    --back-bg: yellow;
+    --border: orangered;
+    --active-border-color: blue;
+  }
+</style>
+
+<button class="btn btn-md my-custom-btn">
+  Custom Button
 </button>`,
       withIcon: `<div class="buttons">
   <button type="button" class="btn btn-sm">

@@ -103,7 +103,8 @@
   &.active:not([disabled]),
   &:active:not([disabled]) {
     transition: none;
-    box-shadow: 0 0 0 var(--outline-width) var(--back-bg);
+    box-shadow: 0 0 0 var(--outline-width)
+      var(--active-border-color, var(--back-bg));
   }
 
   @include component-colors-for-disabled;

@@ -55,19 +55,42 @@
 
     <!-- Custom Properties -->
 
-    <h3 id="customProperties" class="size-4 fw-600 doc-section-title">
-      <a href="#customProperties">#</a>Custom Properties
+    <h3 id="localCustomProperties" class="size-4 fw-600 doc-section-title">
+      <a href="#localCustomProperties">#</a>Local Custom Properties
     </h3>
-    <a href="#--shadow-distance" id="--shadow-distance" class="helper size-5"
-      >--shadow-distance (Global)</a
-    >
+    <div class="helpers-container">
+      <a href="#--back-bg" id="--back-bg" class="helper size-5">--back-bg</a>
+      <a href="#--border" id="--border" class="helper size-5">--border</a>
+      <a
+        href="#--active-border-color"
+        id="--active-border-color"
+        class="helper size-5"
+        >--active-border-color</a
+      >
+    </div>
+    <p>
+      You can easily create your custom class using CSS variables.
+    </p>
+    <Snippet :_code="localCustomProperties" />
+
+    <h3 id="globalCustomProperties" class="size-4 fw-600 doc-section-title">
+      <a href="#globalCustomProperties">#</a>Global Custom Properties
+    </h3>
+    <div class="helpers-container">
+      <a href="#--border-radius" id="--border-radius" class="helper size-5"
+        >--border-radius</a
+      >
+      <a href="#--shadow-distance" id="--shadow-distance" class="helper size-5"
+        >--shadow-distance</a
+      >
+    </div>
     <p>
       The button shadow is customizable like in all other components. You can
       set custom distance using
       <span class="inline-property">--shadow-distance</span>. The other relevant
       properties will be adjusted according to the value you set.
     </p>
-    <Snippet :_code="customShadowDistance" />
+    <Snippet :_code="globalCustomProperties" />
 
     <!-- Other Examples -->
 

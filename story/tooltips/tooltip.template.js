@@ -13,6 +13,6 @@ export default () => {
   )
 
   return `
-    <span class="tooltip ${tooltipClasses}" data-text="tooltip">hover me</span>
+    <span class="tooltip ${tooltipClasses}" data-text="tooltip long text" style="--tooltip-width: 200px">hover me</span>
   `
 }
