@@ -54,14 +54,6 @@
     <p>You can use together right and top classes like below.</p>
     <Snippet :_code="topShadow" />
 
-    <!-- Global Helpers -->
-
-    <h3 id="global-helpers" class="size-4 fw-600 doc-section-title">
-      <a href="#global-helpers">#</a>Global Helpers
-    </h3>
-    <a href="#no-shadow" id="no-shadow" class="helper size-5">No Shadow</a>
-    <Snippet :_code="noShadow" />
-
     <!-- Custom Properties -->
 
     <h3 id="localCustomProperties" class="size-4 fw-600 doc-section-title">

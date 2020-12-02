@@ -7,33 +7,33 @@
   --white: #fff;
   --gray: rgb(196, 196, 196);
   --gray-dark: rgb(97, 97, 97);
-  --gray-light: rgba(196, 196, 196, 0.2);
+  --gray-light: rgb(243, 243, 243);
   --green: rgb(176, 233, 189);
   --green-dark: rgb(50, 136, 69);
-  --green-light: rgba(50, 136, 69, 0.2);
+  --green-light: rgb(214, 231, 218);
   --orange: rgb(240, 208, 146);
   --orange-dark: rgb(209, 161, 67);
   --orange-light: rgb(246, 236, 217);
   --blue: rgb(176, 229, 233);
   --blue-dark: rgb(50, 115, 220);
-  --blue-light: rgba(60, 66, 227, 0.2);
-  --yellow: rgba(255, 199, 0, 0.43);
+  --blue-light: rgb(211 235 255);
+  --yellow: rgb(255, 231, 145);
   --yellow-dark: rgb(255, 199, 0);
-  --yellow-light: rgba(255, 199, 0, 0.2);
+  --yellow-light: rgb(255, 244, 204);
   --pink: rgb(233, 176, 227);
   --pink-dark: rgb(173, 69, 163);
-  --pink-light: rgba(173, 69, 163, 0.2);
+  --pink-light: rgb(239, 218, 237);
   --purple: rgb(187, 185, 255);
   --purple-dark: rgb(85, 81, 255);
-  --purple-light: rgba(85, 81, 255, 0.2);
+  --purple-light: rgb(221, 220, 255);
   --red: rgb(252, 166, 166);
   --red-dark: rgb(173, 45, 45);
-  --red-light: rgba(173, 45, 45, 0.2);
+  --red-light: rgb(239, 213, 213);
 
   // text
   --text-color: #000;
 
-  --font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-    sans-serif !important;
+  --font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica,
+    Arial, sans-serif;
 }

@@ -15,18 +15,12 @@
       <table>
         <thead>
           <th>Name</th>
-          <th>Type</th>
           <th>Default</th>
         </thead>
         <tbody>
           <tr>
             <td>
               <code style="white-space: nowrap;">--slider-width</code>
-            </td>
-            <td>
-              <small>
-                size
-              </small>
             </td>
             <td>
               <code>300px</code>
@@ -37,11 +31,6 @@
               <code style="white-space: nowrap;">--slider-height</code>
             </td>
             <td>
-              <small>
-                size
-              </small>
-            </td>
-            <td>
               <code>300px</code>
             </td>
           </tr>
@@ -50,20 +39,13 @@
               <code style="white-space: nowrap;">--slider-button-size</code>
             </td>
             <td>
-              <small>
-                size
-              </small>
-            </td>
-            <td>
               <code>50px</code>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-    <a href="#--c-p-example" id="--c-p-example" class="example size-5"
-      >An example using custom properties</a
-    >
+    <span class="example size-5">An example using custom properties</span>
     <Snippet :_code="localCustomProperties" />
   </div>
 </template>

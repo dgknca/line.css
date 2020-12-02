@@ -62,27 +62,51 @@ p {
     font-size: 1rem;
   }
 
+  tr {
+    height: 47px;
+  }
+
   th,
   td {
     padding: 8px 15px;
-    border: 1px solid #dfe2e5;
     border-collapse: collapse;
     font-size: 1rem;
     line-height: 1.5;
-    color: #24292e;
     vertical-align: middle;
     border: 1px solid var(--gray-light);
   }
 
-  td {
-    font-size: 0.9rem;
-  }
-
   code {
     font-family: 'Fira Code', monospace;
-    color: var(--purple-dark);
+    color: var(--blue-dark);
     background: var(--gray-light);
     padding: 3px 5px;
     border-radius: 2px;
+  }
+
+  td {
+    font-size: 0.9rem;
+
+    &:nth-child(2) {
+      code {
+        color: var(--red-dark);
+      }
+    }
+  }
+
+  .doc-color-wrp {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .color {
+      display: block;
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      border: 1px solid var(--black);
+      border-radius: var(--border-radius);
+      margin-right: 10px;
+    }
   }
 }

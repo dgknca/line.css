@@ -3,6 +3,16 @@
     <ul>
       <li>
         <router-link
+          to="/docs"
+          class="size-6 fw-600 link link-pink"
+          exact
+          exact-active-class="active"
+        >
+          <span>Home</span>
+        </router-link>
+      </li>
+      <li>
+        <router-link
           to="/docs/button"
           class="size-6 fw-600 link link-pink"
           active-class="active"

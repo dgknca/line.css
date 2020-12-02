@@ -3,8 +3,8 @@
     <div class="page-container">
       <div class="hero">
         <h2 class="site-title">
-          <strong>Line.css</strong> is a minimal CSS library. Can be customized
-          via CSS variables.
+          <strong>Line.css</strong> is a minimal, modern CSS library. Can be
+          customized via CSS variables.
         </h2>
         <div class="hero-btns">
           <router-link to="/docs" class="btn btn-purple btn-l">
