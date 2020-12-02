@@ -32,6 +32,10 @@ export default {}
   width: 200px;
   flex-shrink: 0;
   padding-left: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  align-self: flex-start;
 
   ul {
     margin: 0;

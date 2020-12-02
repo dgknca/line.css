@@ -11,3 +11,77 @@
     box-sizing: content-box;
   }
 }
+
+:root {
+  --shadow-distance: 3px;
+  --is-shadow-right: -1;
+  --is-shadow-top: -1;
+  --reset-shadow-right: auto;
+  --reset-shadow-left: 0;
+  --reset-shadow-top: auto;
+  --reset-shadow-bottom: 0;
+}
+
+.btn,
+.slider {
+  --shadow-distance: inherit;
+  --is-shadow-right: inherit;
+  --is-shadow-top: inherit;
+  --reset-shadow-right: inherit;
+  --reset-shadow-left: inherit;
+  --reset-shadow-top: inherit;
+  --reset-shadow-bottom: inherit;
+  --computed-shadow-right: calc(var(--is-shadow-right) * -1);
+  --computed-shadow-top: calc(var(--is-shadow-top) * -1);
+  margin-top: var(--shadow-distance);
+  margin-left: var(--shadow-distance);
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0); // to avoid jagge
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  // prettier-ignore
+  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0);
+
+  &::before {
+    content: '';
+    // prettier-ignore
+    transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right) * -1), calc(var(--shadow-distance) * var(--computed-shadow-top)), -0.1px);
+    position: absolute;
+    right: var(--reset-shadow-left); // should be 0 for left shadow
+    top: var(--reset-shadow-bottom);
+    left: var(--reset-shadow-right); // should be auto for left shadow
+    bottom: var(--reset-shadow-top);
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    transition: inherit;
+    background-color: var(--back-bg);
+    border: 2px solid var(--border);
+  }
+
+  &.shadow-right {
+    --is-shadow-right: 1;
+    --reset-shadow-left: auto;
+    --reset-shadow-right: 0;
+  }
+  &.shadow-top {
+    --is-shadow-top: 1;
+    --reset-shadow-top: 0;
+    --reset-shadow-bottom: auto;
+  }
+
+  &.no-shadow {
+    margin-top: 0;
+    margin-left: 0;
+    transform: translateY(0);
+
+    &:hover {
+      transform: translateY(0);
+    }
+    &::before {
+      content: none;
+    }
+  }
+}

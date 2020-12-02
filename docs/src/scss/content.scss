@@ -20,7 +20,12 @@ p {
 
 .helper {
   display: block;
-  border-radius: 2px;
+  color: var(--black);
+  margin: 2rem 0 0 0;
+}
+
+.example {
+  display: block;
   color: var(--black);
   margin: 2rem 0 0 0;
 }
@@ -36,4 +41,48 @@ p {
   background-color: var(--pink-light);
   padding: 1px 3px;
   border-radius: 2px;
+}
+
+.doc-table {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid var(--gray);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+
+  table {
+    background-color: #fff;
+    width: 100%;
+    min-width: 750px;
+  }
+
+  th {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
+  th,
+  td {
+    padding: 8px 15px;
+    border: 1px solid #dfe2e5;
+    border-collapse: collapse;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #24292e;
+    vertical-align: middle;
+    border: 1px solid var(--gray-light);
+  }
+
+  td {
+    font-size: 0.9rem;
+  }
+
+  code {
+    font-family: 'Fira Code', monospace;
+    color: var(--purple-dark);
+    background: var(--gray-light);
+    padding: 3px 5px;
+    border-radius: 2px;
+  }
 }

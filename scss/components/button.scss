@@ -1,75 +1,30 @@
 .btn {
   --border: var(--black);
   --back-bg: var(--gray);
-  --shadow-distance: 3px;
   --outline-width: 2px;
-  --is-shadow-right: -1;
-  --is-shadow-top: -1;
-  --reset-shadow-right: auto;
-  --reset-shadow-left: 0;
-  --reset-shadow-top: auto;
-  --reset-shadow-bottom: 0;
-  --computed-shadow-right: calc(var(--is-shadow-right) * -1);
-  --computed-shadow-top: calc(var(--is-shadow-top) * -1);
   @include component-colors;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--border-radius);
-  position: relative;
   background-color: var(--white);
   border: 2px solid var(--border);
   cursor: pointer;
-  transition: var(--transition);
-  transform-style: preserve-3d;
-  transform-origin: center;
   color: currentColor;
   text-decoration: none;
   line-height: 1;
   padding: 8px 16px;
   font-size: 1rem;
-  // outline: 1px solid transparent; // to avoid jagge
-  box-shadow: 0 0 1px rgba(255, 255, 255, 0); // to avoid jagge
-
-  margin-top: var(--shadow-distance);
-  margin-left: var(--shadow-distance);
-  // prettier-ignore
-  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0);
-
-  &::before {
-    content: '';
-    // prettier-ignore
-    transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right) * -1), calc(var(--shadow-distance) * var(--computed-shadow-top)), -0.1px);
-    position: absolute;
-    right: var(--reset-shadow-left); // should be 0 for left shadow
-    top: var(--reset-shadow-bottom);
-    left: var(--reset-shadow-right); // should be auto for left shadow
-    bottom: var(--reset-shadow-top);
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    transition: inherit;
-    border-radius: inherit;
-    background-color: var(--back-bg);
-    border: 2px solid var(--border);
-  }
 
   &#{&}-sm {
     --shadow-distance: 2px;
-    padding: 6px 12px;
-    font-size: 0.9rem;
   }
 
   &#{&}-md {
     --shadow-distance: 3px;
-    padding: 12px 20px;
-    font-size: 1.1rem;
   }
 
   &#{&}-l {
     --shadow-distance: 4px;
-    padding: 16px 32px;
-    font-size: 1.3rem;
   }
 
   &.hover,
@@ -90,6 +45,21 @@
         -0.1px
       );
     }
+  }
+
+  &#{&}-sm {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  &#{&}-md {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+  }
+
+  &#{&}-l {
+    padding: 16px 32px;
+    font-size: 1.3rem;
   }
 
   &.active:not([disabled]),
@@ -121,30 +91,6 @@
   &#{&}-full {
     display: flex;
     width: calc(100% - var(--shadow-distance));
-  }
-
-  &.no-shadow {
-    margin-top: 0;
-    margin-left: 0;
-    transform: translateY(0);
-
-    &:hover {
-      transform: translateY(0);
-    }
-    &::before {
-      content: none;
-    }
-  }
-
-  &.shadow-right {
-    --is-shadow-right: 1;
-    --reset-shadow-left: auto;
-    --reset-shadow-right: 0;
-  }
-  &.shadow-top {
-    --is-shadow-top: 1;
-    --reset-shadow-top: 0;
-    --reset-shadow-bottom: auto;
   }
 
   &#{&}-loading {
