@@ -1037,35 +1037,6 @@ textarea {
     width: 100%;
     height: 100%;
     object-fit: cover; }
-  .img.img-sm {
-    --size: 200px;
-    transform: translate3d(3px, -3px, 0); }
-    .img.img-sm::before {
-      transform: translate3d(-3px, 3px, -0.1px); }
-    .img.img-sm:hover {
-      transform: translate3d(-2px, 2px, 0); }
-      .img.img-sm:hover::before {
-        transform: translate3d(2px, -2px, -0.1px); }
-  .img.img-md {
-    --size: 350px;
-    transform: translate3d(5px, -5px, 0); }
-    .img.img-md::before {
-      transform: translate3d(-5px, 5px, -0.1px); }
-    .img.img-md:hover {
-      transform: translate3d(-2px, 2px, 0); }
-      .img.img-md:hover::before {
-        transform: translate3d(2px, -2px, -0.1px); }
-  .img.img-l {
-    --size: 500px;
-    transform: translate3d(8px, -8px, 0); }
-    .img.img-l::before {
-      transform: translate3d(-8px, 8px, -0.1px); }
-    .img.img-l:hover {
-      transform: translate3d(-2px, 2px, 0); }
-      .img.img-l:hover::before {
-        transform: translate3d(2px, -2px, -0.1px); }
-  .img.full {
-    width: 100%; }
 
 .breadcrumb ul {
   align-items: flex-start;

@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import DocIndex from '@/components/DocIndex.vue'
+import GettingStarted from '@/components/GettingStarted.vue'
 
+import GlobalsDoc from '@/components/docs/GlobalsDoc.vue'
 import ButtonDoc from '@/components/docs/ButtonDoc.vue'
 import SliderDoc from '@/components/docs/SliderDoc.vue'
 
@@ -22,7 +23,11 @@ const routes = [
     children: [
       {
         path: '',
-        component: DocIndex
+        component: GettingStarted
+      },
+      {
+        path: 'globals',
+        component: GlobalsDoc
       },
       {
         path: 'button',

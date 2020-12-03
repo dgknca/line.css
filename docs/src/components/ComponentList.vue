@@ -8,7 +8,16 @@
           exact
           exact-active-class="active"
         >
-          <span>Home</span>
+          <span>Getting Started</span>
+        </router-link>
+      </li>
+      <li>
+        <router-link
+          to="/docs/globals"
+          class="size-6 fw-600 link link-pink"
+          active-class="active"
+        >
+          <span>Globals</span>
         </router-link>
       </li>
       <li>

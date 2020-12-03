@@ -1,5 +1,8 @@
 <template>
   <div class="content-wrapper">
+    <h3 id="global-custom-properties" class="size-4 fw-600 doc-section-title">
+      <a href="#global-custom-properties">#</a>Global Custom Properties
+    </h3>
     <div class="doc-table">
       <table>
         <thead>
@@ -387,6 +390,9 @@
       </table>
     </div>
 
+    <h3 id="global-classes" class="size-4 fw-600 doc-section-title">
+      <a href="#global-classes">#</a>Global Classes
+    </h3>
     <div class="doc-table">
       <table>
         <thead>
@@ -406,10 +412,8 @@
       </table>
     </div>
 
-    <!-- Global Helpers -->
-
-    <h3 id="global-classes" class="size-4 fw-600 doc-section-title">
-      <a href="#global-classes">#</a>Global Classes
+    <h3 id="examples" class="size-4 fw-600 doc-section-title">
+      <a href="#examples">#</a>Examples
     </h3>
     <a href="#no-shadow" id="no-shadow" class="helper size-5">No Shadow</a>
     <Snippet :_code="noShadow" />
@@ -417,7 +421,7 @@
 </template>
 
 <script>
-import { homeMixin } from './snippets/home'
+import { homeMixin } from './../snippets/home'
 export default {
   mixins: [homeMixin]
 }
