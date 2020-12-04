@@ -3,8 +3,6 @@
   --border: var(--black);
   --items-background: var(--gray-light);
 
-  @include component-colors;
-
   &-container {
     width: 200px;
     background-color: var(--white);

@@ -2,7 +2,7 @@
 }
 
 .doc-section-title {
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   color: var(--black);
 
   a {
@@ -18,24 +18,12 @@ p {
   color: var(--black);
 }
 
-.helper {
-  display: block;
-  color: var(--black);
-  margin: 2rem 0 0 0;
-}
-
 .example {
   display: block;
   color: var(--black);
   margin: 2rem 0 0 0;
 }
 
-.helpers-container {
-  margin: 1.5rem 0 0 0;
-}
-.helpers-container .helper {
-  margin: 0.5rem 0 0 0;
-}
 .inline-property {
   font-weight: 600;
   background-color: var(--pink-light);
@@ -76,14 +64,6 @@ p {
     border: 1px solid var(--gray-light);
   }
 
-  code {
-    font-family: 'Fira Code', monospace;
-    color: var(--blue-dark);
-    background: var(--gray-light);
-    padding: 3px 5px;
-    border-radius: 2px;
-  }
-
   td {
     font-size: 0.9rem;
 
@@ -108,5 +88,69 @@ p {
       border-radius: var(--border-radius);
       margin-right: 10px;
     }
+  }
+}
+
+table code,
+.tag-property,
+.tag-class {
+  font-family: 'Fira Code', monospace;
+  border-radius: var(--border-radius);
+  background-color: var(--yellow);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.tag-property,
+.tag-class {
+  &:hover,
+  &:target {
+    box-shadow: inset 0 0 0 2px #000;
+  }
+}
+
+table {
+  code,
+  .tag-property,
+  .tag-class {
+    background-color: var(--gray-light);
+    color: var(--blue-dark);
+    padding: 3px 5px;
+  }
+}
+
+.tag-property,
+.tag-class {
+  padding: 8px 6px 6px 6px;
+  &:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+    font-weight: 500;
+  }
+}
+
+h3 + .tag-property,
+h3 + .tag-class,
+h3 + .modifiers-container {
+  margin-top: 1.2rem;
+}
+
+.modifiers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 1rem 0 0 0;
+
+  & > *:not(:first-child) {
+    margin-top: 6px;
+  }
+}
+
+.content-wrapper {
+  h4 {
+    margin-top: 1.5rem;
   }
 }

@@ -1,29 +1,7 @@
 .img {
-  --border: var(--black);
-  --back-bg: var(--gray);
-  width: var(--size);
-  height: var(--size);
-  position: relative;
+  width: var(--img-width, 300px);
+  height: var(--img-height, 300px);
   border: 2px solid var(--border);
-  border-radius: var(--border-radius);
-  transition: var(--transition);
-  transform-style: preserve-3d;
-  transform-origin: center;
-  @include component-colors;
-
-  &::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    transition: inherit;
-    border-radius: inherit;
-    background-color: var(--back-bg);
-    border: 2px solid var(--border);
-  }
 
   img {
     position: absolute;

@@ -1,6 +1,12 @@
 .btn,
-.input-container,
-.input-container span,
+.checkbox,
+.checkbox span,
+.radio,
+.radio span,
+.input-text,
+.input-text span,
+.input-file,
+.input-file span,
 .accordion-container,
 .dropdown-menu,
 .slider,
@@ -23,7 +29,11 @@
 }
 
 .btn,
-.slider {
+.slider,
+.img,
+.card,
+.checkbox > span,
+.radio > span {
   --shadow-distance: inherit;
   --is-shadow-right: inherit;
   --is-shadow-top: inherit;
@@ -36,8 +46,10 @@
   margin-top: var(--shadow-distance);
   margin-left: var(--shadow-distance);
   position: relative;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transform-origin: center;
+  will-change: transform;
   box-shadow: 0 0 1px rgba(255, 255, 255, 0); // to avoid jagge
   border-radius: var(--border-radius);
   transition: var(--transition);
@@ -49,6 +61,7 @@
     // prettier-ignore
     transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right) * -1), calc(var(--shadow-distance) * var(--computed-shadow-top)), -0.1px);
     position: absolute;
+    z-index: 1;
     right: var(--reset-shadow-left); // should be 0 for left shadow
     top: var(--reset-shadow-bottom);
     left: var(--reset-shadow-right); // should be auto for left shadow
@@ -85,3 +98,5 @@
     }
   }
 }
+
+@include component-colors('.el');

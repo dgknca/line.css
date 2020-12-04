@@ -9,7 +9,6 @@
   position: relative;
   transform-style: preserve-3d;
   display: flex;
-  @include component-colors;
 
   &::before {
     content: attr(data-title);

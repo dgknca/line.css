@@ -1,7 +1,41 @@
 <template>
   <div class="content-wrapper">
-    <h3 id="global-custom-properties" class="size-4 fw-600 doc-section-title">
-      <a href="#global-custom-properties">#</a>Global Custom Properties
+    <h3 id="classes" class="size-4 fw-600 doc-section-title">
+      <a href="#classes">#</a>Global Classes
+    </h3>
+    <div class="doc-table">
+      <table>
+        <thead>
+          <th>Class</th>
+          <th style="width: 70%">Description</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="#no-shadow" class="tag-class">no-shadow</a>
+            </td>
+            <td>
+              Cancels shadow. Valid for all elements that have a shadow.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#shadow-right" class="tag-class">shadow-right</a>
+            </td>
+            <td>Turns the shadow to right.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#shadow-top" class="tag-class">shadow-top</a>
+            </td>
+            <td>Turns the shadow to top.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 id="custom-properties" class="size-4 fw-600 doc-section-title">
+      <a href="#custom-properties">#</a>Global Custom Properties
     </h3>
     <div class="doc-table">
       <table>
@@ -372,7 +406,9 @@
           </tr>
           <tr>
             <td>
-              <code style="white-space: nowrap;">--border-radius</code>
+              <a href="#--border-radius" class="tag-property"
+                >--border-radius</a
+              >
             </td>
             <td>
               <code>4px</code>
@@ -380,32 +416,36 @@
           </tr>
           <tr>
             <td>
-              <code style="white-space: nowrap;">--transition</code>
+              <a href="#--transition" class="tag-property">--transition</a>
             </td>
             <td>
               <code>0.15s cubic-bezier(0.64, 0.57, 0.67, 1.53)</code>
             </td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3 id="global-classes" class="size-4 fw-600 doc-section-title">
-      <a href="#global-classes">#</a>Global Classes
-    </h3>
-    <div class="doc-table">
-      <table>
-        <thead>
-          <th>Class</th>
-          <th style="width: 70%">Description</th>
-        </thead>
-        <tbody>
           <tr>
             <td>
-              <code style="white-space: nowrap;">no-shadow</code>
+              <a href="#--shadow-distance" class="tag-property"
+                >--shadow-distance</a
+              >
             </td>
             <td>
-              Cancels shadow. Valid for all elements that have a shadow.
+              <code>3px</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#--border" class="tag-property">--border</a>
+            </td>
+            <td>
+              <code>var(--black)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#--back-bg" class="tag-property">--back-bg</a>
+            </td>
+            <td>
+              <code>var(--gray)</code>
             </td>
           </tr>
         </tbody>
@@ -415,8 +455,39 @@
     <h3 id="examples" class="size-4 fw-600 doc-section-title">
       <a href="#examples">#</a>Examples
     </h3>
-    <a href="#no-shadow" id="no-shadow" class="helper size-5">No Shadow</a>
+    <div class="modifiers-container">
+      <a href="#no-shadow" id="no-shadow" class="tag-class">.no-shadow</a>
+    </div>
     <Snippet :_code="noShadow" />
+
+    <div class="modifiers-container">
+      <a href="#shadow-right" id="shadow-right" class="tag-property"
+        >.shadow-right</a
+      >
+    </div>
+    <Snippet :_code="rightShadow" />
+
+    <div class="modifiers-container">
+      <a href="#shadow-top" id="shadow-top" class="tag-property">.shadow-top</a>
+    </div>
+    <p>You can use together right and top classes like below.</p>
+    <Snippet :_code="topShadow" />
+
+    <div class="modifiers-container">
+      <a href="#--border-radius" id="--border-radius" class="tag-property"
+        >--border-radius</a
+      >
+      <a href="#--shadow-distance" id="--shadow-distance" class="tag-property"
+        >--shadow-distance</a
+      >
+    </div>
+    <Snippet :_code="borderRadiusShadowDistance" />
+
+    <div class="modifiers-container">
+      <a href="#--border" id="--border" class="tag-property">--border</a>
+      <a href="#--back-bg" id="--back-bg" class="tag-property">--back-bg</a>
+    </div>
+    <Snippet :_code="borderBackBg" />
   </div>
 </template>
 

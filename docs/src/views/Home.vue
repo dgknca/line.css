@@ -7,10 +7,10 @@
           customized via CSS variables.
         </h2>
         <div class="hero-btns">
-          <router-link to="/docs" class="btn btn-purple btn-l">
+          <router-link to="/docs" class="btn el-purple btn-l">
             <span class="btn-text">Download</span>
           </router-link>
-          <router-link to="/docs" class="btn btn-yellow btn-l no-shadow">
+          <router-link to="/docs" class="btn el-yellow btn-l no-shadow">
             <span class="btn-text">Go to docs</span>
           </router-link>
         </div>

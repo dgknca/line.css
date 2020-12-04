@@ -1,6 +1,6 @@
 <template>
   <div class="snippet">
-    <div class="preview-cnt" ref="previewWrp">
+    <div class="preview-cnt" ref="previewWrp" v-if="!onlyCode">
       <div ref="preview"></div>
     </div>
     <div
@@ -8,11 +8,11 @@
       :class="{ shrink: isEditorOverlayActive }"
       :style="{ maxHeight: editorShrinkSize + 'px' }"
     >
-      <div class="codemirror-btn" @click="runCode">Run</div>
+      <div class="codemirror-btn" @click="runCode" v-if="!onlyCode">Run</div>
       <codemirror
         ref="editor"
         v-model="code"
-        :options="cmOptionsHTML"
+        :options="onlyCode ? readOnlyOptions : optionsHTML"
         @ready="onCmReady"
       ></codemirror>
       <div
@@ -38,6 +38,10 @@ export default {
   props: {
     _code: {
       type: String
+    },
+    onlyCode: {
+      type: Boolean,
+      default: false
     }
   },
   components: {
@@ -63,10 +67,23 @@ export default {
     }
   },
   computed: {
-    cmOptionsHTML() {
+    optionsHTML() {
       return {
         ...this.defaultEditorSettings,
         mode: 'text/html'
+      }
+    },
+    optionsJS() {
+      return {
+        ...this.defaultEditorSettings,
+        mode: 'text/javascript'
+      }
+    },
+    readOnlyOptions() {
+      return {
+        ...this.defaultEditorSettings,
+        mode: 'text/html',
+        readOnly: true
       }
     }
   },
@@ -111,7 +128,7 @@ export default {
   display: flex;
 
   & > * {
-    width: 50%;
+    width: 100%;
   }
 }
 

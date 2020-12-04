@@ -4,12 +4,12 @@
     <p>
       A pure CSS slider, uses radio inputs. <strong>Note thats:</strong> the
       name attributes are should be same in a slider component, and the id's
-      should be unique.
+      should be unique in a page.
     </p>
     <Snippet :_code="slider" />
 
-    <h3 id="localCustomProperties" class="size-4 fw-600 doc-section-title">
-      <a href="#localCustomProperties">#</a>Local Custom Properties
+    <h3 id="custom-properties" class="size-4 fw-600 doc-section-title">
+      <a href="#custom-properties">#</a>Custom Properties
     </h3>
     <div class="doc-table">
       <table>
@@ -20,7 +20,7 @@
         <tbody>
           <tr>
             <td>
-              <code style="white-space: nowrap;">--slider-width</code>
+              <code>--slider-width</code>
             </td>
             <td>
               <code>300px</code>
@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td>
-              <code style="white-space: nowrap;">--slider-height</code>
+              <code>--slider-height</code>
             </td>
             <td>
               <code>300px</code>
@@ -36,7 +36,7 @@
           </tr>
           <tr>
             <td>
-              <code style="white-space: nowrap;">--slider-button-size</code>
+              <code>--slider-button-size</code>
             </td>
             <td>
               <code>50px</code>
@@ -45,7 +45,7 @@
         </tbody>
       </table>
     </div>
-    <span class="example size-5">An example using custom properties</span>
+    <h4 class="size-5">An example using custom properties</h4>
     <Snippet :_code="localCustomProperties" />
   </div>
 </template>

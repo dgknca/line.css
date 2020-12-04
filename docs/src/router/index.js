@@ -5,6 +5,8 @@ import GettingStarted from '@/components/GettingStarted.vue'
 
 import GlobalsDoc from '@/components/docs/GlobalsDoc.vue'
 import ButtonDoc from '@/components/docs/ButtonDoc.vue'
+import CheckboxDoc from '@/components/docs/CheckboxDoc.vue'
+import RadioDoc from '@/components/docs/RadioDoc.vue'
 import SliderDoc from '@/components/docs/SliderDoc.vue'
 
 Vue.use(VueRouter)
@@ -32,6 +34,14 @@ const routes = [
       {
         path: 'button',
         component: ButtonDoc
+      },
+      {
+        path: 'checkbox',
+        component: CheckboxDoc
+      },
+      {
+        path: 'radio',
+        component: RadioDoc
       },
       {
         path: 'slider',

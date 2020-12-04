@@ -4,16 +4,16 @@
       <div class="the-doc">
         <router-view></router-view>
       </div>
-      <ComponentList />
+      <List />
     </div>
   </div>
 </template>
 
 <script>
-import ComponentList from '@/components/ComponentList.vue'
+import List from '@/components/List.vue'
 export default {
   components: {
-    ComponentList
+    List
   },
   setup() {
     return {}

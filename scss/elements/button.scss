@@ -1,8 +1,5 @@
 .btn {
-  --border: var(--black);
-  --back-bg: var(--gray);
   --outline-width: 2px;
-  @include component-colors;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -12,20 +9,8 @@
   color: currentColor;
   text-decoration: none;
   line-height: 1;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
-
-  &#{&}-sm {
-    --shadow-distance: 2px;
-  }
-
-  &#{&}-md {
-    --shadow-distance: 3px;
-  }
-
-  &#{&}-l {
-    --shadow-distance: 4px;
-  }
 
   &.hover,
   &:hover,
@@ -48,18 +33,15 @@
   }
 
   &#{&}-sm {
-    padding: 6px 12px;
+    --shadow-distance: 2px;
+    padding: 0.4rem 0.8rem;
     font-size: 0.9rem;
   }
 
-  &#{&}-md {
-    padding: 12px 20px;
-    font-size: 1.1rem;
-  }
-
   &#{&}-l {
-    padding: 16px 32px;
-    font-size: 1.3rem;
+    --shadow-distance: 4px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
   }
 
   &.active:not([disabled]),
@@ -69,7 +51,37 @@
       var(--active-border-color, var(--back-bg));
   }
 
-  @include component-colors-for-disabled;
+  &[disabled] {
+    cursor: not-allowed;
+    --border: var(--gray);
+
+    &,
+    .btn-text {
+      color: var(--gray);
+    }
+
+    &.el-green {
+      --border: var(--green-light);
+    }
+    &.el-orange {
+      --border: var(--orange-light);
+    }
+    &.el-red {
+      --border: var(--red-light);
+    }
+    &.el-pink {
+      --border: var(--pink-light);
+    }
+    &.el-purple {
+      --border: var(--purple-light);
+    }
+    &.el-blue {
+      --border: var(--blue-light);
+    }
+    &.el-yellow {
+      --border: var(--yellow-light);
+    }
+  }
 
   &,
   .btn-text {
