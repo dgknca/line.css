@@ -271,7 +271,7 @@ label {
     margin: 0;
     outline: none;
     cursor: pointer;
-    vertical-align: top;
+    vertical-align: text-bottom;
   }
 
   & > input[type='radio'] {
@@ -279,8 +279,8 @@ label {
     // we've used radial gradient instead of border, because there was a antialising issue
     background: radial-gradient(
           circle at 50% 50%,
-          transparent 0 7px,
-          var(--border) 8px 10px
+          transparent 0 7.5px,
+          var(--border) 8.5px 10px
         )
         50% 50%/20px 20px no-repeat,
       #fff;
@@ -289,8 +289,8 @@ label {
       background: radial-gradient(
             circle at 50% 50%,
             var(--border) 0 5px,
-            transparent 6px 7px,
-            var(--border) 8px 10px
+            transparent 6px 7.5px,
+            var(--border) 8.5px 10px
           )
           50% 50%/20px 20px no-repeat,
         #fff;
@@ -319,8 +319,8 @@ label {
       background: radial-gradient(
             circle at 50% 50%,
             var(--border) 0 5px,
-            transparent 6px 7px,
-            var(--border) 8px 10px
+            transparent 6px 7.5px,
+            var(--border) 8.5px 10px
           )
           50% 50%/20px 20px no-repeat,
         #fff;
@@ -343,6 +343,7 @@ label {
 
   &[disabled] {
     --border: var(--gray);
+    color: var(--gray);
 
     &,
     & > input[disabled] {
@@ -373,12 +374,7 @@ label {
   }
 }
 
-.inputs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  & > *:not(:last-child) {
-    margin-right: 5px;
-  }
+.checkbox + .checkbox,
+.radio + .radio {
+  margin-left: 10px;
 }

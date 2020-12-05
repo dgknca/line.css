@@ -405,14 +405,14 @@ label {
     margin: 0;
     outline: none;
     cursor: pointer;
-    vertical-align: top; }
+    vertical-align: text-bottom; }
   .radio > input[type='radio'],
   .checkbox > input[type='radio'] {
     border-radius: 50%;
-    background: radial-gradient(circle at 50% 50%, transparent 0 7px, var(--border) 8px 10px) 50% 50%/20px 20px no-repeat, #fff; }
+    background: radial-gradient(circle at 50% 50%, transparent 0 7.5px, var(--border) 8.5px 10px) 50% 50%/20px 20px no-repeat, #fff; }
     .radio > input[type='radio']:checked,
     .checkbox > input[type='radio']:checked {
-      background: radial-gradient(circle at 50% 50%, var(--border) 0 5px, transparent 6px 7px, var(--border) 8px 10px) 50% 50%/20px 20px no-repeat, #fff; }
+      background: radial-gradient(circle at 50% 50%, var(--border) 0 5px, transparent 6px 7.5px, var(--border) 8.5px 10px) 50% 50%/20px 20px no-repeat, #fff; }
   .radio > input[type='checkbox'],
   .checkbox > input[type='checkbox'] {
     border: 2px solid var(--border);
@@ -431,7 +431,7 @@ label {
     .checkbox > input[type='radio']:focus:checked,
     .checkbox.focus > input[type='radio']:checked {
       box-shadow: 0 0 0 var(--outline-width) var(--active-border-color, var(--back-bg));
-      background: radial-gradient(circle at 50% 50%, var(--border) 0 5px, transparent 6px 7px, var(--border) 8px 10px) 50% 50%/20px 20px no-repeat, #fff; }
+      background: radial-gradient(circle at 50% 50%, var(--border) 0 5px, transparent 6px 7.5px, var(--border) 8.5px 10px) 50% 50%/20px 20px no-repeat, #fff; }
   .radio > input[type='checkbox']:focus,
   .radio.focus > input[type='checkbox'],
   .checkbox > input[type='checkbox']:focus,
@@ -445,7 +445,8 @@ label {
       background-color: var(--border); }
   .radio[disabled],
   .checkbox[disabled] {
-    --border: var(--gray); }
+    --border: var(--gray);
+    color: var(--gray); }
     .radio[disabled],
     .radio[disabled] > input[disabled],
     .checkbox[disabled],
@@ -473,12 +474,9 @@ label {
     .checkbox[disabled].el-yellow {
       --border: var(--yellow-light); }
 
-.inputs {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .inputs > *:not(:last-child) {
-    margin-right: 5px; }
+.checkbox + .checkbox,
+.radio + .radio {
+  margin-left: 10px; }
 
 .progress {
   --border: var(--gray-dark);

@@ -32,82 +32,50 @@
         </ul>
       </li>
       <li>
-        <router-link
-          to="/docs/button"
-          class="size-6 fw-600 navigation-link link link-pink"
-          active-class="active"
-        >
-          <span>Button</span>
-        </router-link>
+        <a class="size-6 fw-600 navigation-link">Elements</a>
         <ul class="inner-list">
           <li>
-            <a href="#sizes">Sizes</a>
+            <router-link
+              to="/docs/elements/button"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Button</span>
+            </router-link>
           </li>
           <li>
-            <a href="#colors">Colors</a>
+            <router-link
+              to="/docs/elements/checkbox"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Checkbox</span>
+            </router-link>
           </li>
           <li>
-            <a href="#states">States</a>
-          </li>
-          <li>
-            <a href="#classes">Classes</a>
-          </li>
-          <li>
-            <a href="#custom-properties">Custom Properties</a>
-          </li>
-          <li>
-            <a href="#examples">Examples</a>
+            <router-link
+              to="/docs/elements/radio"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Radio</span>
+            </router-link>
           </li>
         </ul>
       </li>
       <li>
-        <router-link
-          to="/docs/checkbox"
-          class="size-6 fw-600 navigation-link link link-pink"
-          active-class="active"
-        >
-          <span>Checkbox</span>
-        </router-link>
+        <a class="size-6 fw-600 navigation-link">Components</a>
         <ul class="inner-list">
           <li>
-            <a href="#sizes">Sizes</a>
-          </li>
-          <li>
-            <a href="#colors">Colors</a>
-          </li>
-          <li>
-            <a href="#states">States</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <router-link
-          to="/docs/radio"
-          class="size-6 fw-600 navigation-link link link-pink"
-          active-class="active"
-        >
-          <span>Radio</span>
-        </router-link>
-        <ul class="inner-list">
-          <li>
-            <a href="#sizes">Sizes</a>
-          </li>
-          <li>
-            <a href="#colors">Colors</a>
-          </li>
-          <li>
-            <a href="#states">States</a>
+            <router-link
+              to="/docs/components/slider"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Slider</span>
+            </router-link>
           </li>
         </ul>
-      </li>
-      <li>
-        <router-link
-          to="/docs/slider"
-          class="size-6 fw-600 navigation-link link link-pink"
-          active-class="active"
-        >
-          <span>Slider</span>
-        </router-link>
       </li>
     </ul>
   </div>
@@ -145,17 +113,11 @@ export default {}
 
 .navigation-link {
   & + .inner-list {
-    display: none;
-
     a {
       color: var(--black);
       font-size: 0.8rem;
       padding: 0.4rem 0;
     }
-  }
-
-  &.active + .inner-list {
-    display: block;
   }
 }
 </style>

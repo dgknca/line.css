@@ -32,19 +32,19 @@ const routes = [
         component: GlobalsDoc
       },
       {
-        path: 'button',
+        path: 'elements/button',
         component: ButtonDoc
       },
       {
-        path: 'checkbox',
+        path: 'elements/checkbox',
         component: CheckboxDoc
       },
       {
-        path: 'radio',
+        path: 'elements/radio',
         component: RadioDoc
       },
       {
-        path: 'slider',
+        path: 'components/slider',
         component: SliderDoc
       }
     ]
