@@ -1,13 +1,13 @@
 .accordion {
-  --back-bg: var(--gray);
-  --border: var(--black);
+  --shadow-bg: var(--gray);
+  --border-color: var(--black);
   --items-background: var(--gray-light);
 
   &-container {
     width: 200px;
     background-color: var(--white);
     border-radius: var(--border-radius);
-    border: 2px solid var(--border);
+    border: 2px solid var(--border-color);
     position: relative;
     transition: var(--transition);
     transform: translate3d(3px, -3px, 0);
@@ -23,8 +23,8 @@
       height: 100%;
       border-radius: inherit;
       transition: inherit;
-      background-color: var(--back-bg);
-      border: 2px solid var(--border);
+      background-color: var(--shadow-bg);
+      border: 2px solid var(--border-color);
       transform: translate3d(-3px, 3px, -0.1px);
     }
 

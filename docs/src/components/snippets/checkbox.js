@@ -4,73 +4,73 @@ const mixin = {
       defaultCheckbox: `<label class="checkbox">
   <input type="checkbox"> Remember me
 </label>`,
-      colors: `<label class="checkbox el-green">
+      colors: `<label class="checkbox green">
   <input type="checkbox">
 </label>
-<label class="checkbox el-orange">
+<label class="checkbox orange">
   <input type="checkbox">
 </label>
-<label class="checkbox el-red">
+<label class="checkbox red">
   <input type="checkbox">
 </label>
-<label class="checkbox el-pink">
+<label class="checkbox pink">
   <input type="checkbox">
 </label>
-<label class="checkbox el-purple">
+<label class="checkbox purple">
   <input type="checkbox">
 </label>
-<label class="checkbox el-yellow">
+<label class="checkbox yellow">
   <input type="checkbox">
 </label>
-<label class="checkbox el-blue">
+<label class="checkbox blue">
   <input type="checkbox">
 </label>`,
       focus: `<label class="checkbox focus">
   <input type="checkbox">
 </label>
-<label class="checkbox focus el-green">
+<label class="checkbox focus green">
   <input type="checkbox">
 </label>
-<label class="checkbox focus el-orange">
+<label class="checkbox focus orange">
   <input type="checkbox">
 </label>
-<label class="checkbox focus el-red">
+<label class="checkbox focus red">
   <input type="checkbox">
 </label>
-<label class="checkbox focus el-pink">
+<label class="checkbox focus pink">
   <input type="checkbox">
 </label>
-<label class="checkbox focus el-purple">
+<label class="checkbox focus purple">
   <input type="checkbox">
 </label>
-<label class="checkbox focus el-yellow">
+<label class="checkbox focus yellow">
   <input type="checkbox">
 </label>
-<label class="checkbox focus el-blue">
+<label class="checkbox focus blue">
   <input type="checkbox">
 </label>`,
       disabled: `<label class="checkbox" disabled>
   <input type="checkbox" disabled> Disabled checkbox
 </label>
-<label class="checkbox el-green" disabled>
+<label class="checkbox green" disabled>
   <input type="checkbox" disabled>
 </label>
-<label class="checkbox el-orange" disabled>
+<label class="checkbox orange" disabled>
   <input type="checkbox" disabled>
 </label>
-<label class="checkbox el-red" disabled>
+<label class="checkbox red" disabled>
   <input type="checkbox" disabled>
 </label>
-<label class="checkbox el-pink" disabled>
+<label class="checkbox pink" disabled>
   <input type="checkbox" disabled>
 </label>
-<label class="checkbox el-purple" disabled>
+<label class="checkbox purple" disabled>
   <input type="checkbox" disabled>
 </label>
-<label class="checkbox el-yellow" disabled>
+<label class="checkbox yellow" disabled>
   <input type="checkbox" disabled>
 </label>
-<label class="checkbox el-blue" disabled>
+<label class="checkbox blue" disabled>
   <input type="checkbox" disabled>
 </label>`
     }

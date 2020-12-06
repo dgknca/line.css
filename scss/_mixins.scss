@@ -1,54 +1,23 @@
-@mixin component-colors($el: &) {
-  &#{$el}-green {
-    --back-bg: var(--green);
-    --border: var(--green-dark);
-  }
-  &#{$el}-orange {
-    --back-bg: var(--orange);
-    --border: var(--orange-dark);
-  }
-  &#{$el}-red {
-    --back-bg: var(--red);
-    --border: var(--red-dark);
-  }
-  &#{$el}-pink {
-    --back-bg: var(--pink);
-    --border: var(--pink-dark);
-  }
-  &#{$el}-purple {
-    --back-bg: var(--purple);
-    --border: var(--purple-dark);
-  }
-  &#{$el}-blue {
-    --back-bg: var(--blue);
-    --border: var(--blue-dark);
-  }
-  &#{$el}-yellow {
-    --back-bg: var(--yellow);
-    --border: var(--yellow-dark);
-  }
-}
-
 @mixin component-colors-only-border($el: &) {
   &#{$el}-green {
-    --border: var(--green-dark);
+    --border-color: var(--green-dark);
   }
   &#{$el}-orange {
-    --border: var(--orange-dark);
+    --border-color: var(--orange-dark);
   }
   &#{$el}-red {
-    --border: var(--red-dark);
+    --border-color: var(--red-dark);
   }
   &#{$el}-pink {
-    --border: var(--pink-dark);
+    --border-color: var(--pink-dark);
   }
   &#{$el}-purple {
-    --border: var(--purple-dark);
+    --border-color: var(--purple-dark);
   }
   &#{$el}-blue {
-    --border: var(--blue-dark);
+    --border-color: var(--blue-dark);
   }
   &#{$el}-yellow {
-    --border: var(--yellow-dark);
+    --border-color: var(--yellow-dark);
   }
 }

@@ -1,7 +1,10 @@
 <template>
   <div class="snippet">
     <div class="preview-cnt" ref="previewWrp" v-if="!onlyCode">
-      <div ref="preview"></div>
+      <div
+        ref="preview"
+        :style="{ display: cancelFlex ? 'block' : 'flex' }"
+      ></div>
     </div>
     <div
       class="codemirror-wrp"
@@ -40,6 +43,10 @@ export default {
       type: String
     },
     onlyCode: {
+      type: Boolean,
+      default: false
+    },
+    cancelFlex: {
       type: Boolean,
       default: false
     }
@@ -142,7 +149,6 @@ export default {
   & > div {
     width: 100%;
     height: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
   }
@@ -158,7 +164,7 @@ export default {
 
   &.shrink {
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
   }
 }
 
@@ -200,8 +206,7 @@ export default {
   display: none;
   user-select: none;
   cursor: pointer;
-  border: 2px solid #000;
-  border-radius: 4px;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
 
   &.active {
     display: flex;

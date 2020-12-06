@@ -1,7 +1,7 @@
 .img {
   width: var(--img-width, 300px);
   height: var(--img-height, 300px);
-  border: 2px solid var(--border);
+  border: 2px solid var(--border-color);
 
   img {
     position: absolute;

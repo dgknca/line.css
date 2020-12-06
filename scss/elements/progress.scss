@@ -1,7 +1,7 @@
 .progress {
-  --border: var(--gray-dark);
+  --border-color: var(--gray-dark);
   background-color: var(--white);
-  border: 2px solid var(--border);
+  border: 2px solid var(--border-color);
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -15,7 +15,7 @@
     height: 100%;
     width: calc(var(--progress) * 1%);
     transition: 0.3s linear;
-    background-color: var(--border);
+    background-color: var(--border-color);
   }
 
   &#{&}-sm {

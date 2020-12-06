@@ -31,8 +31,8 @@
     width: 100%;
     transform-style: preserve-3d;
     transform-origin: center;
-    --back-bg: var(--gray);
-    --border: var(--black);
+    --shadow-bg: var(--gray);
+    --border-color: var(--black);
 
     &::before {
       content: '';
@@ -44,8 +44,8 @@
       border-radius: inherit;
       transition: inherit;
       border-radius: inherit;
-      background-color: var(--back-bg);
-      border: 2px solid var(--border);
+      background-color: var(--shadow-bg);
+      border: 2px solid var(--border-color);
       transform: translate3d(-3px, 3px, -0.1px);
     }
 

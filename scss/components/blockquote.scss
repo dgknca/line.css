@@ -1,8 +1,9 @@
 .blockquote {
-  --border: var(--black);
-  --back-bg: var(--gray);
+  quotes: none;
+  --border-color: var(--black);
+  --shadow-bg: var(--gray);
   border-radius: var(--border-radius);
-  border: 2px solid var(--border);
+  border: 2px solid var(--border-color);
   background-color: var(--white);
   padding: 20px;
   line-height: 1.5;
@@ -26,8 +27,8 @@
     border-radius: inherit;
     transition: inherit;
     border-radius: inherit;
-    background-color: var(--back-bg);
-    border: 2px solid var(--border);
+    background-color: var(--shadow-bg);
+    border: 2px solid var(--border-color);
   }
 
   &::after {

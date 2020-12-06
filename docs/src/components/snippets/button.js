@@ -7,76 +7,86 @@ const mixin = {
   <button class="btn btn-l">Large</button>
 </div>`,
       colors: `<div class="buttons">
-  <a href="#0" class="btn">Default</a>
-  <a href="#0" class="btn el-green">Green</a>
-  <a href="#0" class="btn el-orange">Orange</a>
-  <a href="#0" class="btn el-red">Red</a>
-  <a href="#0" class="btn el-pink">Pink</a>
-  <a href="#0" class="btn el-purple">Purple</a>
-  <a href="#0" class="btn el-yellow">Yellow</a>
-  <a href="#0" class="btn el-blue">Blue</a>
+  <button class="btn">Default</button>
+  <button class="btn green">Green</button>
+  <button class="btn orange">Orange</button>
+  <button class="btn red">Red</button>
+  <button class="btn pink">Pink</button>
+  <button class="btn purple">Purple</button>
+  <button class="btn yellow">Yellow</button>
+  <button class="btn blue">Blue</button>
 </div>`,
       hover: `<div class="buttons">
-  <a href="#0" class="btn hover">Button</a>
-  <a href="#0" class="btn hover el-green">Button</a>
-  <a href="#0" class="btn hover el-orange">Button</a>
-  <a href="#0" class="btn hover el-red">Button</a>
-  <a href="#0" class="btn hover el-pink">Button</a>
-  <a href="#0" class="btn hover el-purple">Button</a>
-  <a href="#0" class="btn hover el-blue">Button</a>
-  <a href="#0" class="btn hover el-yellow">Button</a>
+  <button class="btn hover">Button</button>
+  <button class="btn hover green">Button</button>
+  <button class="btn hover orange">Button</button>
+  <button class="btn hover red">Button</button>
+  <button class="btn hover pink">Button</button>
+  <button class="btn hover purple">Button</button>
+  <button class="btn hover blue">Button</button>
+  <button class="btn hover yellow">Button</button>
 </div>`,
       active: `<div class="buttons">
-  <a href="#0" class="btn active">Button</a>
-  <a href="#0" class="btn active el-green">Button</a>
-  <a href="#0" class="btn active el-orange">Button</a>
-  <a href="#0" class="btn active el-red">Button</a>
-  <a href="#0" class="btn active el-pink">Button</a>
-  <a href="#0" class="btn active el-purple">Button</a>
-  <a href="#0" class="btn active el-blue">Button</a>
-  <a href="#0" class="btn active el-yellow">Button</a>
+  <button class="btn active">Button</button>
+  <button class="btn active green">Button</button>
+  <button class="btn active orange">Button</button>
+  <button class="btn active red">Button</button>
+  <button class="btn active pink">Button</button>
+  <button class="btn active purple">Button</button>
+  <button class="btn active blue">Button</button>
+  <button class="btn active yellow">Button</button>
 </div>`,
       loading: `<div class="buttons">
-  <a href="#0" class="btn btn-loading el-green">Button</a>
-  <a href="#0" class="btn btn-loading el-orange">Button</a>
-  <a href="#0" class="btn btn-loading el-red">Button</a>
-  <a href="#0" class="btn btn-loading el-pink">Button</a>
-  <a href="#0" class="btn btn-loading el-purple">Button</a>
-  <a href="#0" class="btn btn-loading el-blue">Button</a>
-  <a href="#0" class="btn btn-loading el-yellow">Button</a>
+  <button class="btn btn-loading green">Button</button>
+  <button class="btn btn-loading orange">Button</button>
+  <button class="btn btn-loading red">Button</button>
+  <button class="btn btn-loading pink">Button</button>
+  <button class="btn btn-loading purple">Button</button>
+  <button class="btn btn-loading blue">Button</button>
+  <button class="btn btn-loading yellow">Button</button>
 </div>`,
       disabled: `<div class="buttons">
   <button disabled class="btn">Button</button>
-  <button disabled class="btn el-green">Button</button>
-  <button disabled class="btn el-orange">Button</button>
-  <button disabled class="btn el-red">Button</button>
-  <button disabled class="btn el-pink">Button</button>
-  <button disabled class="btn el-purple">Button</button>
-  <button disabled class="btn el-blue">Button</button>
-  <button disabled class="btn el-yellow">Button</button>
+  <button disabled class="btn green">Button</button>
+  <button disabled class="btn orange">Button</button>
+  <button disabled class="btn red">Button</button>
+  <button disabled class="btn pink">Button</button>
+  <button disabled class="btn purple">Button</button>
+  <button disabled class="btn blue">Button</button>
+  <button disabled class="btn yellow">Button</button>
 </div>`,
       fullWidth: `<button class="btn btn-l btn-full">
-  Button Full Width
+  Full Width
 </button>`,
-      activeBorderColor: `<button
-  class="btn active"
-  style="--active-border-color: blue">
-  Button
-</button>`,
+      noShadow: `<button class="btn no-shadow">No Shadow</button>`,
+      rightShadow: `<button class="btn green shadow-right">Shadow Right</button>`,
+      topShadow: `<button class="btn pink shadow-top shadow-right">Shadow Top Right</button>`,
       withIcon: `<div class="buttons">
   <button type="button" class="btn btn-sm">
     <span class="btn-icon btn-icon-left">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
     </span>
-    <span class="btn-text">Left</span>
+    Left
   </button>
   <button type="button" class="btn btn-sm">
-    <span class="btn-text">Right</span>
+    Right
     <span class="btn-icon btn-icon-right">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
     </span>
   </button>
-</div>`
+</div>`,
+      play: `<style>
+.my-custom-btn {
+  --focus-box-shadow-width: 5px;
+  --focus-box-shadow-color: yellow;
+  --shadow-bg: lightblue;
+  --border-color: orangered;
+  --border-radius: 6px;
+  --shadow-distance: 6px;
+}
+</style>
+
+<button class="btn my-custom-btn">Button</button>`
     }
   }
 }

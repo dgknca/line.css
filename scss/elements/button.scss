@@ -1,10 +1,11 @@
 .btn {
-  --outline-width: 2px;
+  --focus-box-shadow-width: 2px;
+  outline: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background-color: var(--white);
-  border: 2px solid var(--border);
+  border: 2px solid var(--border-color);
   cursor: pointer;
   color: currentColor;
   text-decoration: none;
@@ -47,45 +48,36 @@
   &.active:not([disabled]),
   &:active:not([disabled]) {
     transition: none;
-    box-shadow: 0 0 0 var(--outline-width)
-      var(--active-border-color, var(--back-bg));
+    box-shadow: 0 0 0 var(--focus-box-shadow-width)
+      var(--focus-box-shadow-color, var(--shadow-bg));
   }
 
   &[disabled] {
+    color: var(--gray);
     cursor: not-allowed;
-    --border: var(--gray);
+    --border-color: var(--gray);
 
-    &,
-    .btn-text {
-      color: var(--gray);
+    &.green {
+      --border-color: var(--green-light);
     }
-
-    &.el-green {
-      --border: var(--green-light);
+    &.orange {
+      --border-color: var(--orange-light);
     }
-    &.el-orange {
-      --border: var(--orange-light);
+    &.red {
+      --border-color: var(--red-light);
     }
-    &.el-red {
-      --border: var(--red-light);
+    &.pink {
+      --border-color: var(--pink-light);
     }
-    &.el-pink {
-      --border: var(--pink-light);
+    &.purple {
+      --border-color: var(--purple-light);
     }
-    &.el-purple {
-      --border: var(--purple-light);
+    &.blue {
+      --border-color: var(--blue-light);
     }
-    &.el-blue {
-      --border: var(--blue-light);
+    &.yellow {
+      --border-color: var(--yellow-light);
     }
-    &.el-yellow {
-      --border: var(--yellow-light);
-    }
-  }
-
-  &,
-  .btn-text {
-    font-size: 1em;
   }
 
   &-icon {

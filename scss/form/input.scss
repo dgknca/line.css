@@ -1,0 +1,402 @@
+/*
+    Table of Contents
+    -----------------
+    1. Text
+    2. Checkbox
+    3. Radio
+    4. File
+    5. Range
+*/
+
+.field:not(:first-child) {
+  margin-top: 0.75rem;
+}
+
+.control {
+  position: relative;
+}
+
+/*------------------------------------*\
+	# Text
+\*------------------------------------*/
+
+.textarea,
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--border-color);
+  font-size: 1rem;
+  outline: none;
+  color: var(--text-color);
+
+  &.focus,
+  &:focus {
+    box-shadow: 0 0 0 var(--focus-box-shadow-width)
+      var(--focus-box-shadow-color);
+  }
+
+  & + & {
+    margin-top: 0.75rem;
+  }
+
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+
+  &.has-icon-left {
+    padding-left: calc(var(--input-height));
+  }
+  &.has-icon-right {
+    padding-right: calc(var(--input-height));
+  }
+
+  & ~ .icon-left,
+  & ~ .icon-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--input-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+  }
+  &:focus ~ .icon-left,
+  &:focus ~ .icon-right {
+    opacity: 1;
+  }
+  & ~ .icon-left {
+    left: var(--border-width);
+  }
+  & ~ .icon-right {
+    right: var(--border-width);
+  }
+}
+
+.input {
+  height: var(--input-height);
+}
+
+.textarea {
+  min-height: 100px;
+}
+
+/*------------------------------------*\
+  # Checkbox
+  # Radio
+\*------------------------------------*/
+
+.radio,
+.checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: baseline;
+
+  & > input[type='radio'],
+  & > input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    outline: none;
+    cursor: pointer;
+    vertical-align: text-bottom;
+  }
+
+  & > input[type='radio'] {
+    border-radius: 50%;
+    // we've used radial gradient instead of border, because there was a antialising issue
+    background: radial-gradient(
+          circle at 50% 50%,
+          transparent 0 7.5px,
+          var(--border-color) 8.5px 10px
+        )
+        50% 50%/20px 20px no-repeat,
+      #fff;
+
+    &:checked {
+      background: radial-gradient(
+            circle at 50% 50%,
+            var(--border-color) 0 5px,
+            transparent 6px 7.5px,
+            var(--border-color) 8.5px 10px
+          )
+          50% 50%/20px 20px no-repeat,
+        #fff;
+    }
+  }
+
+  & > input[type='checkbox'] {
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+
+    &:checked {
+      box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #fff,
+        inset 2px -2px 0 #fff, inset -2px 2px 0 #fff;
+      background-color: var(--border-color);
+    }
+  }
+
+  & > input[type='radio']:focus,
+  &.focus > input[type='radio'] {
+    box-shadow: 0 0 0 var(--focus-box-shadow-width)
+      var(--focus-box-shadow-color);
+
+    &:checked {
+      box-shadow: 0 0 0 var(--focus-box-shadow-width)
+        var(--focus-box-shadow-color);
+      background: radial-gradient(
+            circle at 50% 50%,
+            var(--border-color) 0 5px,
+            transparent 6px 7.5px,
+            var(--border-color) 8.5px 10px
+          )
+          50% 50%/20px 20px no-repeat,
+        #fff;
+    }
+  }
+
+  & > input[type='checkbox']:focus,
+  &.focus > input[type='checkbox'] {
+    box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #fff,
+      inset 2px -2px 0 #fff, inset -2px 2px 0 #fff,
+      0 0 0 var(--focus-box-shadow-width) var(--focus-box-shadow-color);
+
+    &:checked {
+      box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #fff,
+        inset 2px -2px 0 #fff, inset -2px 2px 0 #fff,
+        0 0 0 var(--focus-box-shadow-width) var(--focus-box-shadow-color);
+      background-color: var(--border-color);
+    }
+  }
+}
+
+.input,
+.radio,
+.checkbox {
+  line-height: 1;
+  &[disabled] {
+    --border-color: var(--disabled-border-color, var(--gray));
+    color: var(--gray);
+
+    &,
+    & > input[disabled] {
+      cursor: not-allowed;
+    }
+
+    &.green {
+      --border-color: var(--green-light);
+    }
+    &.orange {
+      --border-color: var(--orange-light);
+    }
+    &.red {
+      --border-color: var(--red-light);
+    }
+    &.pink {
+      --border-color: var(--pink-light);
+    }
+    &.purple {
+      --border-color: var(--purple-light);
+    }
+    &.blue {
+      --border-color: var(--blue-light);
+    }
+    &.yellow {
+      --border-color: var(--yellow-light);
+    }
+  }
+}
+
+.checkbox + .checkbox,
+.radio + .radio {
+  margin-left: 10px;
+}
+
+/*------------------------------------*\
+  # File
+\*------------------------------------*/
+
+.input-file {
+  position: relative;
+
+  &-drag-drop {
+    width: 100%;
+    height: 100px;
+  }
+
+  input[type='file'] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    z-index: 2;
+
+    &::-webkit-file-upload-button {
+      display: none;
+    }
+  }
+
+  .btn-file {
+    margin-top: 0;
+    margin-left: 0;
+    transform: translateY(0);
+
+    &:hover {
+      transform: translateY(0);
+    }
+    &::before {
+      content: none;
+    }
+  }
+
+  .file-dummy {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--border-radius);
+    background-color: var(--drag-drop-bg, var(--gray-light));
+    transition: var(--transition-linear);
+  }
+
+  .file-dummy,
+  .btn-file {
+    .file-success {
+      display: none;
+    }
+  }
+
+  &:hover {
+    .file-dummy {
+      background-color: var(--hover-drag-drop-bg, var(--gray));
+    }
+  }
+
+  input[type='file']:valid + .file-dummy {
+    background-color: var(--success-drag-drop-bg, var(--green-light));
+    --border-color: var(--success-drag-drop-border-color, var(--green-dark));
+  }
+  input[type='file']:valid + .btn-file {
+    --border-color: var(--success-drag-drop-border-color, var(--green-dark));
+  }
+
+  input[type='file']:valid + .file-dummy,
+  input[type='file']:valid + .btn-file {
+    .file-success {
+      display: inline-block;
+      color: var(--success-text-color, var(--text-color));
+    }
+    .file-default {
+      display: none;
+    }
+  }
+}
+
+/*------------------------------------*\
+  # Range
+\*------------------------------------*/
+
+@mixin track {
+  cursor: var(--cursor);
+  height: var(--track-height);
+  width: var(--track-width);
+}
+
+@mixin thumb {
+  background: var(--thumb-color);
+  border: var(--thumb-border-width) solid var(--thumb-border-color);
+  border-radius: var(--thumb-radius);
+  box-sizing: border-box;
+  cursor: var(--cursor);
+  height: var(--thumb-height);
+  width: var(--thumb-width);
+}
+
+[type='range'] {
+  --track-color: var(--white);
+  --disabled-track-color: var(--white);
+  --thumb-color: var(--white);
+  --disabled-thumb-color: var(--white);
+  --track-color--focus: var(--gray-light);
+  --thumb-radius: 50%;
+  --thumb-height: 24px;
+  --thumb-width: 24px;
+  --thumb-border-width: 2px;
+  --thumb-border-color: var(--black);
+  --disabled-thumb-border-color: var(--gray);
+  --track-border-width: 2px;
+  --track-border-color: var(--black);
+  --disabled-track-border-color: var(--gray);
+  --track-width: 100%;
+  --track-height: 8px;
+  --track-radius: 5px;
+  --cursor: defualt;
+  -webkit-appearance: none;
+  background: transparent;
+  margin: calc(var(--thumb-height) / 2) 0;
+  width: var(--track-width);
+
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
+  &:focus {
+    outline: 0;
+
+    &::-webkit-slider-runnable-track {
+      background: var(--track-color--focus);
+    }
+  }
+
+  &::-webkit-slider-runnable-track {
+    @include track;
+    background: var(--track-color);
+    border: var(--track-border-width) solid var(--track-border-color);
+    border-radius: var(--track-radius);
+  }
+
+  &::-webkit-slider-thumb {
+    @include thumb;
+    -webkit-appearance: none;
+    margin-top: calc(
+      (var(--track-border-width) * -2 + var(--track-height)) / 2 -
+        var(--thumb-height) / 2
+    );
+  }
+
+  &::-moz-range-track {
+    @include track;
+    background: var(--track-color);
+    border: var(--track-border-width) solid var(--track-border-color);
+    border-radius: var(--track-radius);
+    height: calc(var(--track-height) / 2);
+  }
+
+  &::-moz-range-thumb {
+    @include thumb;
+  }
+
+  &:disabled {
+    --track-color: var(--disabled-track-color);
+    --thumb-color: var(--disabled-thumb-color);
+    --thumb-border-color: var(--disabled-thumb-border-color);
+    --track-border-color: var(--disabled-track-border-color);
+    --cursor: not-allowed;
+  }
+}

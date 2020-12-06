@@ -18,22 +18,10 @@
   }
 }
 
-:root {
-  --shadow-distance: 3px;
-  --is-shadow-right: -1;
-  --is-shadow-top: -1;
-  --reset-shadow-right: auto;
-  --reset-shadow-left: 0;
-  --reset-shadow-top: auto;
-  --reset-shadow-bottom: 0;
-}
-
 .btn,
 .slider,
 .img,
-.card,
-.checkbox > span,
-.radio > span {
+.card {
   --shadow-distance: inherit;
   --is-shadow-right: inherit;
   --is-shadow-top: inherit;
@@ -70,8 +58,8 @@
     height: 100%;
     border-radius: inherit;
     transition: inherit;
-    background-color: var(--back-bg);
-    border: 2px solid var(--border);
+    background-color: var(--shadow-bg);
+    border: 2px solid var(--border-color);
   }
 
   &.shadow-right {
@@ -99,4 +87,38 @@
   }
 }
 
-@include component-colors('.el');
+.green {
+  --shadow-bg: var(--green);
+  --focus-box-shadow-color: var(--green);
+  --border-color: var(--green-dark);
+}
+.orange {
+  --shadow-bg: var(--orange);
+  --focus-box-shadow-color: var(--orange);
+  --border-color: var(--orange-dark);
+}
+.red {
+  --shadow-bg: var(--red);
+  --focus-box-shadow-color: var(--red);
+  --border-color: var(--red-dark);
+}
+.pink {
+  --shadow-bg: var(--pink);
+  --focus-box-shadow-color: var(--pink);
+  --border-color: var(--pink-dark);
+}
+.purple {
+  --shadow-bg: var(--purple);
+  --focus-box-shadow-color: var(--purple);
+  --border-color: var(--purple-dark);
+}
+.blue {
+  --shadow-bg: var(--blue);
+  --focus-box-shadow-color: var(--blue);
+  --border-color: var(--blue-dark);
+}
+.yellow {
+  --shadow-bg: var(--yellow);
+  --focus-box-shadow-color: var(--yellow);
+  --border-color: var(--yellow-dark);
+}

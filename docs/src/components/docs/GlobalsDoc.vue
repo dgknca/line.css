@@ -414,80 +414,9 @@
               <code>4px</code>
             </td>
           </tr>
-          <tr>
-            <td>
-              <a href="#--transition" class="tag-property">--transition</a>
-            </td>
-            <td>
-              <code>0.15s cubic-bezier(0.64, 0.57, 0.67, 1.53)</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#--shadow-distance" class="tag-property"
-                >--shadow-distance</a
-              >
-            </td>
-            <td>
-              <code>3px</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#--border" class="tag-property">--border</a>
-            </td>
-            <td>
-              <code>var(--black)</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="#--back-bg" class="tag-property">--back-bg</a>
-            </td>
-            <td>
-              <code>var(--gray)</code>
-            </td>
-          </tr>
         </tbody>
       </table>
     </div>
-
-    <h3 id="examples" class="size-4 fw-600 doc-section-title">
-      <a href="#examples">#</a>Examples
-    </h3>
-    <div class="modifiers-container">
-      <a href="#no-shadow" id="no-shadow" class="tag-class">.no-shadow</a>
-    </div>
-    <Snippet :_code="noShadow" />
-
-    <div class="modifiers-container">
-      <a href="#shadow-right" id="shadow-right" class="tag-property"
-        >.shadow-right</a
-      >
-    </div>
-    <Snippet :_code="rightShadow" />
-
-    <div class="modifiers-container">
-      <a href="#shadow-top" id="shadow-top" class="tag-property">.shadow-top</a>
-    </div>
-    <p>You can use together right and top classes like below.</p>
-    <Snippet :_code="topShadow" />
-
-    <div class="modifiers-container">
-      <a href="#--border-radius" id="--border-radius" class="tag-property"
-        >--border-radius</a
-      >
-      <a href="#--shadow-distance" id="--shadow-distance" class="tag-property"
-        >--shadow-distance</a
-      >
-    </div>
-    <Snippet :_code="borderRadiusShadowDistance" />
-
-    <div class="modifiers-container">
-      <a href="#--border" id="--border" class="tag-property">--border</a>
-      <a href="#--back-bg" id="--back-bg" class="tag-property">--back-bg</a>
-    </div>
-    <Snippet :_code="borderBackBg" />
   </div>
 </template>
 

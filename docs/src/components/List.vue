@@ -19,15 +19,72 @@
         >
           <span>Globals</span>
         </router-link>
+      </li>
+      <li>
+        <a class="size-6 fw-600 navigation-link">Form</a>
         <ul class="inner-list">
           <li>
-            <a href="#custom-properties">Custom Properties</a>
+            <router-link
+              to="/docs/form/input"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Input</span>
+            </router-link>
           </li>
           <li>
-            <a href="#classes">Classes</a>
+            <router-link
+              to="/docs/form/textarea"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Textarea</span>
+            </router-link>
           </li>
           <li>
-            <a href="#examples">Examples</a>
+            <router-link
+              to="/docs/form/checkbox"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Checkbox</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/form/radio"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Radio</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/form/file"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>File</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/form/range"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Range</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/form/select"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Select</span>
+            </router-link>
           </li>
         </ul>
       </li>
@@ -41,24 +98,6 @@
               active-class="active"
             >
               <span>Button</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/docs/elements/checkbox"
-              class="navigation-link link link-pink"
-              active-class="active"
-            >
-              <span>Checkbox</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/docs/elements/radio"
-              class="navigation-link link link-pink"
-              active-class="active"
-            >
-              <span>Radio</span>
             </router-link>
           </li>
         </ul>

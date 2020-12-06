@@ -1,6 +1,7 @@
 :root {
   --border-radius: 4px;
   --transition: 0.15s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  --transition-linear: 0.15s linear;
 
   // colors
   --black: #000;
@@ -37,6 +38,20 @@
     Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica,
     Arial, sans-serif;
 
-  --back-bg: var(--gray);
-  --border: var(--black);
+  --shadow-bg: var(--gray);
+  --focus-box-shadow-width: 2px;
+  --focus-box-shadow-color: var(--gray);
+
+  --border-color: var(--black);
+  --border-width: 2px;
+  --input-height: 2.5rem;
+  --placeholder-color: var(--gray);
+
+  --shadow-distance: 3px;
+  --is-shadow-right: -1;
+  --is-shadow-top: -1;
+  --reset-shadow-right: auto;
+  --reset-shadow-left: 0;
+  --reset-shadow-top: auto;
+  --reset-shadow-bottom: 0;
 }

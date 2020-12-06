@@ -7,73 +7,73 @@ const mixin = {
 <label class="radio">
   <input type="radio" name="answer"> No
 </label>`,
-      colors: `<label class="radio el-green">
+      colors: `<label class="radio green">
   <input type="radio" name="group2">
 </label>
-<label class="radio el-orange">
+<label class="radio orange">
   <input type="radio" name="group2">
 </label>
-<label class="radio el-red">
+<label class="radio red">
   <input type="radio" name="group2">
 </label>
-<label class="radio el-pink">
+<label class="radio pink">
   <input type="radio" name="group2">
 </label>
-<label class="radio el-purple">
+<label class="radio purple">
   <input type="radio" name="group2">
 </label>
-<label class="radio el-yellow">
+<label class="radio yellow">
   <input type="radio" name="group2">
 </label>
-<label class="radio el-blue">
+<label class="radio blue">
   <input type="radio" name="group2">
 </label>`,
       focus: `<label class="radio focus">
   <input type="radio" name="group3">
 </label>
-<label class="radio focus el-green">
+<label class="radio focus green">
   <input type="radio" name="group3">
 </label>
-<label class="radio focus el-orange">
+<label class="radio focus orange">
   <input type="radio" name="group3">
 </label>
-<label class="radio focus el-red">
+<label class="radio focus red">
   <input type="radio" name="group3">
 </label>
-<label class="radio focus el-pink">
+<label class="radio focus pink">
   <input type="radio" name="group3">
 </label>
-<label class="radio focus el-purple">
+<label class="radio focus purple">
   <input type="radio" name="group3">
 </label>
-<label class="radio focus el-yellow">
+<label class="radio focus yellow">
   <input type="radio" name="group3">
 </label>
-<label class="radio focus el-blue">
+<label class="radio focus blue">
   <input type="radio" name="group3">
 </label>`,
       disabled: `<label class="radio" disabled>
   <input type="radio" disabled> Disabled radio
 </label>
-<label class="radio el-green" disabled>
+<label class="radio green" disabled>
   <input type="radio" disabled>
 </label>
-<label class="radio el-orange" disabled>
+<label class="radio orange" disabled>
   <input type="radio" disabled>
 </label>
-<label class="radio el-red" disabled>
+<label class="radio red" disabled>
   <input type="radio" disabled>
 </label>
-<label class="radio el-pink" disabled>
+<label class="radio pink" disabled>
   <input type="radio" disabled>
 </label>
-<label class="radio el-purple" disabled>
+<label class="radio purple" disabled>
   <input type="radio" disabled>
 </label>
-<label class="radio el-yellow" disabled>
+<label class="radio yellow" disabled>
   <input type="radio" disabled>
 </label>
-<label class="radio el-blue" disabled>
+<label class="radio blue" disabled>
   <input type="radio" disabled>
 </label>`
     }
