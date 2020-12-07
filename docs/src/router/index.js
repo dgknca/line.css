@@ -13,6 +13,7 @@ import RangeDoc from '@/components/docs/RangeDoc.vue'
 import SelectDoc from '@/components/docs/SelectDoc.vue'
 import FileInputDoc from '@/components/docs/FileInputDoc.vue'
 import SliderDoc from '@/components/docs/SliderDoc.vue'
+import AccordionDoc from '@/components/docs/AccordionDoc.vue'
 
 Vue.use(VueRouter)
 
@@ -82,6 +83,11 @@ const routes = [
         path: 'components/slider',
         component: SliderDoc,
         meta: { title: 'Slider' }
+      },
+      {
+        path: 'components/accordion',
+        component: AccordionDoc,
+        meta: { title: 'Accordion' }
       }
     ]
   }

@@ -114,6 +114,15 @@
               <span>Slider</span>
             </router-link>
           </li>
+          <li>
+            <router-link
+              to="/docs/components/accordion"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Accordion</span>
+            </router-link>
+          </li>
         </ul>
       </li>
     </ul>
