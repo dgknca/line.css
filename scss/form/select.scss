@@ -11,4 +11,11 @@
   font: inherit;
   line-height: 1.3rem;
   color: var(--text-color);
+  outline: none;
+
+  &.focus,
+  &:focus {
+    box-shadow: 0 0 0 var(--focus-box-shadow-width)
+      var(--focus-box-shadow-color);
+  }
 }

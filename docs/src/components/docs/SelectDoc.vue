@@ -52,6 +52,22 @@
               <code>#000</code>
             </td>
           </tr>
+          <tr>
+            <td>
+              <code>--focus-box-shadow-width</code>
+            </td>
+            <td>
+              <code>2px</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--focus-box-shadow-color</code>
+            </td>
+            <td>
+              <code>var(--gray)</code>
+            </td>
+          </tr>
         </tbody>
         <thead>
           <th colspan="2">Locals</th>

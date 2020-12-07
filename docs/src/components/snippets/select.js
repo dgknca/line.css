@@ -15,7 +15,7 @@ const mixin = {
   }
 </style>
 
-<select class="select my-custom-select">
+<select class="select pink my-custom-select">
   <option>Line.css is...</option>
   <option>Pretty minimal</option>
   <option>So cute</option>
