@@ -21,7 +21,8 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
-    alias: '/home'
+    alias: '/home',
+    meta: { title: 'Line.css' }
   },
   {
     path: '/docs',
@@ -30,7 +31,8 @@ const routes = [
     children: [
       {
         path: '',
-        component: GettingStarted
+        component: GettingStarted,
+        meta: { title: 'Line.css' }
       },
       {
         path: 'globals',
@@ -38,39 +40,48 @@ const routes = [
       },
       {
         path: 'elements/button',
-        component: ButtonDoc
+        component: ButtonDoc,
+        meta: { title: 'Button' }
       },
       {
         path: 'form/input',
-        component: InputDoc
+        component: InputDoc,
+        meta: { title: 'Input' }
       },
       {
         path: 'form/textarea',
-        component: TextareaDoc
+        component: TextareaDoc,
+        meta: { title: 'Textarea' }
       },
       {
         path: 'form/checkbox',
-        component: CheckboxDoc
+        component: CheckboxDoc,
+        meta: { title: 'Checkbox' }
       },
       {
         path: 'form/radio',
-        component: RadioDoc
+        component: RadioDoc,
+        meta: { title: 'Radio' }
       },
       {
         path: 'form/file',
-        component: FileInputDoc
+        component: FileInputDoc,
+        meta: { title: 'File' }
       },
       {
         path: 'form/range',
-        component: RangeDoc
+        component: RangeDoc,
+        meta: { title: 'Range' }
       },
       {
         path: 'form/select',
-        component: SelectDoc
+        component: SelectDoc,
+        meta: { title: 'Select' }
       },
       {
         path: 'components/slider',
-        component: SliderDoc
+        component: SliderDoc,
+        meta: { title: 'Slider' }
       }
     ]
   }
@@ -83,6 +94,11 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title
+  next()
 })
 
 export default router

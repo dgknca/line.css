@@ -29,21 +29,32 @@
           <th>Name</th>
           <th>Default</th>
         </thead>
+        <thead>
+          <th colspan="2">Globals</th>
+        </thead>
         <tbody>
-          <tr>
-            <td>
-              <code>--border-radius</code>
-            </td>
-            <td>
-              <code>4px</code>
-            </td>
-          </tr>
           <tr>
             <td>
               <code>--border-color</code>
             </td>
             <td>
               <code>var(--black)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--disabled-border-color</code>
+            </td>
+            <td>
+              <code>var(--gray)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--border-radius</code>
+            </td>
+            <td>
+              <code>4px</code>
             </td>
           </tr>
           <tr>
@@ -60,14 +71,6 @@
             </td>
             <td>
               <code>2px</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--disabled-border-color</code>
-            </td>
-            <td>
-              <code>var(--gray)</code>
             </td>
           </tr>
         </tbody>

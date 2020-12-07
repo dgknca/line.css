@@ -26,7 +26,6 @@
   width: 100%;
   padding: 0.5rem 0.75rem;
   border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--border-color);
   font-size: 1rem;
   outline: none;
   color: var(--text-color);
@@ -99,7 +98,7 @@
   & > input[type='checkbox'] {
     width: 20px;
     height: 20px;
-    background-color: var(--white);
+    background-color: #fff;
     -webkit-appearance: none;
     appearance: none;
     margin: 0;
@@ -132,7 +131,7 @@
   }
 
   & > input[type='checkbox'] {
-    border: 2px solid var(--border-color);
+    border: var(--border-width) solid var(--border-color);
     border-radius: var(--border-radius);
 
     &:checked {
@@ -224,6 +223,7 @@
 
 .input-file {
   position: relative;
+  color: var(--text-color);
 
   &-drag-drop {
     width: 100%;
@@ -269,7 +269,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 2px dashed var(--border-color);
+    border: var(--border-width) dashed var(--border-color);
     border-radius: var(--border-radius);
     background-color: var(--drag-drop-bg, var(--gray-light));
     transition: var(--transition-linear);
@@ -328,12 +328,12 @@
   width: var(--thumb-width);
 }
 
-[type='range'] {
-  --track-color: var(--white);
-  --disabled-track-color: var(--white);
-  --thumb-color: var(--white);
-  --disabled-thumb-color: var(--white);
-  --track-color--focus: var(--gray-light);
+.range {
+  --track-color: #fff;
+  --disabled-track-color: #fff;
+  --thumb-color: #fff;
+  --disabled-thumb-color: #fff;
+  --focus-track-color: var(--gray-light);
   --thumb-radius: 50%;
   --thumb-height: 24px;
   --thumb-width: 24px;
@@ -360,7 +360,7 @@
     outline: 0;
 
     &::-webkit-slider-runnable-track {
-      background: var(--track-color--focus);
+      background: var(--focus-track-color);
     }
   }
 

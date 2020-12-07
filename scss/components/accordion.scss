@@ -5,7 +5,7 @@
 
   &-container {
     width: 200px;
-    background-color: var(--white);
+    background-color: #fff;
     border-radius: var(--border-radius);
     border: 2px solid var(--border-color);
     position: relative;
@@ -42,7 +42,7 @@
     user-select: none;
     display: flex;
     align-items: center;
-    background-color: var(--white);
+    background-color: #fff;
     border-radius: var(--border-radius);
     position: relative;
     z-index: 2;

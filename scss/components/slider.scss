@@ -1,10 +1,10 @@
 .slider {
-  --slider-width: 300px;
-  --slider-height: 300px;
   --slider-button-size: 50px;
-  width: var(--slider-width);
-  height: var(--slider-height);
-  border: 2px solid var(--black);
+  --slider-icon: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12L21 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 5L21 12L14 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  --slider-icon-size: 24px;
+  --slider-icon-bg: #fff;
+  width: var(--slider-width, 300px);
+  height: var(--slider-height, 300px);
   user-select: none;
 
   &-item {
@@ -57,7 +57,7 @@
     width: var(--slider-button-size);
     height: var(--slider-button-size);
     border-radius: 50%;
-    background: var(--white);
+    background: #fff;
     border: 2px solid var(--black);
     display: flex;
     align-items: center;
@@ -66,16 +66,17 @@
     cursor: pointer;
   }
 
+  &-prev,
+  &-next {
+    background: var(--slider-icon) 50% 50% / var(--slider-icon-size) no-repeat,
+      var(--slider-icon-bg);
+  }
+
   &-prev {
     left: calc(var(--slider-button-size) / 2 * -1);
-    background: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12L3 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 19L3 12L10 5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
-        50% 50%/24px 24px no-repeat,
-      var(--white);
+    transform: rotate(180deg);
   }
   &-next {
     right: calc(var(--slider-button-size) / 2 * -1);
-    background: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12L21 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 5L21 12L14 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
-        50% 50%/24px 24px no-repeat,
-      var(--white);
   }
 }

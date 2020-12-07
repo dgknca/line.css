@@ -16,15 +16,10 @@
           <th style="width:30%">Name</th>
           <th>Default</th>
         </thead>
+        <thead>
+          <th colspan="2">Globals</th>
+        </thead>
         <tbody>
-          <tr>
-            <td>
-              <code>--border-radius</code>
-            </td>
-            <td>
-              <code>4px</code>
-            </td>
-          </tr>
           <tr>
             <td>
               <code>--border-color</code>
@@ -41,6 +36,27 @@
               <code>2px</code>
             </td>
           </tr>
+          <tr>
+            <td>
+              <code>--border-radius</code>
+            </td>
+            <td>
+              <code>4px</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--text-color</code>
+            </td>
+            <td>
+              <code>#000</code>
+            </td>
+          </tr>
+        </tbody>
+        <thead>
+          <th colspan="2">Locals</th>
+        </thead>
+        <tbody>
           <tr>
             <td>
               <code>--select-icon-size</code>
@@ -67,6 +83,11 @@
         </tbody>
       </table>
     </div>
+
+    <h3 id="play" class="size-4 fw-600 doc-section-title">
+      <a href="#play">#</a>Let's play with variables
+    </h3>
+    <Snippet :_code="play" />
   </div>
 </template>
 

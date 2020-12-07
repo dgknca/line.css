@@ -1,14 +1,14 @@
 .select {
-  --select-icon-size: 20px;
   --select-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
-  border: var(--border-width) solid var(--border-color);
-  border-radius: var(--border-radius);
   padding: 0.5rem calc(1.5rem + var(--select-icon-size)) 0.5rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background: var(--select-icon) calc(100% - 0.5rem) 50% /
       var(--select-icon-size) no-repeat,
-    var(--white);
+    #fff;
   cursor: pointer;
+  font: inherit;
+  line-height: 1.3rem;
+  color: var(--text-color);
 }

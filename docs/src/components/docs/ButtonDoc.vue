@@ -48,15 +48,10 @@
           <th>Class</th>
           <th style="width: 70%">Description</th>
         </thead>
+        <thead>
+          <th colspan="2">Globals</th>
+        </thead>
         <tbody>
-          <tr>
-            <td>
-              <a href="#btn-full" class="tag-class">btn-full</a>
-            </td>
-            <td>
-              Full width button.
-            </td>
-          </tr>
           <tr>
             <td>
               <a href="#no-shadow" class="tag-class">no-shadow</a>
@@ -78,12 +73,21 @@
             <td>Turns the shadow to top.</td>
           </tr>
         </tbody>
+        <thead>
+          <th colspan="2">Locals</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="#btn-full" class="tag-class">btn-full</a>
+            </td>
+            <td>
+              Full width button.
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
-    <div class="modifiers-container">
-      <a href="#btn-full" id="btn-full" class="tag-property">.btn-full</a>
-    </div>
-    <Snippet :_code="fullWidth" />
 
     <div class="modifiers-container">
       <a href="#no-shadow" id="no-shadow" class="tag-property">.no-shadow</a>
@@ -103,6 +107,11 @@
     <p>You can use together right and top classes like below.</p>
     <Snippet :_code="topShadow" />
 
+    <div class="modifiers-container">
+      <a href="#btn-full" id="btn-full" class="tag-property">.btn-full</a>
+    </div>
+    <Snippet :_code="fullWidth" />
+
     <!-- Custom Properties -->
 
     <h3 id="custom-properties" class="size-4 fw-600 doc-section-title">
@@ -113,27 +122,11 @@
         <thead>
           <th>Name</th>
           <th>Default</th>
-          <th>Computed Value</th>
+        </thead>
+        <thead>
+          <th colspan="2">Globals</th>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <code>--focus-box-shadow-color</code>
-            </td>
-            <td>
-              <code>var(--shadow-bg)</code>
-            </td>
-            <td><code>rgb(196, 196, 196)</code></td>
-          </tr>
-          <tr>
-            <td>
-              <code>--focus-box-shadow-width</code>
-            </td>
-            <td>
-              <code>2px</code>
-            </td>
-            <td></td>
-          </tr>
           <tr>
             <td>
               <code>--border-color</code>
@@ -141,8 +134,13 @@
             <td>
               <code>var(--black)</code>
             </td>
+          </tr>
+          <tr>
             <td>
-              <code>#000</code>
+              <code>--disabled-border-color</code>
+            </td>
+            <td>
+              <code>var(--gray)</code>
             </td>
           </tr>
           <tr>
@@ -152,16 +150,6 @@
             <td>
               <code>2px</code>
             </td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>
-              <code>--shadow-bg</code>
-            </td>
-            <td>
-              <code>var(--gray)</code>
-            </td>
-            <td><code>rgb(196, 196, 196)</code></td>
           </tr>
           <tr>
             <td>
@@ -170,7 +158,22 @@
             <td>
               <code>4px</code>
             </td>
-            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <code>--text-color</code>
+            </td>
+            <td>
+              <code>#000</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--shadow-bg</code>
+            </td>
+            <td>
+              <code>var(--gray)</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -179,7 +182,22 @@
             <td>
               <code>3px</code>
             </td>
-            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <code>--focus-box-shadow-color</code>
+            </td>
+            <td>
+              <code>var(--shadow-bg)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--focus-box-shadow-width</code>
+            </td>
+            <td>
+              <code>2px</code>
+            </td>
           </tr>
           <tr>
             <td>
@@ -188,7 +206,6 @@
             <td>
               <code>0.15s cubic-bezier(0.64, 0.57, 0.67, 1.53)</code>
             </td>
-            <td></td>
           </tr>
         </tbody>
       </table>

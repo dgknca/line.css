@@ -36,11 +36,18 @@ const mixin = {
     </div>
   </div>
 </div>`,
-      localCustomProperties: `<div class="slider" style="
-  --slider-button-size: 40px;
-  --slider-width: 90%;
-  --slider-height: 200px;
-">
+      play: `<style>
+  .my-custom-slider {
+    --slider-button-size: 40px;
+    --slider-width: 90%;
+    --slider-height: 200px;
+    --slider-icon-bg: lightyellow;
+    --slider-icon-size: 20px;
+    --slider-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>');
+  }
+</style>
+
+<div class="slider my-custom-slider">
   <input type="radio" name="slide2" checked="" id="slide-5">
   <div class="slider-item">
     <img src="../../assets/images/img-1.jpg">

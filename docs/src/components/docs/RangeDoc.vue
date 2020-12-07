@@ -23,18 +23,21 @@
           <th>Name</th>
           <th>Default</th>
         </thead>
+        <thead>
+          <th colspan="2">Locals</th>
+        </thead>
         <tbody>
           <tr>
             <td>
               <code>--track-color</code>
             </td>
             <td>
-              <code>var(--white)</code>
+              <code>#fff</code>
             </td>
           </tr>
           <tr>
             <td>
-              <code>--track-color--focus</code>
+              <code>--focus-track-color</code>
             </td>
             <td>
               <code>var(--gray-light)</code>
@@ -45,7 +48,56 @@
               <code>--disabled-track-color</code>
             </td>
             <td>
-              <code>var(--white)</code>
+              <code>#fff</code>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <code>--track-width</code>
+            </td>
+            <td>
+              <code>100%</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--track-height</code>
+            </td>
+            <td>
+              <code>8px</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--track-border-width</code>
+            </td>
+            <td>
+              <code>2px</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--track-border-color</code>
+            </td>
+            <td>
+              <code>var(--black)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--disabled-track-border-color</code>
+            </td>
+            <td>
+              <code>var(--gray)</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--track-radius</code>
+            </td>
+            <td>
+              <code>5px</code>
             </td>
           </tr>
           <tr>
@@ -53,7 +105,7 @@
               <code>--thumb-color</code>
             </td>
             <td>
-              <code>var(--white)</code>
+              <code>#fff</code>
             </td>
           </tr>
           <tr>
@@ -61,7 +113,7 @@
               <code>--disabled-thumb-color</code>
             </td>
             <td>
-              <code>var(--white)</code>
+              <code>#fff</code>
             </td>
           </tr>
           <tr>
@@ -110,54 +162,6 @@
             </td>
             <td>
               <code>var(--gray)</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--track-width</code>
-            </td>
-            <td>
-              <code>100%</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--track-height</code>
-            </td>
-            <td>
-              <code>8px</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--track-border-width</code>
-            </td>
-            <td>
-              <code>2px</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--track-border-color</code>
-            </td>
-            <td>
-              <code>var(--black)</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--disabled-track-border-color</code>
-            </td>
-            <td>
-              <code>var(--gray)</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--track-radius</code>
-            </td>
-            <td>
-              <code>5px</code>
             </td>
           </tr>
         </tbody>

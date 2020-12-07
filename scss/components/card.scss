@@ -1,10 +1,8 @@
 .card {
   padding: 15px;
-  background-color: var(--white);
-  border: 2px solid var(--black);
+  background-color: #fff;
   max-width: 350px;
   width: 100%;
-
   --items-background: var(--gray-light);
 
   &-image,

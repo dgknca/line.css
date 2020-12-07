@@ -1,13 +1,12 @@
 .btn {
   --focus-box-shadow-width: 2px;
-  outline: 0;
+  outline: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--white);
-  border: 2px solid var(--border-color);
+  background-color: #fff;
   cursor: pointer;
-  color: currentColor;
+  color: var(--text-color);
   text-decoration: none;
   line-height: 1;
   padding: 0.5rem 1rem;
@@ -53,9 +52,9 @@
   }
 
   &[disabled] {
-    color: var(--gray);
     cursor: not-allowed;
-    --border-color: var(--gray);
+    --border-color: var(--disabled-border-color, var(--gray));
+    color: var(--gray);
 
     &.green {
       --border-color: var(--green-light);

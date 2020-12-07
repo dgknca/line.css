@@ -318,7 +318,7 @@ a {
   justify-content: center;
   border-radius: var(--border-radius);
   position: relative;
-  background-color: var(--white);
+  background-color: #fff;
   border: 2px solid var(--border-color);
   cursor: pointer;
   transition: var(--transition);
@@ -492,7 +492,7 @@ a {
 .input-container.input-text {
   border: 2px solid var(--border-color);
   border-radius: var(--border-radius);
-  background-color: var(--white);
+  background-color: #fff;
   height: 35px;
   width: 100%;
   max-width: 300px;
@@ -547,7 +547,7 @@ a {
   width: 20px;
   height: 20px;
   position: relative;
-  background-color: var(--white);
+  background-color: #fff;
   border: 2px solid var(--border-color);
   cursor: pointer;
   transition: var(--transition);
@@ -741,7 +741,7 @@ a {
   width: var(--slider-button-size);
   height: var(--slider-button-size);
   border-radius: 50%;
-  background: var(--white);
+  background: #fff;
   border: 2px solid var(--black);
   display: flex;
   align-items: center;
@@ -753,13 +753,13 @@ a {
   left: calc(var(--slider-button-size) / 2 * -1);
   background: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 12L3 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 19L3 12L10 5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
       50% 50%/24px 24px no-repeat,
-    var(--white);
+    #fff;
 }
 .slider-next {
   right: calc(var(--slider-button-size) / 2 * -1);
   background: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12L21 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 5L21 12L14 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
       50% 50%/24px 24px no-repeat,
-    var(--white);
+    #fff;
 }
 .accordion {
   --shadow-bg: var(--gray);
@@ -796,7 +796,7 @@ a {
 }
 .accordion-container {
   width: 200px;
-  background-color: var(--white);
+  background-color: #fff;
   border-radius: var(--border-radius);
   border: 2px solid var(--border-color);
   position: relative;
@@ -830,7 +830,7 @@ a {
   user-select: none;
   display: flex;
   align-items: center;
-  background-color: var(--white);
+  background-color: #fff;
   border-radius: var(--border-radius);
   position: relative;
   z-index: 2;
@@ -918,7 +918,7 @@ a {
 }
 .dropdown-menu,
 .dropdown-sub-list {
-  background-color: var(--white);
+  background-color: #fff;
   border-radius: var(--border-radius);
   border: 2px solid var(--black);
   position: absolute;
@@ -1011,7 +1011,7 @@ a {
   left: 50%;
   border: 2px solid var(--black);
   border-radius: var(--border-radius);
-  background-color: var(--white);
+  background-color: #fff;
   padding: 5px 10px;
   font-size: 0.9rem;
   position: absolute;
@@ -1023,11 +1023,7 @@ a {
   width: var(--caret-width);
   height: var(--caret-width);
   border: 2px solid var(--black);
-  background: linear-gradient(
-      to right bottom,
-      transparent 0 50%,
-      var(--white) 50% 100%
-    )
+  background: linear-gradient(to right bottom, transparent 0 50%, #fff 50% 100%)
     0 0 / contain no-repeat;
   transform-origin: center;
   border-left-color: transparent;
@@ -1084,7 +1080,7 @@ a {
   --shadow-bg: var(--gray);
   border-radius: var(--border-radius);
   border: 2px solid var(--border-color);
-  background-color: var(--white);
+  background-color: #fff;
   padding: 20px;
   line-height: 1.5;
   position: relative;
@@ -1150,7 +1146,7 @@ a {
 }
 .card {
   padding: 15px;
-  background-color: var(--white);
+  background-color: #fff;
   border: 2px solid var(--black);
   border-radius: var(--border-radius);
   max-width: 350px;
@@ -1250,7 +1246,7 @@ a {
 }
 .progress {
   --border-color: var(--gray-dark);
-  background-color: var(--white);
+  background-color: #fff;
   border: 2px solid var(--border-color);
   position: relative;
   overflow: hidden;

@@ -21,7 +21,9 @@
         <thead>
           <th>Name</th>
           <th>Default</th>
-          <th>Computed Value</th>
+        </thead>
+        <thead>
+          <th colspan="2">Globals</th>
         </thead>
         <tbody>
           <tr>
@@ -30,12 +32,6 @@
             </td>
             <td>
               <code>var(--black)</code>
-            </td>
-            <td>
-              <div class="doc-color-wrp">
-                <span class="color" style="background: #000"></span
-                ><code>#000</code>
-              </div>
             </td>
           </tr>
           <tr>
@@ -48,19 +44,31 @@
           </tr>
           <tr>
             <td>
+              <code>--text-color</code>
+            </td>
+            <td>
+              <code>#000</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>--transition-linear</code>
+            </td>
+            <td>
+              <code>0.15s linear</code>
+            </td>
+          </tr>
+        </tbody>
+        <thead>
+          <th colspan="2">Locals</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
               <code>--drag-drop-bg</code>
             </td>
             <td>
               <code>var(--gray-light)</code>
-            </td>
-            <td>
-              <div class="doc-color-wrp">
-                <span
-                  class="color"
-                  style="background: rgb(243, 243, 243);"
-                ></span
-                ><code>rgb(243, 243, 243)</code>
-              </div>
             </td>
           </tr>
           <tr>
@@ -70,15 +78,6 @@
             <td>
               <code>var(--gray)</code>
             </td>
-            <td>
-              <div class="doc-color-wrp">
-                <span
-                  class="color"
-                  style="background: rgb(196, 196, 196);"
-                ></span
-                ><code>rgb(196, 196, 196)</code>
-              </div>
-            </td>
           </tr>
           <tr>
             <td>
@@ -86,15 +85,6 @@
             </td>
             <td>
               <code>var(--green-light)</code>
-            </td>
-            <td>
-              <div class="doc-color-wrp">
-                <span
-                  class="color"
-                  style="background: rgb(214, 231, 218);"
-                ></span
-                ><code>rgb(214, 231, 218)</code>
-              </div>
             </td>
           </tr>
           <tr>
@@ -104,12 +94,6 @@
             <td>
               <code>var(--green-dark)</code>
             </td>
-            <td>
-              <div class="doc-color-wrp">
-                <span class="color" style="background:rgb(50, 136, 69)"></span
-                ><code>rgb(50, 136, 69)</code>
-              </div>
-            </td>
           </tr>
           <tr>
             <td>
@@ -117,20 +101,6 @@
             </td>
             <td>
               <code>var(--text-color)</code>
-            </td>
-            <td>
-              <div class="doc-color-wrp">
-                <span class="color" style="background: #000"></span
-                ><code>#000</code>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--transition-linear</code>
-            </td>
-            <td>
-              <code>0.15s linear</code>
             </td>
           </tr>
         </tbody>

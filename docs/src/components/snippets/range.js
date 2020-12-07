@@ -1,12 +1,12 @@
 const mixin = {
   data() {
     return {
-      defaultRange: `<input type="range"/>`,
-      disabled: `<input type="range" disabled/>`,
+      defaultRange: `<input type="range" class="range"/>`,
+      disabled: `<input type="range" class="range" disabled/>`,
       play: `<style>
 .my-custom-range {
   --track-color: var(--yellow-light);
-  --track-color--focus: var(--yellow);
+  --focus-track-color: var(--yellow);
   --thumb-color: var(--pink);
   --thumb-radius: 4px;
   --thumb-height: 28px;
@@ -21,7 +21,7 @@ const mixin = {
 }
 </style>
 
-<input type="range" class="my-custom-range"/>`
+<input type="range" class="range my-custom-range"/>`
     }
   }
 }

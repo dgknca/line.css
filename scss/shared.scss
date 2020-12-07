@@ -1,14 +1,4 @@
 .btn,
-.checkbox,
-.checkbox span,
-.radio,
-.radio span,
-.input-text,
-.input-text span,
-.input-file,
-.input-file span,
-.accordion-container,
-.dropdown-menu,
 .slider,
 .card,
 .tooltip,
@@ -39,7 +29,6 @@
   transform-origin: center;
   will-change: transform;
   box-shadow: 0 0 1px rgba(255, 255, 255, 0); // to avoid jagge
-  border-radius: var(--border-radius);
   transition: var(--transition);
   // prettier-ignore
   transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0);
@@ -85,6 +74,18 @@
       content: none;
     }
   }
+}
+
+.btn,
+.textarea,
+.input,
+.select,
+.slider,
+.img,
+.blockquote,
+.card {
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
 }
 
 .green {
