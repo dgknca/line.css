@@ -210,6 +210,7 @@
         </tbody>
       </table>
     </div>
+
     <h3 id="play" class="size-4 fw-600 doc-section-title">
       <a href="#play">#</a>Let's play with variables
     </h3>

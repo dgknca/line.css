@@ -1,5 +1,4 @@
 :root {
-  --border-radius: 4px;
   --transition: 0.15s cubic-bezier(0.64, 0.57, 0.67, 1.53);
   --transition-linear: 0.15s linear;
   --black: #000;
@@ -37,6 +36,7 @@
   --focus-box-shadow-color: var(--gray);
   --border-color: var(--black);
   --border-width: 2px;
+  --border-radius: 4px;
   --input-height: 2.5rem;
   --placeholder-color: var(--gray);
   --shadow-distance: 3px;
@@ -45,41 +45,21 @@
   --reset-shadow-right: auto;
   --reset-shadow-left: 0;
   --reset-shadow-top: auto;
-  --reset-shadow-bottom: 0; }
+  --reset-shadow-bottom: 0;
+  --select-icon-size: 20px;
+  --accordion-button-height: 40px;
+  --accordion-button-bg: #fff;
+  --hover-accordion-button-bg: #fff;
+  --active-accordion-button-bg: #fff;
+  --active-accordion-text-color: #000; }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 /* prettier-ignore */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
 body {
   line-height: 1; }
-
-button {
-  border: none;
-  padding: 0;
-  outline: 0;
-  box-shadow: none; }
 
 label {
   line-height: 1; }
@@ -162,7 +142,7 @@ a {
 
 .btn {
   --focus-box-shadow-width: 2px;
-  outline: 0;
+  outline: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -489,7 +469,8 @@ a {
   # File
 \*------------------------------------*/
 .input-file {
-  position: relative; }
+  position: relative;
+  color: var(--text-color); }
   .input-file-drag-drop {
     width: 100%;
     height: 100px; }
@@ -618,9 +599,7 @@ a {
     --cursor: not-allowed; }
 
 .select {
-  --select-icon-size: 20px;
   --select-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
-  border-radius: var(--border-radius);
   padding: 0.5rem calc(1.5rem + var(--select-icon-size)) 0.5rem 1rem;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -628,7 +607,11 @@ a {
   background: var(--select-icon) calc(100% - 0.5rem) 50%/var(--select-icon-size) no-repeat, #fff;
   cursor: pointer;
   font: inherit;
-  line-height: 1.3rem; }
+  line-height: 1.3rem;
+  color: var(--text-color);
+  outline: none; }
+  .select.focus, .select:focus {
+    box-shadow: 0 0 0 var(--focus-box-shadow-width) var(--focus-box-shadow-color); }
 
 body,
 button,
@@ -728,91 +711,104 @@ textarea {
   .slider-next {
     right: calc(var(--slider-button-size) / 2 * -1); }
 
-.accordion {
-  --shadow-bg: var(--gray);
-  --border-color: var(--black);
-  --items-background: var(--gray-light); }
-  .accordion-container {
-    width: 200px;
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    border: 2px solid var(--border-color);
-    position: relative;
-    transition: var(--transition);
-    transform: translate3d(3px, -3px, 0);
-    transform-origin: center center;
-    transform-style: preserve-3d; }
-    .accordion-container::before {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: inherit;
-      transition: inherit;
-      background-color: var(--shadow-bg);
-      border: 2px solid var(--border-color);
-      transform: translate3d(-3px, 3px, -0.1px); }
-    .accordion-checkbox:checked ~ .accordion-container, .accordion-container:hover {
-      transform: translate3d(-2px, 2px, 0); }
-      .accordion-checkbox:checked ~ .accordion-container::before, .accordion-container:hover::before {
-        transform: translate3d(2px, -2px, -0.1px); }
-  .accordion-button {
-    user-select: none;
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    border-radius: var(--border-radius);
-    position: relative;
-    z-index: 2; }
-  .accordion-title {
-    width: 100%;
+.accordion-container {
+  width: 100%;
+  position: relative; }
+
+.accordion-button {
+  user-select: none;
+  height: calc(var(--accordion-button-height) - var(--border-width) * 2);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 2;
+  background-color: var(--accordion-button-bg);
+  transition: var(--transition-linear);
+  transition-property: background-color, color;
+  box-sizing: content-box; }
+  .accordion-button:hover {
+    background-color: var(--hover-accordion-button-bg); }
+  .accordion-button::before {
+    content: '';
     cursor: pointer;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 10px;
-    padding: 10px 20px; }
-  .accordion-chevron {
-    flex-shrink: 0;
-    padding: 0 10px;
-    display: block;
-    transition: 0.3s; }
-  .accordion-checkbox {
-    display: none; }
-  .accordion-content {
-    height: 0;
-    overflow: hidden;
-    background-color: var(--items-background);
-    transition: height 0.3s ease-in;
-    --accordion-item-height: 35px; }
-  .accordion-checkbox:checked + .accordion-container .accordion-content {
-    height: calc(var(--items-count) * var(--accordion-item-height));
-    transition-timing-function: ease-out; }
-  .accordion-checkbox:checked + .accordion-container .accordion-chevron {
-    transform: rotate(180deg); }
-  .accordion-checkbox:checked + .accordion-container .accordion-button {
-    border-radius: var(--border-radius) var(--border-radius) 0 0; }
-  .accordion-item-container {
-    height: var(--accordion-item-height);
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    border-top: 1px solid #a8a8a8; }
-  .accordion.no-shadow .accordion-container {
-    transform: translate3d(0, 0, 0); }
-    .accordion.no-shadow .accordion-container::before {
-      content: none; }
-  .accordion.no-transition .accordion-content {
-    height: auto;
-    display: none;
-    transition: none; }
-  .accordion.no-transition .accordion-chevron {
-    transition: none; }
-  .accordion.no-transition .accordion-checkbox:checked ~ .accordion-container .accordion-content {
-    display: block;
-    transition: none; }
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: var(--transition-linear);
+    width: var(--accordion-icon-size, 20px);
+    height: var(--accordion-icon-size, 20px);
+    background: var(--accordion-icon, url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>')) 50% 50%/contain no-repeat; }
+
+.accordion-title {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0.5rem 1rem; }
+
+.accordion input {
+  display: none; }
+
+.accordion-content {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border: var(--border-width) solid var(--border-color);
+  border-top: none;
+  padding: 1rem;
+  background-color: #fff;
+  overflow: hidden;
+  display: none;
+  font-size: 0.9rem;
+  line-height: 1.5; }
+
+.accordion input:checked + .accordion-container .accordion-content {
+  display: block; }
+
+.accordion input:checked + .accordion-container .accordion-chevron {
+  transform: rotate(180deg); }
+
+.accordion input:checked + .accordion-container .accordion-button {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  background-color: var(--active-accordion-button-bg);
+  color: var(--active-accordion-text-color); }
+  .accordion input:checked + .accordion-container .accordion-button::before {
+    transform: translateY(-50%) rotate(180deg); }
+
+.accordions .accordion-button {
+  border-radius: 0; }
+
+.accordions .accordion input:checked + .accordion-container .accordion-button {
+  border-bottom: var(--border-width) solid var(--border-color);
+  border-radius: 0; }
+
+.accordions .accordion input:checked + .accordion-container .accordion-content {
+  border-radius: 0;
+  border-bottom: none; }
+
+.accordions .accordion:first-child .accordion-button {
+  border-radius: var(--border-radius) var(--border-radius) 0 0; }
+
+.accordions .accordion:first-child input:checked + .accordion-container .accordion-button {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-bottom: var(--border-width) solid var(--border-color); }
+
+.accordions .accordion:first-child input:checked + .accordion-container .accordion-content {
+  border-radius: 0;
+  border-bottom: none; }
+
+.accordions .accordion:last-child .accordion-button {
+  border-radius: 0 0 var(--border-radius) var(--border-radius); }
+
+.accordions .accordion:last-child input:checked + .accordion-container .accordion-content {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-bottom: var(--border-width) solid var(--border-color); }
+
+.accordions .accordion:not(:last-child) .accordion-button {
+  border-bottom: none; }
 
 .dropdown {
   display: inline-block;
@@ -989,32 +985,6 @@ textarea {
     height: 100%;
     object-fit: cover; }
 
-.breadcrumb ul {
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; }
-
-.breadcrumb li {
-  align-items: center;
-  display: flex; }
-  .breadcrumb li:not(:first-child)::before {
-    color: var(--gray);
-    content: '\0002f'; }
-  .breadcrumb li.active a {
-    pointer-events: none;
-    color: var(--black); }
-
-.breadcrumb a {
-  color: var(--blue-dark);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 0.75em;
-  text-decoration: none; }
-  .breadcrumb a:hover {
-    text-decoration: underline; }
-
 .btn::before,
 .slider::before,
 .card::before,
@@ -1043,7 +1013,6 @@ textarea {
   transform-origin: center;
   will-change: transform;
   box-shadow: 0 0 1px rgba(255, 255, 255, 0);
-  border-radius: var(--border-radius);
   transition: var(--transition);
   transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0); }
   .btn::before,
@@ -1104,7 +1073,8 @@ textarea {
 .img,
 .blockquote,
 .card {
-  border: var(--border-width) solid var(--border-color); }
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius); }
 
 .green {
   --shadow-bg: var(--green);

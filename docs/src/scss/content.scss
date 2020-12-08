@@ -68,6 +68,10 @@ p {
   td {
     font-size: 0.9rem;
 
+    &:first-child {
+      white-space: nowrap;
+    }
+
     &:nth-child(2) {
       code {
         color: var(--red-dark);

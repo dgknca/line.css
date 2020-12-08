@@ -6,7 +6,7 @@
 
   &-button {
     user-select: none;
-    height: 40px;
+    height: calc(var(--accordion-button-height) - var(--border-width) * 2);
     white-space: nowrap;
     display: flex;
     align-items: center;
@@ -14,10 +14,18 @@
     border-radius: var(--border-radius);
     position: relative;
     z-index: 2;
-    background-color: #fff;
+    background-color: var(--accordion-button-bg);
+    transition: var(--transition-linear);
+    transition-property: background-color, color;
+    box-sizing: content-box;
+
+    &:hover {
+      background-color: var(--hover-accordion-button-bg);
+    }
 
     &::before {
       content: '';
+      cursor: pointer;
       position: absolute;
       right: 10px;
       top: 50%;
@@ -25,7 +33,10 @@
       transition: var(--transition-linear);
       width: var(--accordion-icon-size, 20px);
       height: var(--accordion-icon-size, 20px);
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>')
+      background: var(
+          --accordion-icon,
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>')
+        )
         50% 50% / contain no-repeat;
     }
   }
@@ -47,12 +58,12 @@
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     border: var(--border-width) solid var(--border-color);
     border-top: none;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     background-color: #fff;
     overflow: hidden;
     display: none;
     font-size: 0.9rem;
-    line-height: 1.2;
+    line-height: 1.5;
   }
 
   input:checked {
@@ -67,6 +78,8 @@
 
       .accordion-button {
         border-radius: var(--border-radius) var(--border-radius) 0 0;
+        background-color: var(--active-accordion-button-bg);
+        color: var(--active-accordion-text-color);
 
         &::before {
           transform: translateY(-50%) rotate(180deg);
@@ -76,6 +89,7 @@
   }
 }
 
+// group
 .accordions {
   .accordion {
     &-button {

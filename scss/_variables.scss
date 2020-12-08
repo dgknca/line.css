@@ -1,5 +1,4 @@
 :root {
-  --border-radius: 4px;
   --transition: 0.15s cubic-bezier(0.64, 0.57, 0.67, 1.53);
   --transition-linear: 0.15s linear;
 
@@ -44,6 +43,8 @@
 
   --border-color: var(--black);
   --border-width: 2px;
+  --border-radius: 4px;
+
   --input-height: 2.5rem;
   --placeholder-color: var(--gray);
 
@@ -56,4 +57,10 @@
   --reset-shadow-bottom: 0;
 
   --select-icon-size: 20px;
+
+  --accordion-button-height: 40px;
+  --accordion-button-bg: #fff;
+  --hover-accordion-button-bg: #fff;
+  --active-accordion-button-bg: #fff;
+  --active-accordion-text-color: #000;
 }
