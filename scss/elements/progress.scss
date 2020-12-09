@@ -1,69 +1,92 @@
 .progress {
-  --border-color: var(--gray-dark);
-  background-color: #fff;
-  border: 2px solid var(--border-color);
-  position: relative;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  $height: 1.5rem;
+  border-radius: #{$height / 2};
+  height: $height;
+  display: block;
   overflow: hidden;
+  padding: 0;
   width: 100%;
-  @include component-colors-only-border;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: calc(var(--progress) * 1%);
-    transition: 0.3s linear;
-    background-color: var(--border-color);
-  }
+  border: var(--border-width) solid var(--border-color);
+  transition: var(--transition-linear);
 
   &#{&}-sm {
-    $h: 20px;
-    height: $h;
-    border-radius: #{$h / 2};
-
-    &::before {
-      border-radius: #{$h / 2};
-      background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 5px,
-        rgba(255, 255, 255, 0.2) 5px,
-        rgba(255, 255, 255, 0.2) 10px
-      );
-    }
-  }
-  &#{&}-md {
-    $h: 30px;
-    height: $h;
-    border-radius: #{$h / 2};
-
-    &::before {
-      border-radius: #{$h / 2};
-      background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(255, 255, 255, 0.2) 10px,
-        rgba(255, 255, 255, 0.2) 20px
-      );
-    }
+    $height: 1rem;
+    border-radius: #{$height / 2};
+    height: $height;
   }
   &#{&}-l {
-    $h: 40px;
-    height: $h;
-    border-radius: #{$h / 2};
+    $height: 2rem;
+    border-radius: #{$height / 2};
+    height: $height;
+  }
 
-    &::before {
-      border-radius: #{$h / 2};
-      background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 15px,
-        rgba(255, 255, 255, 0.2) 15px,
-        rgba(255, 255, 255, 0.2) 30px
-      );
-    }
+  &::-webkit-progress-bar {
+    background-color: var(--progress-bar-bg, #fff);
+  }
+
+  &::-webkit-progress-value {
+    background-color: var(--progress-value-bg, var(--gray-dark));
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgba(255, 255, 255, 0.2) 5px,
+      rgba(255, 255, 255, 0.2) 10px
+    );
+  }
+
+  // &:indeterminate {
+  //   animation: moveIndeterminate 1.5s linear infinite;
+  //   background: repeating-linear-gradient(
+  //         45deg,
+  //         transparent,
+  //         transparent 5px,
+  //         rgba(255, 255, 255, 0.2) 5px,
+  //         rgba(255, 255, 255, 0.2) 10px
+  //       )
+  //       top left / 150% 150% no-repeat,
+  //     var(--progress-bar-bg, var(--gray-dark));
+  // }
+
+  // &:indeterminate::-webkit-progress-bar {
+  //   background-color: transparent;
+  // }
+
+  // @keyframes moveIndeterminate {
+  //   from {
+  //     background-position: 200% 0;
+  //   }
+  //   to {
+  //     background-position: -200% 0;
+  //   }
+  // }
+
+  &.pink {
+    --progress-value-bg: var(--pink-dark);
+  }
+  &.green {
+    --progress-value-bg: var(--green-dark);
+  }
+  &.orange {
+    --progress-value-bg: var(--orange-dark);
+  }
+  &.red {
+    --progress-value-bg: var(--red-dark);
+  }
+  &.purple {
+    --progress-value-bg: var(--purple-dark);
+  }
+  &.blue {
+    --progress-value-bg: var(--blue-dark);
+  }
+  &.yellow {
+    --progress-value-bg: var(--yellow-dark);
+  }
+
+  & + & {
+    margin-top: 0.75rem;
   }
 }

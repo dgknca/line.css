@@ -8,6 +8,7 @@ import GlobalsDoc from '@/components/docs/GlobalsDoc.vue'
 // Elements
 import ButtonDoc from '@/components/docs/ButtonDoc.vue'
 import ImageDoc from '@/components/docs/ImageDoc.vue'
+import ProgressDoc from '@/components/docs/ProgressDoc.vue'
 
 // Form
 import InputDoc from '@/components/docs/InputDoc.vue'
@@ -55,6 +56,11 @@ const routes = [
         path: 'elements/image',
         component: ImageDoc,
         meta: { title: 'Image' }
+      },
+      {
+        path: 'elements/progress',
+        component: ProgressDoc,
+        meta: { title: 'Progress' }
       },
       {
         path: 'form/input',
