@@ -8,17 +8,36 @@
   line-height: 1.5;
   position: relative;
   transform-style: preserve-3d;
-  display: flex;
+  width: 100%;
+  margin: 0;
+  color: var(--text-color);
 
-  &::before {
-    content: attr(data-title);
+  &-title {
     margin-right: 15px;
-    opacity: 0.5;
     text-transform: uppercase;
-    font-style: normal;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
-  &::after {
+  &-text {
+    font-style: italic;
+    color: currentColor;
+    padding: 0;
+    margin: 0;
+  }
+
+  &-footer {
+    margin-top: 10px;
+    text-align: right;
+
+    &::before {
+      content: '\2014 \00A0';
+    }
+  }
+
+  &:not(.no-shadow)::after {
     content: '';
     position: absolute;
     z-index: 1;
@@ -28,18 +47,9 @@
     border-radius: inherit;
     background-color: var(--shadow-bg);
     border: 2px solid var(--border-color);
-  }
-
-  &::after {
     bottom: -8px;
     width: calc(100% - 20px);
     left: 10px;
     transform: translate3d(0, 0, -0.1px);
-  }
-
-  &-text {
-    font-style: italic;
-    position: relative;
-    z-index: 2;
   }
 }

@@ -111,6 +111,15 @@
           </li>
           <li>
             <router-link
+              to="/docs/elements/blockquote"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Blockquote</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
               to="/docs/elements/progress"
               class="navigation-link link link-pink"
               active-class="active"
