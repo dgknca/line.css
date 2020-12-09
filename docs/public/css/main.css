@@ -230,6 +230,29 @@ a {
     .buttons .btn:not(:last-child) {
       margin-right: 0.75rem; }
 
+.img {
+  width: calc(var(--img-width, 300px) - var(--shadow-distance) * 2);
+  height: var(--img-height, 300px); }
+  .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: var(--object-fit, cover); }
+  .img.aspect-ratio-img, .img[style*='--aspect-ratio'] {
+    width: calc(100% - var(--shadow-distance) * 2);
+    height: auto;
+    position: relative; }
+    .img.aspect-ratio-img::after, .img[style*='--aspect-ratio']::after {
+      content: '';
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio))); }
+  .img.hover, .img:hover {
+    transform: translate3d(calc(var(--computed-shadow-right) * -2px), calc(var(--computed-shadow-top) * 2px), 0); }
+    .img.hover::before, .img:hover::before {
+      transform: translate3d(calc(var(--computed-shadow-right) * 2px), calc(var(--computed-shadow-top) * -2px), -0.1px); }
+
 .progress {
   --border-color: var(--gray-dark);
   background-color: #fff;
@@ -973,17 +996,6 @@ textarea {
       height: var(--card-image-height, 100px);
       margin-bottom: 0;
       margin-right: 20px; }
-
-.img {
-  width: var(--img-width, 300px);
-  height: var(--img-height, 300px); }
-  .img img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; }
 
 .btn::before,
 .slider::before,

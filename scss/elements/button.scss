@@ -93,7 +93,12 @@
 
   &#{&}-full {
     display: flex;
-    width: calc(100% - var(--shadow-distance));
+    width: 100%;
+
+    &:not(.no-shadow) {
+      width: calc(100% - var(--shadow-distance));
+      margin-right: calc(var(--shadow-distance) - var(--border-width));
+    }
   }
 
   &#{&}-loading {

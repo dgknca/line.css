@@ -36,6 +36,14 @@
           </tr>
           <tr>
             <td>
+              <code>--border-width</code>
+            </td>
+            <td>
+              <code>2px</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <code>--border-radius</code>
             </td>
             <td>

@@ -4,7 +4,12 @@ import Home from '../views/Home.vue'
 import GettingStarted from '@/components/GettingStarted.vue'
 
 import GlobalsDoc from '@/components/docs/GlobalsDoc.vue'
+
+// Elements
 import ButtonDoc from '@/components/docs/ButtonDoc.vue'
+import ImageDoc from '@/components/docs/ImageDoc.vue'
+
+// Form
 import InputDoc from '@/components/docs/InputDoc.vue'
 import TextareaDoc from '@/components/docs/TextareaDoc.vue'
 import CheckboxDoc from '@/components/docs/CheckboxDoc.vue'
@@ -12,6 +17,8 @@ import RadioDoc from '@/components/docs/RadioDoc.vue'
 import RangeDoc from '@/components/docs/RangeDoc.vue'
 import SelectDoc from '@/components/docs/SelectDoc.vue'
 import FileInputDoc from '@/components/docs/FileInputDoc.vue'
+
+// Components
 import SliderDoc from '@/components/docs/SliderDoc.vue'
 import AccordionDoc from '@/components/docs/AccordionDoc.vue'
 
@@ -43,6 +50,11 @@ const routes = [
         path: 'elements/button',
         component: ButtonDoc,
         meta: { title: 'Button' }
+      },
+      {
+        path: 'elements/image',
+        component: ImageDoc,
+        meta: { title: 'Image' }
       },
       {
         path: 'form/input',

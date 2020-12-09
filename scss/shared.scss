@@ -22,7 +22,7 @@
   --computed-shadow-right: calc(var(--is-shadow-right) * -1);
   --computed-shadow-top: calc(var(--is-shadow-top) * -1);
   margin-top: var(--shadow-distance);
-  margin-left: var(--shadow-distance);
+  // margin-left: var(--shadow-distance);
   position: relative;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -64,7 +64,6 @@
 
   &.no-shadow {
     margin-top: 0;
-    margin-left: 0;
     transform: translateY(0);
 
     &:hover {

@@ -100,6 +100,15 @@
               <span>Button</span>
             </router-link>
           </li>
+          <li>
+            <router-link
+              to="/docs/elements/image"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Image</span>
+            </router-link>
+          </li>
         </ul>
       </li>
       <li>
