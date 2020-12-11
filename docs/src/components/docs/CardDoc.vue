@@ -1,8 +1,11 @@
 <template>
   <div class="content-wrapper">
-    <h1 class="size-2 fw-600">Image</h1>
+    <h1 class="size-2 fw-600">Card</h1>
 
-    <Snippet :_code="image" />
+    <h3 id="card-default" class="size-4 fw-600 doc-section-title">
+      <a href="#card-default">#</a>Default
+    </h3>
+    <Snippet :_code="card" :cancel-flex="true" />
 
     <h3 id="classes" class="size-4 fw-600 doc-section-title">
       <a href="#classes">#</a>Helper Classes
@@ -19,7 +22,7 @@
         <tbody>
           <tr>
             <td>
-              <code>no-shadow</code>
+              <a href="#no-shadow" class="tag-class">no-shadow</a>
             </td>
             <td>
               Cancels shadow.
@@ -27,13 +30,13 @@
           </tr>
           <tr>
             <td>
-              <code>shadow-right</code>
+              <a href="#shadow-right" class="tag-class">shadow-right</a>
             </td>
             <td>Turns the shadow to right.</td>
           </tr>
           <tr>
             <td>
-              <code>shadow-top</code>
+              <a href="#shadow-top" class="tag-class">shadow-top</a>
             </td>
             <td>Turns the shadow to top.</td>
           </tr>
@@ -44,27 +47,20 @@
         <tbody>
           <tr>
             <td>
-              <code>disable-hover</code>
+              <a href="#card-v" class="tag-class">card-v</a>
             </td>
             <td>
-              Disables hover.
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>aspect-ratio</code>
-            </td>
-            <td>
-              If you will use the <code>--aspect-ratio</code> property in a
-              class, you have to add this class to the element you will use
-              aspect ratio. If you will send the property as an inline-style,
-              this class is not required. See the
-              <a href="#play">example</a> below.
+              Makes the card vertical.
             </td>
           </tr>
         </tbody>
       </table>
     </div>
+
+    <div class="modifiers-container">
+      <a href="#card-v" id="card-v" class="tag-property">.card-v</a>
+    </div>
+    <Snippet :_code="cardV" :cancel-flex="true" />
 
     <h3 id="custom-properties" class="size-4 fw-600 doc-section-title">
       <a href="#custom-properties">#</a>Custom Properties
@@ -105,6 +101,14 @@
           </tr>
           <tr>
             <td>
+              <code>--text-color</code>
+            </td>
+            <td>
+              <code>#000</code>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <code>--shadow-bg</code>
             </td>
             <td>
@@ -119,14 +123,6 @@
               <code>3px</code>
             </td>
           </tr>
-          <tr>
-            <td>
-              <code>--transition</code>
-            </td>
-            <td>
-              <code>0.15s cubic-bezier(0.64, 0.57, 0.67, 1.53)</code>
-            </td>
-          </tr>
         </tbody>
         <thead>
           <th colspan="2">Locals</th>
@@ -134,35 +130,20 @@
         <tbody>
           <tr>
             <td>
-              <code>--img-width</code>
+              <code>--card-image-width</code>
             </td>
             <td>
-              <code>300px</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--img-height</code>
-            </td>
-            <td>
-              <code>300px</code>
+              <code>100px</code> default, <code>100%</code> with
+              <a href="#card-v" class="tag-class">card-v</a>
             </td>
           </tr>
           <tr>
             <td>
-              <code>--object-fit</code>
+              <code>--card-image-height</code>
             </td>
             <td>
-              <code>cover</code>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <code>--aspect-ratio</code>
-            </td>
-            <td>
-              You can send any aspect ratio you want. Like <code>16/9</code>,
-              <code>1/1</code>
+              <code>100px</code> default, <code>200px</code> with
+              <a href="#card-v" class="tag-class">card-v</a>
             </td>
           </tr>
         </tbody>
@@ -177,8 +158,8 @@
 </template>
 
 <script>
-import { imageMixin } from './../snippets/image'
+import { cardMixin } from './../snippets/card'
 export default {
-  mixins: [imageMixin]
+  mixins: [cardMixin]
 }
 </script>

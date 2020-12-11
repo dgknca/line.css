@@ -29,8 +29,8 @@
     }
   }
 
-  &.hover,
-  &:hover {
+  &:not(.disable-hover).hover,
+  &:not(.disable-hover):hover {
     transform: translate3d(
       calc(var(--computed-shadow-right) * -2px),
       calc(var(--computed-shadow-top) * 2px),

@@ -21,8 +21,14 @@
   --reset-shadow-bottom: inherit;
   --computed-shadow-right: calc(var(--is-shadow-right) * -1);
   --computed-shadow-top: calc(var(--is-shadow-top) * -1);
-  margin-top: var(--shadow-distance);
-  // margin-left: var(--shadow-distance);
+  margin-top: calc(var(--shadow-distance) * (var(--reset-shadow-bottom) + 1));
+  margin-bottom: calc(var(--shadow-distance) * var(--is-shadow-top));
+  margin-right: calc(
+    (var(--shadow-distance) - var(--border-width)) * var(--reset-shadow-right)
+  );
+  margin-left: calc(
+    (var(--shadow-distance) - var(--border-width)) * var(--is-shadow-right)
+  );
   position: relative;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -79,12 +85,22 @@
 .textarea,
 .input,
 .select,
+.dropdown-trigger,
+.dropdown-menu,
+.dropdown-sub-list,
 .slider,
 .img,
 .blockquote,
 .card {
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
+}
+
+.btn:not(.btn-sm):not(.btn-l),
+.select,
+.input,
+.dropdown-trigger {
+  height: 40px;
 }
 
 .green {

@@ -23,6 +23,8 @@ import FileInputDoc from '@/components/docs/FileInputDoc.vue'
 // Components
 import SliderDoc from '@/components/docs/SliderDoc.vue'
 import AccordionDoc from '@/components/docs/AccordionDoc.vue'
+import DropdownDoc from '@/components/docs/DropdownDoc.vue'
+import CardDoc from '@/components/docs/CardDoc.vue'
 
 Vue.use(VueRouter)
 
@@ -107,6 +109,16 @@ const routes = [
         path: 'components/slider',
         component: SliderDoc,
         meta: { title: 'Slider' }
+      },
+      {
+        path: 'components/dropdown',
+        component: DropdownDoc,
+        meta: { title: 'Dropdown' }
+      },
+      {
+        path: 'components/card',
+        component: CardDoc,
+        meta: { title: 'Card' }
       },
       {
         path: 'components/accordion',

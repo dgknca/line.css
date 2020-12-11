@@ -1,9 +1,18 @@
 .card {
   padding: 15px;
   background-color: #fff;
-  max-width: 350px;
-  width: 100%;
-  --items-background: var(--gray-light);
+  width: calc(100% - var(--shadow-distance));
+  display: flex;
+  max-width: 100%;
+  color: var(--text-color);
+
+  &-image {
+    flex-shrink: 0;
+    width: var(--card-image-width, 100px);
+    height: var(--card-image-height, 100px);
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
 
   &-image,
   &-content {
@@ -14,8 +23,7 @@
   &-image {
     border-radius: var(--border-radius);
     overflow: hidden;
-    border: 2px solid var(--black);
-    margin-bottom: 20px;
+    border: var(--border-width) solid var(--border-color);
 
     img {
       position: absolute;
@@ -30,33 +38,23 @@
   &-title {
     font-weight: 700;
     font-size: 1.4rem;
+    margin: 0;
   }
 
   &-text {
     font-size: 1rem;
     line-height: 1.5;
-    margin-top: 10px;
+    margin-top: 0.75rem;
   }
 
   &#{&}-v {
+    display: block;
+
     .card {
       &-image {
         width: var(--card-image-width, 100%);
         height: var(--card-image-height, 200px);
-      }
-    }
-  }
-
-  &#{&}-h {
-    display: flex;
-    max-width: 100%;
-    .card {
-      &-image {
-        flex-shrink: 0;
-        width: var(--card-image-width, 100px);
-        height: var(--card-image-height, 100px);
-        margin-bottom: 0;
-        margin-right: 20px;
+        margin-bottom: 20px;
       }
     }
   }

@@ -1,7 +1,5 @@
 .blockquote {
   quotes: none;
-  --border-color: var(--black);
-  --shadow-bg: var(--gray);
   border-radius: var(--border-radius);
   background-color: #fff;
   padding: 20px;
@@ -12,12 +10,17 @@
   margin: 0;
   color: var(--text-color);
 
+  &-title,
+  &-text,
+  &-foter {
+    position: relative;
+    z-index: 2;
+  }
+
   &-title {
-    margin-right: 15px;
-    text-transform: uppercase;
-    font-weight: 500;
     display: block;
-    margin-bottom: 10px;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
     text-align: center;
   }
 
@@ -29,7 +32,7 @@
   }
 
   &-footer {
-    margin-top: 10px;
+    margin-top: 0.75rem;
     text-align: right;
 
     &::before {

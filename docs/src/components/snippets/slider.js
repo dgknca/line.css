@@ -2,7 +2,7 @@ const mixin = {
   data() {
     return {
       slider: `<div class="slider">
-  <input type="radio" name="slide1" checked="" id="slide-1">
+  <input type="radio" name="slider1" checked="" id="slide-1">
   <div class="slider-item">
     <img src="../../assets/images/img-1.jpg">
     <div class="slider-control">
@@ -10,7 +10,7 @@ const mixin = {
     </div>
   </div>
 
-  <input type="radio" name="slide1" id="slide-2">
+  <input type="radio" name="slider1" id="slide-2">
   <div class="slider-item">
     <img src="../../assets/images/img-2.jpg">
     <div class="slider-control">
@@ -19,7 +19,7 @@ const mixin = {
     </div>
   </div>
 
-  <input type="radio" name="slide1" id="slide-3">
+  <input type="radio" name="slider1" id="slide-3">
   <div class="slider-item">
     <img src="../../assets/images/img-3.jpg">
     <div class="slider-control">
@@ -28,7 +28,7 @@ const mixin = {
     </div>
   </div>
 
-  <input type="radio" name="slide1" id="slide-4">
+  <input type="radio" name="slider1" id="slide-4">
   <div class="slider-item">
     <img src="../../assets/images/img-4.jpg">
     <div class="slider-control">
@@ -48,7 +48,7 @@ const mixin = {
 </style>
 
 <div class="slider my-custom-slider">
-  <input type="radio" name="slide2" checked="" id="slide-5">
+  <input type="radio" name="slider2" checked="" id="slide-5">
   <div class="slider-item">
     <img src="../../assets/images/img-1.jpg">
     <div class="slider-control">
@@ -56,7 +56,7 @@ const mixin = {
     </div>
   </div>
 
-  <input type="radio" name="slide2" id="slide-6">
+  <input type="radio" name="slider2" id="slide-6">
   <div class="slider-item">
     <img src="../../assets/images/img-2.jpg">
     <div class="slider-control">

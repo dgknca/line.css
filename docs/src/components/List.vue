@@ -150,6 +150,24 @@
               <span>Accordion</span>
             </router-link>
           </li>
+          <li>
+            <router-link
+              to="/docs/components/dropdown"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Dropdown</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/components/card"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Card</span>
+            </router-link>
+          </li>
         </ul>
       </li>
     </ul>
