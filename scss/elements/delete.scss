@@ -1,0 +1,47 @@
+.delete {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  height: var(--delete-button-size);
+  width: var(--delete-button-size);
+  border-radius: 50%;
+  flex-shrink: 0;
+  outline: none;
+  border: var(--border-width) solid var(--border-color);
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--gray-light);
+  }
+
+  &.delete-sm {
+    --delete-button-size: 16px;
+  }
+  &.delete-l {
+    --delete-button-size: 32px;
+  }
+
+  &::before {
+    height: 2px;
+    width: 50%;
+  }
+
+  &::after {
+    height: 50%;
+    width: 2px;
+  }
+
+  &::before,
+  &::after {
+    background-color: var(--border-color);
+    content: '';
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+  }
+}

@@ -91,7 +91,8 @@
 .slider,
 .img,
 .blockquote,
-.card {
+.card,
+.notification {
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
 }

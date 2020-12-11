@@ -102,6 +102,15 @@
           </li>
           <li>
             <router-link
+              to="/docs/elements/delete"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Delete</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
               to="/docs/elements/image"
               class="navigation-link link link-pink"
               active-class="active"
@@ -125,6 +134,15 @@
               active-class="active"
             >
               <span>Progress</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/elements/notification"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Notification</span>
             </router-link>
           </li>
         </ul>

@@ -1,0 +1,38 @@
+.notification {
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  position: relative;
+  background-color: var(--gray-light);
+  line-height: 1.5;
+
+  .delete {
+    right: 0.5rem;
+    position: absolute;
+    top: 0.5rem;
+  }
+
+  & + & {
+    margin-top: 1.5rem;
+  }
+
+  &.orange {
+    background-color: var(--orange-light);
+  }
+  &.purple {
+    background-color: var(--purple-light);
+  }
+  &.pink {
+    background-color: var(--pink-light);
+  }
+  &.yellow {
+    background-color: var(--yellow-light);
+  }
+  &.blue {
+    background-color: var(--blue-light);
+  }
+  &.green {
+    background-color: var(--green-light);
+  }
+  &.red {
+    background-color: var(--red-light);
+  }
+}

@@ -5,11 +5,11 @@
     <h3 id="install" class="size-4 fw-600 doc-section-title">
       <a href="#install">#</a>Install (not available yet)
     </h3>
-    <h4 class="size-5">
+    <h4 class="helper size-5">
       Use from CDN
     </h4>
     <Snippet :_code="cdn" :only-code="true" />
-    <h4 class="size-5">
+    <h4 class="helper size-5">
       Or, Install from NPM
     </h4>
     <Snippet :_code="npm" :only-code="true" />

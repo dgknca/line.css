@@ -47,6 +47,7 @@
   --reset-shadow-top: auto;
   --reset-shadow-bottom: 0;
   --select-icon-size: 20px;
+  --delete-button-size: 24px;
   --accordion-button-height: 40px;
   --accordion-button-bg: #fff;
   --hover-accordion-button-bg: #fff;
@@ -242,6 +243,41 @@ a {
     .buttons .btn:not(:last-child) {
       margin-right: 0.75rem; }
 
+.delete {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  height: var(--delete-button-size);
+  width: var(--delete-button-size);
+  border-radius: 50%;
+  flex-shrink: 0;
+  outline: none;
+  border: var(--border-width) solid var(--border-color);
+  background-color: #fff;
+  position: relative;
+  cursor: pointer; }
+  .delete:hover {
+    background-color: var(--gray-light); }
+  .delete.delete-sm {
+    --delete-button-size: 16px; }
+  .delete.delete-l {
+    --delete-button-size: 32px; }
+  .delete::before {
+    height: 2px;
+    width: 50%; }
+  .delete::after {
+    height: 50%;
+    width: 2px; }
+  .delete::before, .delete::after {
+    background-color: var(--border-color);
+    content: '';
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center; }
+
 .img {
   width: calc(var(--img-width, 300px) - var(--shadow-distance) * 2);
   height: var(--img-height, 300px); }
@@ -267,6 +303,50 @@ a {
     transform: translate3d(calc(var(--computed-shadow-right) * -2px), calc(var(--computed-shadow-top) * 2px), 0); }
     .img:not(.disable-hover).hover::before, .img:not(.disable-hover):hover::before {
       transform: translate3d(calc(var(--computed-shadow-right) * 2px), calc(var(--computed-shadow-top) * -2px), -0.1px); }
+
+.blockquote {
+  quotes: none;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  padding: 20px;
+  line-height: 1.5;
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  margin: 0;
+  color: var(--text-color); }
+  .blockquote-title, .blockquote-text, .blockquote-foter {
+    position: relative;
+    z-index: 2; }
+  .blockquote-title {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    text-align: center; }
+  .blockquote-text {
+    font-style: italic;
+    color: currentColor;
+    padding: 0;
+    margin: 0; }
+  .blockquote-footer {
+    margin-top: 0.75rem;
+    text-align: right; }
+    .blockquote-footer::before {
+      content: '\2014 \00A0'; }
+  .blockquote:not(.no-shadow)::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    border-radius: inherit;
+    transition: inherit;
+    border-radius: inherit;
+    background-color: var(--shadow-bg);
+    border: 2px solid var(--border-color);
+    bottom: -8px;
+    width: calc(100% - 20px);
+    left: 10px;
+    transform: translate3d(0, 0, -0.1px); }
 
 .progress {
   -moz-appearance: none;
@@ -307,6 +387,9 @@ a {
     --progress-value-bg: var(--yellow-dark); }
   .progress + .progress {
     margin-top: 0.75rem; }
+
+.notification {
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem; }
 
 /*
     Table of Contents
@@ -932,50 +1015,6 @@ textarea {
     height: 1px;
     margin: 0.5rem 0; }
 
-.blockquote {
-  quotes: none;
-  border-radius: var(--border-radius);
-  background-color: #fff;
-  padding: 20px;
-  line-height: 1.5;
-  position: relative;
-  transform-style: preserve-3d;
-  width: 100%;
-  margin: 0;
-  color: var(--text-color); }
-  .blockquote-title, .blockquote-text, .blockquote-foter {
-    position: relative;
-    z-index: 2; }
-  .blockquote-title {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    text-align: center; }
-  .blockquote-text {
-    font-style: italic;
-    color: currentColor;
-    padding: 0;
-    margin: 0; }
-  .blockquote-footer {
-    margin-top: 0.75rem;
-    text-align: right; }
-    .blockquote-footer::before {
-      content: '\2014 \00A0'; }
-  .blockquote:not(.no-shadow)::after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    border-radius: inherit;
-    transition: inherit;
-    border-radius: inherit;
-    background-color: var(--shadow-bg);
-    border: 2px solid var(--border-color);
-    bottom: -8px;
-    width: calc(100% - 20px);
-    left: 10px;
-    transform: translate3d(0, 0, -0.1px); }
-
 .card {
   padding: 15px;
   background-color: #fff;
@@ -1109,7 +1148,8 @@ textarea {
 .slider,
 .img,
 .blockquote,
-.card {
+.card,
+.notification {
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius); }
 

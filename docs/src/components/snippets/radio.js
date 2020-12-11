@@ -2,7 +2,7 @@ const mixin = {
   data() {
     return {
       defaultRadio: `<label class="radio">
-  <input type="radio" name="answer"> Yes
+  <input type="radio" name="answer" checked> Yes
 </label>
 <label class="radio">
   <input type="radio" name="answer"> No

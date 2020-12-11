@@ -10,6 +10,7 @@ import ButtonDoc from '@/components/docs/ButtonDoc.vue'
 import ImageDoc from '@/components/docs/ImageDoc.vue'
 import BlockquoteDoc from '@/components/docs/BlockquoteDoc.vue'
 import ProgressDoc from '@/components/docs/ProgressDoc.vue'
+import DeleteDoc from '@/components/docs/DeleteDoc.vue'
 
 // Form
 import InputDoc from '@/components/docs/InputDoc.vue'
@@ -25,6 +26,7 @@ import SliderDoc from '@/components/docs/SliderDoc.vue'
 import AccordionDoc from '@/components/docs/AccordionDoc.vue'
 import DropdownDoc from '@/components/docs/DropdownDoc.vue'
 import CardDoc from '@/components/docs/CardDoc.vue'
+import NotificationDoc from '@/components/docs/NotificationDoc.vue'
 
 Vue.use(VueRouter)
 
@@ -56,6 +58,11 @@ const routes = [
         meta: { title: 'Button' }
       },
       {
+        path: 'elements/delete',
+        component: DeleteDoc,
+        meta: { title: 'Delete' }
+      },
+      {
         path: 'elements/image',
         component: ImageDoc,
         meta: { title: 'Image' }
@@ -69,6 +76,11 @@ const routes = [
         path: 'elements/progress',
         component: ProgressDoc,
         meta: { title: 'Progress' }
+      },
+      {
+        path: 'elements/notification',
+        component: NotificationDoc,
+        meta: { title: 'Notification' }
       },
       {
         path: 'form/input',

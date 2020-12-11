@@ -5,7 +5,7 @@ const mixin = {
   <input type="checkbox"> Remember me
 </label>`,
       colors: `<label class="checkbox green">
-  <input type="checkbox">
+  <input type="checkbox" checked>
 </label>
 <label class="checkbox orange">
   <input type="checkbox">

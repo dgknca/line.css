@@ -9,7 +9,7 @@
     <div
       class="codemirror-wrp"
       :class="{ shrink: isEditorOverlayActive }"
-      :style="{ maxHeight: editorShrinkSize + 'px' }"
+      :style="{ maxHeight: !noHide ? editorShrinkSize + 'px' : 'unset' }"
     >
       <div class="codemirror-btn" @click="runCode" v-if="!onlyCode">Run</div>
       <codemirror
@@ -20,7 +20,7 @@
       ></codemirror>
       <div
         class="expand-overlay"
-        :class="{ active: isEditorOverlayActive }"
+        :class="{ active: !noHide ? isEditorOverlayActive : '' }"
         @click="expandSnippet"
       >
         Show Code
@@ -47,6 +47,10 @@ export default {
       default: false
     },
     cancelFlex: {
+      type: Boolean,
+      default: false
+    },
+    noHide: {
       type: Boolean,
       default: false
     }
