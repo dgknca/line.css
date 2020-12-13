@@ -48,6 +48,8 @@
   --reset-shadow-bottom: 0;
   --is-shadow-margin-left: 1;
   --is-shadow-margin-right: 0;
+  --is-shadow-margin-bottom: 1;
+  --is-shadow-margin-top: 0;
   --select-icon-size: 20px;
   --delete-button-size: 24px;
   --accordion-button-height: 40px;
@@ -354,6 +356,21 @@ strong {
 /*------------------------------------*\
 	# Text
 \*------------------------------------*/
+.field {
+  width: 100%; }
+  .field .field-label {
+    margin-bottom: 0.5rem; }
+  .field.field-horizontal {
+    display: flex;
+    align-items: center; }
+    .field.field-horizontal .field-label {
+      margin-right: 0.75rem;
+      margin-bottom: 0; }
+  .field .field-body {
+    flex-grow: 1; }
+  .field:not(:first-child) {
+    margin-top: 1.5rem; }
+
 .textarea,
 .input {
   display: block;
@@ -988,8 +1005,8 @@ textarea {
 .card {
   --computed-shadow-right: calc(var(--is-shadow-right) * -1);
   --computed-shadow-top: calc(var(--is-shadow-top) * -1);
-  margin-top: calc(var(--shadow-distance) * (var(--reset-shadow-bottom) + 1));
-  margin-bottom: calc(var(--shadow-distance) * var(--is-shadow-top));
+  margin-top: calc(var(--shadow-distance) * var(--is-shadow-margin-bottom));
+  margin-bottom: calc(var(--shadow-distance) * var(--is-shadow-margin-top));
   margin-right: calc(var(--shadow-distance) * var(--is-shadow-margin-left));
   margin-left: calc(var(--shadow-distance) * var(--is-shadow-margin-right));
   position: relative;

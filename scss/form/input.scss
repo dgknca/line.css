@@ -20,6 +20,29 @@
 	# Text
 \*------------------------------------*/
 
+.field {
+  width: 100%;
+  .field-label {
+    margin-bottom: 0.5rem;
+  }
+
+  &#{&}-horizontal {
+    display: flex;
+    align-items: center;
+
+    .field-label {
+      margin-right: 0.75rem;
+      margin-bottom: 0;
+    }
+  }
+  .field-body {
+    flex-grow: 1;
+  }
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+}
+
 .textarea,
 .input {
   display: block;

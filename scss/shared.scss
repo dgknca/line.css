@@ -13,8 +13,8 @@
 .card {
   --computed-shadow-right: calc(var(--is-shadow-right) * -1);
   --computed-shadow-top: calc(var(--is-shadow-top) * -1);
-  margin-top: calc(var(--shadow-distance) * (var(--reset-shadow-bottom) + 1));
-  margin-bottom: calc(var(--shadow-distance) * var(--is-shadow-top));
+  margin-top: calc(var(--shadow-distance) * var(--is-shadow-margin-bottom));
+  margin-bottom: calc(var(--shadow-distance) * var(--is-shadow-margin-top));
   margin-right: calc(var(--shadow-distance) * var(--is-shadow-margin-left));
   margin-left: calc(var(--shadow-distance) * var(--is-shadow-margin-right));
   position: relative;

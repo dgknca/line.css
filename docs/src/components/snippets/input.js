@@ -1,7 +1,40 @@
 const mixin = {
   data() {
     return {
-      defaultInput: `<input class="input" type="text" placeholder="Text">`,
+      verticalField: `<div class="field">
+  <div class="field-label">
+    <label class="label">First name</label>
+  </div>
+  <div class="field-body">
+    <input class="input" type="text" placeholder="First name">
+  </div>
+</div>
+
+<div class="field">
+  <div class="field-label">
+    <label class="label">Last name</label>
+  </div>
+  <div class="field-body">
+    <input class="input" type="text" placeholder="Last name">
+  </div>
+</div>`,
+      horizontalField: `<div class="field field-horizontal">
+  <div class="field-label">
+    <label class="label">First name</label>
+  </div>
+  <div class="field-body">
+    <input class="input" type="text" placeholder="First name">
+  </div>
+</div>
+
+<div class="field field-horizontal">
+  <div class="field-label">
+    <label class="label">Last name</label>
+  </div>
+  <div class="field-body">
+    <input class="input" type="text" placeholder="Last name">
+  </div>
+</div>`,
       colors: `<input class="input green" type="text" placeholder="Green">
 <input class="input orange" type="text" placeholder="Orange">
 <input class="input red" type="text" placeholder="Red">

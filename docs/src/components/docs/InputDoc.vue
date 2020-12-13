@@ -2,10 +2,15 @@
   <div class="content-wrapper">
     <h1 class="size-2 fw-600">Input</h1>
 
-    <h3 id="default" class="size-4 fw-600 doc-section-title">
-      <a href="#default">#</a>Default
+    <h3 id="verticalField" class="size-4 fw-600 doc-section-title">
+      <a href="#verticalField">#</a>Vertical Field
     </h3>
-    <Snippet :_code="defaultInput" />
+    <Snippet :_code="verticalField" :cancel-flex="true" />
+
+    <h3 id="horizontalField" class="size-4 fw-600 doc-section-title">
+      <a href="#horizontalField">#</a>Horizontal Field
+    </h3>
+    <Snippet :_code="horizontalField" :cancel-flex="true" />
 
     <h3 id="colors" class="size-4 fw-600 doc-section-title">
       <a href="#colors">#</a>Colors
