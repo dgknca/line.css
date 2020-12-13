@@ -400,7 +400,7 @@
             <td>
               <div class="doc-color-wrp">
                 <span class="color" style="background: #000"></span>
-                <code>#000</code>
+                <code>#4a4a4a</code>
               </div>
             </td>
           </tr>

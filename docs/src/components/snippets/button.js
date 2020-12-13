@@ -55,7 +55,7 @@ const mixin = {
   <button disabled class="btn blue">Button</button>
   <button disabled class="btn yellow">Button</button>
 </div>`,
-      fullWidth: `<button class="btn btn-full">
+      fullWidth: `<button class="btn btn-full" style="--shadow-distance:22px">
   Full Width
 </button>`,
       noShadow: `<button class="btn no-shadow">No Shadow</button>`,

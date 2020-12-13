@@ -10,8 +10,6 @@
     white-space: nowrap;
     display: flex;
     align-items: center;
-    border: var(--border-width) solid var(--border-color);
-    border-radius: var(--border-radius);
     position: relative;
     z-index: 2;
     background-color: var(--accordion-button-bg);
@@ -56,10 +54,8 @@
 
   &-content {
     border-radius: 0 0 var(--border-radius) var(--border-radius);
-    border: var(--border-width) solid var(--border-color);
     border-top: none;
     padding: 1rem;
-    background-color: #fff;
     overflow: hidden;
     display: none;
     font-size: 0.9rem;

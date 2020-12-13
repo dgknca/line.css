@@ -104,7 +104,7 @@
               <code>--text-color</code>
             </td>
             <td>
-              <code>#000</code>
+              <code>#4a4a4a</code>
             </td>
           </tr>
           <tr>

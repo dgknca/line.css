@@ -1,7 +1,5 @@
 .blockquote {
   quotes: none;
-  border-radius: var(--border-radius);
-  background-color: #fff;
   padding: 20px;
   line-height: 1.5;
   position: relative;
@@ -45,11 +43,9 @@
     position: absolute;
     z-index: 1;
     height: 100%;
-    border-radius: inherit;
     transition: inherit;
     border-radius: inherit;
     background-color: var(--shadow-bg);
-    border: 2px solid var(--border-color);
     bottom: -8px;
     width: calc(100% - 20px);
     left: 10px;

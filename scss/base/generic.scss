@@ -17,11 +17,18 @@ html {
   text-size-adjust: 100%;
 }
 
-strong {
-  font-weight: 700;
+body {
+  color: var(--text-color);
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  text-decoration: underline;
-  color: var(--blue-dark);
+label {
+  line-height: 1;
+}
+
+strong {
+  font-weight: 700;
 }

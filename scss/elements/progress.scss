@@ -9,7 +9,6 @@
   overflow: hidden;
   padding: 0;
   width: 100%;
-  border: var(--border-width) solid var(--border-color);
   transition: var(--transition-linear);
 
   &#{&}-sm {

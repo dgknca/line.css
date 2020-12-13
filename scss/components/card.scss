@@ -1,17 +1,14 @@
 .card {
   padding: 15px;
-  background-color: #fff;
   width: calc(100% - var(--shadow-distance));
   display: flex;
-  max-width: 100%;
   color: var(--text-color);
 
   &-image {
     flex-shrink: 0;
     width: var(--card-image-width, 100px);
     height: var(--card-image-height, 100px);
-    margin-bottom: 0;
-    margin-right: 20px;
+    margin-right: 1.3rem;
   }
 
   &-image,
@@ -21,9 +18,7 @@
   }
 
   &-image {
-    border-radius: var(--border-radius);
     overflow: hidden;
-    border: var(--border-width) solid var(--border-color);
 
     img {
       position: absolute;

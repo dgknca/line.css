@@ -81,6 +81,17 @@ const mixin = {
       <a href="#0" class="dropdown-item">Something else here</a>
     </div>
   </div>
+</div>`,
+      noIcon: `<div class="dropdown">
+  <input type="checkbox" id="dropdown-6">
+  <label for="dropdown-6" class="dropdown-trigger no-icon">Dropdown</label>
+  <div class="dropdown-menu">
+    <div class="dropdown-list">
+      <a href="#0" class="dropdown-item">Action</a>
+      <a href="#0" class="dropdown-item">Another action</a>
+      <a href="#0" class="dropdown-item">Something else here</a>
+    </div>
+  </div>
 </div>`
     }
   }

@@ -2,15 +2,6 @@
   width: calc(var(--img-width, 300px) - var(--shadow-distance) * 2);
   height: var(--img-height, 300px);
 
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: var(--object-fit, cover);
-  }
-
   &.aspect-ratio,
   &[style*='--aspect-ratio'] {
     width: 100%;

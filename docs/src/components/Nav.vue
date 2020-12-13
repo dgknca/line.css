@@ -126,6 +126,8 @@ export default {
 
   .social-btn {
     margin: 0 20px;
+    display: flex;
+    align-items: center;
     &.github {
       color: #24292e;
     }

@@ -59,6 +59,14 @@
               Aligns to center.
             </td>
           </tr>
+          <tr>
+            <td>
+              <a href="#no-icon" class="tag-class">no-icon</a>
+            </td>
+            <td>
+              Removes dropdown icon.
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -94,6 +102,11 @@
       >
     </div>
     <Snippet :_code="centerAlign" />
+
+    <div class="modifiers-container">
+      <a href="#no-icon" id="no-icon" class="tag-property">.no-icon</a>
+    </div>
+    <Snippet :_code="noIcon" />
 
     <h3 id="custom-properties" class="size-4 fw-600 doc-section-title">
       <a href="#custom-properties">#</a>Custom Properties
@@ -137,7 +150,7 @@
               <code>--text-color</code>
             </td>
             <td>
-              <code>#000</code>
+              <code>#4a4a4a</code>
             </td>
           </tr>
           <tr>

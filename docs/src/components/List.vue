@@ -21,6 +21,65 @@
         </router-link>
       </li>
       <li>
+        <a class="size-6 fw-600 navigation-link">Elements</a>
+        <ul class="inner-list">
+          <li>
+            <router-link
+              to="/docs/elements/button"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Button</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/elements/delete"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Delete</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/elements/image"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Image</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/elements/blockquote"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Blockquote</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/elements/progress"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Progress</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/elements/notification"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Notification</span>
+            </router-link>
+          </li>
+        </ul>
+      </li>
+      <li>
         <a class="size-6 fw-600 navigation-link">Form</a>
         <ul class="inner-list">
           <li>
@@ -84,65 +143,6 @@
               active-class="active"
             >
               <span>Select</span>
-            </router-link>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a class="size-6 fw-600 navigation-link">Elements</a>
-        <ul class="inner-list">
-          <li>
-            <router-link
-              to="/docs/elements/button"
-              class="navigation-link link link-pink"
-              active-class="active"
-            >
-              <span>Button</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/docs/elements/delete"
-              class="navigation-link link link-pink"
-              active-class="active"
-            >
-              <span>Delete</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/docs/elements/image"
-              class="navigation-link link link-pink"
-              active-class="active"
-            >
-              <span>Image</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/docs/elements/blockquote"
-              class="navigation-link link link-pink"
-              active-class="active"
-            >
-              <span>Blockquote</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/docs/elements/progress"
-              class="navigation-link link link-pink"
-              active-class="active"
-            >
-              <span>Progress</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link
-              to="/docs/elements/notification"
-              class="navigation-link link link-pink"
-              active-class="active"
-            >
-              <span>Notification</span>
             </router-link>
           </li>
         </ul>
@@ -216,7 +216,7 @@ export default {}
     padding: 0;
 
     a {
-      padding: 10px 0;
+      padding: 0.2rem 0;
       display: block;
     }
   }
@@ -227,7 +227,7 @@ export default {}
     a {
       color: var(--black);
       font-size: 0.8rem;
-      padding: 0.4rem 0;
+      padding: 0.2rem 0;
     }
   }
 }

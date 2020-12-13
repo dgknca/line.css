@@ -29,6 +29,7 @@
   font-size: 1rem;
   outline: none;
   color: var(--text-color);
+  resize: vertical;
 
   &.focus,
   &:focus {
@@ -98,7 +99,6 @@
   & > input[type='checkbox'] {
     width: 20px;
     height: 20px;
-    background-color: #fff;
     -webkit-appearance: none;
     appearance: none;
     margin: 0;
@@ -131,9 +131,6 @@
   }
 
   & > input[type='checkbox'] {
-    border: var(--border-width) solid var(--border-color);
-    border-radius: var(--border-radius);
-
     &:checked {
       box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #fff,
         inset 2px -2px 0 #fff, inset -2px 2px 0 #fff;
