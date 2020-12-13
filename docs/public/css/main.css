@@ -772,6 +772,8 @@ textarea {
   position: relative; }
 
 .accordion-button {
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
   user-select: none;
   height: calc(var(--accordion-button-height) - var(--border-width) * 2);
   white-space: nowrap;
@@ -809,6 +811,7 @@ textarea {
   display: none; }
 
 .accordion-content {
+  border: var(--border-width) solid var(--border-color);
   border-radius: 0 0 var(--border-radius) var(--border-radius);
   border-top: none;
   padding: 1rem;
@@ -1081,8 +1084,7 @@ textarea {
 .card,
 .card-image,
 .notification,
-.checkbox > input[type='checkbox'],
-.accordion-button {
+.checkbox > input[type='checkbox'] {
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius); }
 
@@ -1090,8 +1092,7 @@ textarea {
 .slider-prev,
 .blockquote:not(.no-shadow)::after,
 .delete,
-.progress,
-.accordion-content {
+.progress {
   border: var(--border-width) solid var(--border-color); }
 
 .btn:not(.btn-sm):not(.btn-l),

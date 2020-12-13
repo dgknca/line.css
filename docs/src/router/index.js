@@ -50,7 +50,8 @@ const routes = [
       },
       {
         path: 'globals',
-        component: GlobalsDoc
+        component: GlobalsDoc,
+        meta: { title: 'Global Variables' }
       },
       {
         path: 'elements/button',

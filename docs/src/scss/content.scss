@@ -96,11 +96,6 @@ p {
   }
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
 .link,
 .navigation-link {
   color: var(--black);
@@ -174,4 +169,8 @@ h3 + .modifiers-container {
   h4.helper {
     margin-top: 1.5rem;
   }
+}
+
+.rules {
+  margin-top: 1.5rem;
 }

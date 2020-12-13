@@ -84,8 +84,7 @@
 .card,
 .card-image,
 .notification,
-.checkbox > input[type='checkbox'],
-.accordion-button {
+.checkbox > input[type='checkbox'] {
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
 }
@@ -94,8 +93,7 @@
 .slider-prev,
 .blockquote:not(.no-shadow)::after,
 .delete,
-.progress,
-.accordion-content {
+.progress {
   border: var(--border-width) solid var(--border-color);
 }
 

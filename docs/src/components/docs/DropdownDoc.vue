@@ -2,6 +2,25 @@
   <div class="content-wrapper">
     <h1 class="size-2 fw-600">Dropdown</h1>
 
+    <div class="rules">
+      <strong> Rules:</strong>
+      <ul>
+        <li>
+          Each checkbox must have an 'id' that we'll target it and an 'id' must
+          be unique in the whole document.
+        </li>
+        <li>
+          '.dropdown-trigger' is our trigger. You must use 'label' as tag name
+          to trigger our checkbox.
+        </li>
+        <li>
+          The 'label' then needs a 'for' an attribute whose value is the same as
+          the previous input id.
+        </li>
+        <li>Also pay attention to place of inputs in the structure.</li>
+      </ul>
+    </div>
+
     <h3 id="default" class="size-4 fw-600 doc-section-title">
       <a href="#default">#</a>Default
     </h3>

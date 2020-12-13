@@ -8,6 +8,10 @@ Vue.config.productionTip = false
 import Snippet from './components/_Snippet.vue'
 Vue.component('Snippet', Snippet)
 
+import VueClipboard from 'vue-clipboard2'
+
+Vue.use(VueClipboard)
+
 new Vue({
   router,
   store,

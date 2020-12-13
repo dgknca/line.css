@@ -5,6 +5,8 @@
   }
 
   &-button {
+    border: var(--border-width) solid var(--border-color);
+    border-radius: var(--border-radius);
     user-select: none;
     height: calc(var(--accordion-button-height) - var(--border-width) * 2);
     white-space: nowrap;
@@ -53,6 +55,7 @@
   }
 
   &-content {
+    border: var(--border-width) solid var(--border-color);
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     border-top: none;
     padding: 1rem;

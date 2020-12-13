@@ -1,22 +1,18 @@
 const mixin = {
   data() {
     return {
-      borderRadiusShadowDistance: `<button
-  class="btn btn-md"
-  style="--border-radius: 8px;--shadow-distance: 7px;">
-  Custom Button
-</button>`,
-
-      borderBackBg: `<style>
+      customPropertyOnRoot: `<style>
+  :root {
+    --shadow-distance: 20px;
+  }
+</style>`,
+      customPropertyInAClass: `<style>
   .my-custom-btn {
-    --shadow-bg: yellow;
-    --border-color: orangered;
+    --shadow-distance: 20px;
   }
 </style>
 
-<button class="btn btn-md my-custom-btn">
-  Custom Button
-</button>`
+<button class="btn my-custom-btn">Custom Button</button>`
     }
   }
 }

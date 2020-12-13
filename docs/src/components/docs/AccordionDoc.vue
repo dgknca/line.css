@@ -2,6 +2,29 @@
   <div class="content-wrapper">
     <h1 class="size-2 fw-600">Accordion</h1>
 
+    <div class="rules">
+      <strong> Rules:</strong>
+      <ul>
+        <li>
+          Each radio and checkbox inputs must have an 'id' that we'll target it
+          and an 'id' must be unique in the whole document.
+        </li>
+        <li>
+          The 'name' attributes must be same in a accordion component. (Name
+          attribute is required for radio inputs only.)
+        </li>
+        <li>
+          '.accordion-button' is our trigger. You must use 'label' as tag name
+          to trigger our checkbox or radio.
+        </li>
+        <li>
+          The 'label' then needs a 'for' an attribute whose value is the same as
+          the previous input's id.
+        </li>
+        <li>Also pay attention to place of inputs in the structure.</li>
+      </ul>
+    </div>
+
     <h3 id="default" class="size-4 fw-600 doc-section-title">
       <a href="#default">#</a>Single Accordion
     </h3>
@@ -13,8 +36,9 @@
     <Snippet :_code="checkboxAccordion" :cancel-flex="true" />
 
     <h3 id="default" class="size-4 fw-600 doc-section-title">
-      <a href="#default">#</a>With Radio
+      <a href="#default">#</a>With Radios
     </h3>
+    <p>Only allows one open dropdown at a time.</p>
     <Snippet :_code="radioAccordion" :cancel-flex="true" />
 
     <div class="doc-table">

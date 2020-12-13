@@ -1,29 +1,43 @@
 <template>
   <div class="snippet">
-    <div class="preview-cnt" ref="previewWrp" v-if="!onlyCode">
+    <div class="snippet-wrp">
+      <div class="preview-cnt" ref="previewWrp" v-if="!onlyCode">
+        <div
+          ref="preview"
+          :style="{ display: cancelFlex ? 'block' : 'flex' }"
+        ></div>
+      </div>
       <div
-        ref="preview"
-        :style="{ display: cancelFlex ? 'block' : 'flex' }"
-      ></div>
-    </div>
-    <div
-      class="codemirror-wrp"
-      :class="{ shrink: isEditorOverlayActive }"
-      :style="{ maxHeight: !noHide ? editorShrinkSize + 'px' : 'unset' }"
-    >
-      <div class="codemirror-btn" @click="runCode" v-if="!onlyCode">Run</div>
-      <codemirror
-        ref="editor"
-        v-model="code"
-        :options="onlyCode ? readOnlyOptions : optionsHTML"
-        @ready="onCmReady"
-      ></codemirror>
-      <div
-        class="expand-overlay"
-        :class="{ active: !noHide ? isEditorOverlayActive : '' }"
-        @click="expandSnippet"
+        class="codemirror-wrp"
+        :class="{ shrink: isEditorOverlayActive }"
+        :style="{ maxHeight: !noHide ? editorShrinkSize + 'px' : 'unset' }"
       >
-        Show Code
+        <button
+          type="button"
+          class="copy-btn"
+          ref="copyBtn"
+          v-clipboard:copy="code"
+          v-clipboard:success="onCopy"
+          v-clipboard:error="onError"
+        >
+          Copy
+        </button>
+        <div class="codemirror-btn" @click="runCode" v-if="!onlyCode">
+          Run
+        </div>
+        <codemirror
+          ref="editor"
+          v-model="code"
+          :options="onlyCode ? readOnlyOptions : optionsHTML"
+          @ready="onCmReady"
+        ></codemirror>
+        <div
+          class="expand-overlay"
+          :class="{ active: !noHide ? isEditorOverlayActive : '' }"
+          @click="expandSnippet"
+        >
+          Show Code
+        </div>
       </div>
     </div>
   </div>
@@ -74,7 +88,9 @@ export default {
       },
       code: '',
       isEditorOverlayActive: false,
-      editorShrinkSize: 270
+      editorShrinkSize: 270,
+
+      message: 'Copy These Text'
     }
   },
   computed: {
@@ -117,6 +133,19 @@ export default {
     expandSnippet() {
       this.isEditorOverlayActive = !this.isEditorOverlayActive
       this.editorShrinkSize = this.$refs.editor.$el.getBoundingClientRect().height
+    },
+    onCopy() {
+      this.$refs.copyBtn.innerText = 'Copied!'
+      this.resetCopyText()
+    },
+    onError() {
+      this.$refs.copyBtn.innerText = 'Failed to copy'
+      this.resetCopyText()
+    },
+    resetCopyText() {
+      setTimeout(() => {
+        this.$refs.copyBtn.innerText = 'Copy'
+      }, 3000)
     }
   },
   mounted() {
@@ -134,13 +163,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.snippet {
+.snippet-wrp {
   padding: 1.5rem 0 1.5rem 0;
   display: flex;
 
   & > * {
     width: 100%;
   }
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 30px;
+  top: -32px;
+  right: 0;
+  border-radius: 3px;
+  border: 2px solid var(--border-color);
+  background: #fff;
+  color: var(--text-color);
+  padding: 5px 8px;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.1s;
 }
 
 .preview-cnt {

@@ -14,11 +14,6 @@
     </h4>
     <Snippet :_code="npm" :only-code="true" />
     <Snippet :_code="importLibrary" type="js" :only-code="true" />
-
-    <p>
-      line.css only provides elements & components. You will need to define your
-      own layout.
-    </p>
   </div>
 </template>
 

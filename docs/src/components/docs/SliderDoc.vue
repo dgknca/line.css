@@ -1,11 +1,32 @@
 <template>
   <div class="content-wrapper">
     <h1 class="size-2 fw-600">Slider</h1>
-    <p>
-      A pure CSS slider, uses radio inputs. <strong>Note thats:</strong> the
-      name attributes are should be same in a slider component, and the id's
-      should be unique in a page.
-    </p>
+
+    <div class="rules">
+      <strong> Rules:</strong>
+      <ul>
+        <li>
+          You must use radio input for slider. It doesn't work with checkboxes.
+        </li>
+        <li>
+          Each radio input must have an 'id' that we'll target it and an 'id'
+          must be unique in the whole document.
+        </li>
+        <li>
+          The 'name' attributes must be same in a slider component.
+        </li>
+        <li>
+          '.slider-next' and '.slider-prev' is our triggers. You must use
+          'label' as tag name to trigger our radio.
+        </li>
+        <li>
+          The 'label' then needs a 'for' an attribute whose value is the same as
+          the previous input id of the parent '.slider-item'.
+        </li>
+        <li>Also pay attention to place of inputs in the structure.</li>
+      </ul>
+    </div>
+
     <Snippet :_code="slider" />
 
     <h3 id="custom-properties" class="size-4 fw-600 doc-section-title">
