@@ -82,9 +82,9 @@ const mixin = {
     </div>
   </div>
 </div>`,
-      noIcon: `<div class="dropdown">
+      noIcon: `<div class="dropdown no-icon">
   <input type="checkbox" id="dropdown-6">
-  <label for="dropdown-6" class="dropdown-trigger no-icon">Dropdown</label>
+  <label for="dropdown-6" class="dropdown-trigger">Dropdown</label>
   <div class="dropdown-menu">
     <div class="dropdown-list">
       <a href="#0" class="dropdown-item">Action</a>

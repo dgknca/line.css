@@ -109,7 +109,7 @@
               <code>--hover-accordion-button-bg</code>
             </td>
             <td>
-              <code>#fff</code>
+              <code>var(--accordion-button-bg)</code>
             </td>
           </tr>
           <tr>

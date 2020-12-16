@@ -54,7 +54,6 @@
   --delete-button-size: 24px;
   --accordion-button-height: 40px;
   --accordion-button-bg: #fff;
-  --hover-accordion-button-bg: #fff;
   --active-accordion-button-bg: #fff;
   --active-accordion-text-color: #000;
   --slider-button-size: 50px;
@@ -102,10 +101,6 @@ strong {
   line-height: 1;
   padding: 0.5rem 1rem;
   font-size: 1rem; }
-  .btn.hover, .btn:hover, .btn.active, .btn:active, .btn[disabled] {
-    transform: translate3d(calc(var(--computed-shadow-right) * -2px), calc(var(--computed-shadow-top) * 2px), 0); }
-    .btn.hover::before, .btn:hover::before, .btn.active::before, .btn:active::before, .btn[disabled]::before {
-      transform: translate3d(calc(var(--computed-shadow-right) * 2px), calc(var(--computed-shadow-top) * -2px), -0.1px); }
   .btn.btn-sm {
     --shadow-distance: 2px;
     padding: 0.4rem 0.8rem;
@@ -228,10 +223,6 @@ strong {
       content: '';
       display: block;
       padding-bottom: calc(100% / (var(--aspect-ratio))); }
-  .img:not(.disable-hover).hover, .img:not(.disable-hover):hover {
-    transform: translate3d(calc(var(--computed-shadow-right) * -2px), calc(var(--computed-shadow-top) * 2px), 0); }
-    .img:not(.disable-hover).hover::before, .img:not(.disable-hover):hover::before {
-      transform: translate3d(calc(var(--computed-shadow-right) * 2px), calc(var(--computed-shadow-top) * -2px), -0.1px); }
 
 .blockquote {
   quotes: none;
@@ -316,7 +307,9 @@ strong {
   padding: 1.25rem 2.5rem 1.25rem 1.5rem;
   position: relative;
   background-color: var(--gray-light);
-  line-height: 1.5; }
+  line-height: 1.5;
+  width: 100%;
+  max-width: var(--notification-max-width, 500px); }
   .notification .delete {
     right: 0.5rem;
     position: absolute;
@@ -767,6 +760,9 @@ textarea {
   .slider-next {
     right: calc(var(--slider-button-size) / 2 * -1); }
 
+.accordions {
+  width: 100%; }
+
 .accordion-container {
   width: 100%;
   position: relative; }
@@ -786,7 +782,7 @@ textarea {
   transition-property: background-color, color;
   box-sizing: content-box; }
   .accordion-button:hover {
-    background-color: var(--hover-accordion-button-bg); }
+    background-color: var(--hover-accordion-button-bg, var(--accordion-button-bg)); }
   .accordion-button::before {
     content: '';
     cursor: pointer;
@@ -878,9 +874,9 @@ textarea {
     cursor: pointer;
     user-select: none;
     outline: none; }
-    .dropdown-trigger.no-icon {
-      background: none;
-      padding: 0.5rem 1rem; }
+  .dropdown.no-icon .dropdown-trigger {
+    background: none;
+    padding: 0.5rem 1rem; }
   .dropdown.close-on-click-outside .dropdown-trigger::before {
     content: '';
     position: fixed;
@@ -1071,6 +1067,23 @@ textarea {
     .card.no-shadow::before {
       content: none; }
 
+.btn.hover,
+.btn:hover,
+.btn.active,
+.btn:active,
+.btn[disabled],
+.img:not(.disable-hover).hover,
+.img:not(.disable-hover):hover {
+  transform: translate3d(calc(var(--computed-shadow-right) * var(--border-width) * -1), calc(var(--computed-shadow-top) * var(--border-width)), 0); }
+  .btn.hover::before,
+  .btn:hover::before,
+  .btn.active::before,
+  .btn:active::before,
+  .btn[disabled]::before,
+  .img:not(.disable-hover).hover::before,
+  .img:not(.disable-hover):hover::before {
+    transform: translate3d(calc(var(--computed-shadow-right) * var(--border-width)), calc(var(--computed-shadow-top) * var(--border-width) * -1), -0.1px); }
+
 .btn,
 .textarea,
 .input,
@@ -1094,12 +1107,6 @@ textarea {
 .delete,
 .progress {
   border: var(--border-width) solid var(--border-color); }
-
-.btn:not(.btn-sm):not(.btn-l),
-.select,
-.input,
-.dropdown-trigger {
-  height: 40px; }
 
 .btn,
 .delete,

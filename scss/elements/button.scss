@@ -11,26 +11,6 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
 
-  &.hover,
-  &:hover,
-  &.active,
-  &:active,
-  &[disabled] {
-    transform: translate3d(
-      calc(var(--computed-shadow-right) * -2px),
-      calc(var(--computed-shadow-top) * 2px),
-      0
-    );
-
-    &::before {
-      transform: translate3d(
-        calc(var(--computed-shadow-right) * 2px),
-        calc(var(--computed-shadow-top) * -2px),
-        -0.1px
-      );
-    }
-  }
-
   &#{&}-sm {
     --shadow-distance: 2px;
     padding: 0.4rem 0.8rem;

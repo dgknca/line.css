@@ -14,11 +14,11 @@
     cursor: pointer;
     user-select: none;
     outline: none;
+  }
 
-    &.no-icon {
-      background: none;
-      padding: 0.5rem 1rem;
-    }
+  &.no-icon .dropdown-trigger {
+    background: none;
+    padding: 0.5rem 1rem;
   }
 
   &.close-on-click-outside {

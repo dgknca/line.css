@@ -71,6 +71,28 @@
   }
 }
 
+.btn.hover,
+.btn:hover,
+.btn.active,
+.btn:active,
+.btn[disabled],
+.img:not(.disable-hover).hover,
+.img:not(.disable-hover):hover {
+  transform: translate3d(
+    calc(var(--computed-shadow-right) * var(--border-width) * -1),
+    calc(var(--computed-shadow-top) * var(--border-width)),
+    0
+  );
+
+  &::before {
+    transform: translate3d(
+      calc(var(--computed-shadow-right) * var(--border-width)),
+      calc(var(--computed-shadow-top) * var(--border-width) * -1),
+      -0.1px
+    );
+  }
+}
+
 .btn,
 .textarea,
 .input,
@@ -95,13 +117,6 @@
 .delete,
 .progress {
   border: var(--border-width) solid var(--border-color);
-}
-
-.btn:not(.btn-sm):not(.btn-l),
-.select,
-.input,
-.dropdown-trigger {
-  height: 40px;
 }
 
 .btn,

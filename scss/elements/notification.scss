@@ -3,6 +3,8 @@
   position: relative;
   background-color: var(--gray-light);
   line-height: 1.5;
+  width: 100%;
+  max-width: var(--notification-max-width, 500px);
 
   .delete {
     right: 0.5rem;

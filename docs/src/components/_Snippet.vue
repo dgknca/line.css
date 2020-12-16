@@ -180,9 +180,8 @@ export default {
   height: 30px;
   top: -32px;
   right: 0;
-  border-radius: 3px;
   border: 2px solid var(--border-color);
-  background: #fff;
+  background-color: #fff;
   color: var(--text-color);
   padding: 5px 8px;
   font-size: 13px;
