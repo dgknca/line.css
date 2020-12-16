@@ -5,7 +5,7 @@ var rename = require('gulp-rename')
 const cleanCSS = require('gulp-clean-css')
 
 var path = {
-  scss: { source: './scss/main.scss', target: './docs/public/css' }
+  scss: { source: './scss/main.scss', target: './' }
 }
 
 var listen = './scss/**/**.scss'
@@ -15,10 +15,10 @@ gulp.task('scss', function() {
     .src(path.scss.source)
     .pipe(plumber())
     .pipe(sass())
-    .pipe(rename({ extname: '.css' }))
+    .pipe(rename('line.css'))
     .pipe(gulp.dest(path.scss.target))
     .pipe(cleanCSS())
-    .pipe(rename({ extname: '.min.css' }))
+    .pipe(rename('line.min.css'))
     .pipe(gulp.dest(path.scss.target))
 })
 
