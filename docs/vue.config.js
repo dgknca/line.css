@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/line.css/'
+  publicPath: process.env.NODE_ENV === 'production' ? '/line.css/' : '/'
 }
