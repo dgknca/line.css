@@ -1,1 +1,7 @@
 docs
+story
+debug.log
+.editorconfig
+.gitattributes
+.prettierrc
+gulpfile.js

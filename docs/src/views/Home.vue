@@ -8,10 +8,10 @@
             elements that you can customize easily.
           </h2>
           <div class="hero-btns">
-            <router-link to="/docs" class="btn purple btn-l">
+            <!-- <router-link to="/docs" class="btn purple btn-l">
               <span class="btn-text">Download</span>
-            </router-link>
-            <router-link to="/docs" class="btn yellow btn-l no-shadow">
+            </router-link> -->
+            <router-link to="/docs" class="btn purple btn-l">
               <span class="btn-text">Go to docs</span>
             </router-link>
           </div>

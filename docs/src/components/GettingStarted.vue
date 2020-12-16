@@ -3,7 +3,7 @@
     <h1 class="size-2 fw-600">Getting Started</h1>
 
     <h3 id="install" class="size-4 fw-600 doc-section-title">
-      <a href="#install">#</a>Install (not available yet)
+      <a href="#install">#</a>Install
     </h3>
     <h4 class="helper size-5">
       Use from CDN

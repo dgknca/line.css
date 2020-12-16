@@ -137,6 +137,11 @@ const routes = [
         path: 'components/accordion',
         component: AccordionDoc,
         meta: { title: 'Accordion' }
+      },
+      {
+        path: '*',
+        name: 'catchAll',
+        component: Home
       }
     ]
   }
