@@ -2,7 +2,7 @@
 
 A simple CSS framework that provides useful components.
 
-[Documentatin](https://dgknca.github.io/line.css/) | [Storybook] (https://linecss.netlify.app/)
+[Documentatin](https://dgknca.github.io/line.css/) | [Storybook](https://linecss.netlify.app/)
 
 ## Install
 
