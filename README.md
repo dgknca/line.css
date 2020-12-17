@@ -1,6 +1,6 @@
 # line.css
 
-A simple CSS framework that provides useful components.
+A simple CSS library that provides useful elements & components.
 
 [Documentatin](https://dgknca.github.io/line.css/) | [Storybook](https://linecss.netlify.app/)
 
