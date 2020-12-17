@@ -2,9 +2,7 @@
 
 A simple CSS framework that provides useful components.
 
-## Demos
-
-
+[Documentatin](https://dgknca.github.io/line.css/)
 
 ## Install
 
