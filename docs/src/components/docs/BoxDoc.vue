@@ -2,6 +2,11 @@
   <div class="content-wrapper">
     <h1 class="size-2 fw-600">Box</h1>
 
+    <p>
+      The box element is simply a container with a shadow, a border, a radius,
+      and some padding.
+    </p>
+
     <Snippet :_code="box" />
 
     <h3 id="custom-properties" class="size-4 fw-600 doc-section-title">
