@@ -77,6 +77,15 @@
               <span>Notification</span>
             </router-link>
           </li>
+          <li>
+            <router-link
+              to="/docs/elements/box"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Box</span>
+            </router-link>
+          </li>
         </ul>
       </li>
       <li>
@@ -143,6 +152,15 @@
               active-class="active"
             >
               <span>Select</span>
+            </router-link>
+          </li>
+          <li>
+            <router-link
+              to="/docs/form/form"
+              class="navigation-link link link-pink"
+              active-class="active"
+            >
+              <span>Form Examples</span>
             </router-link>
           </li>
         </ul>

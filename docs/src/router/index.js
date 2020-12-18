@@ -11,6 +11,7 @@ import ImageDoc from '@/components/docs/ImageDoc.vue'
 import BlockquoteDoc from '@/components/docs/BlockquoteDoc.vue'
 import ProgressDoc from '@/components/docs/ProgressDoc.vue'
 import DeleteDoc from '@/components/docs/DeleteDoc.vue'
+import BoxDoc from '@/components/docs/BoxDoc.vue'
 
 // Form
 import InputDoc from '@/components/docs/InputDoc.vue'
@@ -20,6 +21,7 @@ import RadioDoc from '@/components/docs/RadioDoc.vue'
 import RangeDoc from '@/components/docs/RangeDoc.vue'
 import SelectDoc from '@/components/docs/SelectDoc.vue'
 import FileInputDoc from '@/components/docs/FileInputDoc.vue'
+import FormExamplesDoc from '@/components/docs/FormExamplesDoc.vue'
 
 // Components
 import SliderDoc from '@/components/docs/SliderDoc.vue'
@@ -84,6 +86,11 @@ const routes = [
         meta: { title: 'Notification' }
       },
       {
+        path: 'elements/box',
+        component: BoxDoc,
+        meta: { title: 'Box' }
+      },
+      {
         path: 'form/input',
         component: InputDoc,
         meta: { title: 'Input' }
@@ -117,6 +124,11 @@ const routes = [
         path: 'form/select',
         component: SelectDoc,
         meta: { title: 'Select' }
+      },
+      {
+        path: 'form/form',
+        component: FormExamplesDoc,
+        meta: { title: 'Form Examples' }
       },
       {
         path: 'components/slider',

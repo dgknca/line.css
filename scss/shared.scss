@@ -1,3 +1,9 @@
+.box {
+  padding: 1.5rem;
+  width: calc(100% - var(--shadow-distance));
+}
+
+.box,
 .btn,
 .slider,
 .card,
@@ -7,6 +13,7 @@
   }
 }
 
+.box,
 .btn,
 .slider,
 .img,
@@ -71,6 +78,7 @@
   }
 }
 
+.box:not(.disable-hover).hover,
 .btn.hover,
 .btn:hover,
 .btn.active,
@@ -93,6 +101,7 @@
   }
 }
 
+.box,
 .btn,
 .textarea,
 .input,
@@ -119,6 +128,7 @@
   border: var(--border-width) solid var(--border-color);
 }
 
+.box,
 .btn,
 .delete,
 .img,

@@ -331,26 +331,10 @@ strong {
   .notification.red {
     background-color: var(--red-light); }
 
-/*
-    Table of Contents
-    -----------------
-    1. Text
-    2. Checkbox
-    3. Radio
-    4. File
-    5. Range
-*/
-.field:not(:first-child) {
-  margin-top: 0.75rem; }
-
-.control {
-  position: relative; }
-
-/*------------------------------------*\
-	# Text
-\*------------------------------------*/
 .field {
   width: 100%; }
+  .field:not(:first-child) {
+    margin-top: 1.5rem; }
   .field .field-label {
     margin-bottom: 0.5rem; }
   .field.field-horizontal {
@@ -361,9 +345,32 @@ strong {
       margin-bottom: 0; }
   .field .field-body {
     flex-grow: 1; }
-  .field:not(:first-child) {
-    margin-top: 1.5rem; }
 
+.control {
+  position: relative; }
+
+.form-row {
+  display: flex;
+  width: 100%; }
+  .form-row .field:not(:first-child) {
+    margin-top: 0; }
+  .form-row:not(:first-child) {
+    margin-top: 1.5rem; }
+  .form-row > *:not(:last-child) {
+    margin-right: 0.75rem; }
+
+/*
+    Table of Contents
+    -----------------
+    1. Text
+    2. Checkbox
+    3. Radio
+    4. File
+    5. Range
+*/
+/*------------------------------------*\
+	# Text
+\*------------------------------------*/
 .textarea,
 .input {
   display: block;
@@ -672,7 +679,8 @@ strong {
   font: inherit;
   line-height: 1.3rem;
   color: var(--text-color);
-  outline: none; }
+  outline: none;
+  width: 100%; }
   .select.focus, .select:focus {
     box-shadow: 0 0 0 var(--focus-box-shadow-width) var(--focus-box-shadow-color); }
 
@@ -992,12 +1000,18 @@ textarea {
       height: var(--card-image-height, 200px);
       margin-bottom: 20px; }
 
+.box {
+  padding: 1.5rem;
+  width: calc(100% - var(--shadow-distance)); }
+
+.box::before,
 .btn::before,
 .slider::before,
 .card::before,
 .img::before {
   box-sizing: content-box; }
 
+.box,
 .btn,
 .slider,
 .img,
@@ -1016,6 +1030,7 @@ textarea {
   box-shadow: 0 0 1px rgba(255, 255, 255, 0);
   transition: var(--transition);
   transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0); }
+  .box::before,
   .btn::before,
   .slider::before,
   .img::before,
@@ -1034,6 +1049,7 @@ textarea {
     transition: inherit;
     background-color: var(--shadow-bg);
     border: var(--border-width) solid var(--border-color); }
+  .box.shadow-right,
   .btn.shadow-right,
   .slider.shadow-right,
   .img.shadow-right,
@@ -1043,6 +1059,7 @@ textarea {
     --reset-shadow-right: 0;
     --is-shadow-margin-left: 0;
     --is-shadow-margin-right: 1; }
+  .box.shadow-top,
   .btn.shadow-top,
   .slider.shadow-top,
   .img.shadow-top,
@@ -1050,23 +1067,27 @@ textarea {
     --is-shadow-top: 1;
     --reset-shadow-top: 0;
     --reset-shadow-bottom: auto; }
+  .box.no-shadow,
   .btn.no-shadow,
   .slider.no-shadow,
   .img.no-shadow,
   .card.no-shadow {
     margin-top: 0;
     transform: translateY(0); }
+    .box.no-shadow:hover,
     .btn.no-shadow:hover,
     .slider.no-shadow:hover,
     .img.no-shadow:hover,
     .card.no-shadow:hover {
       transform: translateY(0); }
+    .box.no-shadow::before,
     .btn.no-shadow::before,
     .slider.no-shadow::before,
     .img.no-shadow::before,
     .card.no-shadow::before {
       content: none; }
 
+.box:not(.disable-hover).hover,
 .btn.hover,
 .btn:hover,
 .btn.active,
@@ -1075,6 +1096,7 @@ textarea {
 .img:not(.disable-hover).hover,
 .img:not(.disable-hover):hover {
   transform: translate3d(calc(var(--computed-shadow-right) * var(--border-width) * -1), calc(var(--computed-shadow-top) * var(--border-width)), 0); }
+  .box:not(.disable-hover).hover::before,
   .btn.hover::before,
   .btn:hover::before,
   .btn.active::before,
@@ -1084,6 +1106,7 @@ textarea {
   .img:not(.disable-hover):hover::before {
     transform: translate3d(calc(var(--computed-shadow-right) * var(--border-width)), calc(var(--computed-shadow-top) * var(--border-width) * -1), -0.1px); }
 
+.box,
 .btn,
 .textarea,
 .input,
@@ -1108,6 +1131,7 @@ textarea {
 .progress {
   border: var(--border-width) solid var(--border-color); }
 
+.box,
 .btn,
 .delete,
 .img,

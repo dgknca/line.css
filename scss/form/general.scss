@@ -1,0 +1,45 @@
+.field {
+  width: 100%;
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  .field-label {
+    margin-bottom: 0.5rem;
+  }
+
+  &#{&}-horizontal {
+    display: flex;
+    align-items: center;
+
+    .field-label {
+      margin-right: 0.75rem;
+      margin-bottom: 0;
+    }
+  }
+  .field-body {
+    flex-grow: 1;
+  }
+}
+
+.control {
+  position: relative;
+}
+
+.form-row {
+  display: flex;
+  width: 100%;
+
+  .field:not(:first-child) {
+    margin-top: 0;
+  }
+
+  &:not(:first-child) {
+    margin-top: 1.5rem;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: 0.75rem;
+  }
+}
