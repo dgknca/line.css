@@ -2,10 +2,10 @@ const mixin = {
   data() {
     return {
       cdn: `<!-- UNPKG -->
-<link rel="stylesheet" href="https://unpkg.com/line.css@0.1.0/line.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/line.css@0.1.2/line.min.css"/>
 
 <!-- or JSDelivr -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line.css@0.1.0/line.min.css"/>`,
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line.css@0.1.2/line.min.css"/>`,
       npm: `npm i line.css`,
       importLibrary: `import 'line.css'`
     }

@@ -9,7 +9,7 @@ A simple CSS framework that provides useful components.
 CDN
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line.css@0.1.0/line.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line.css@0.1.2/line.min.css"/>
 ```
 
 Also you can install via npm
