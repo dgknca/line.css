@@ -1,7 +1,5 @@
 # line.css
 
-<a href="https://github.com/dgknca/line.css"><img src="https://dgknca.github.io/line.css/apple-touch-icon.png" alt="Line.css logo" width="75" height="75" align="left" hspace="10" vspace="6"></a>
-
 A simple CSS framework that provides useful components.
 
 [Documentatin](https://dgknca.github.io/line.css/) | [Storybook](https://linecss.netlify.app/)
