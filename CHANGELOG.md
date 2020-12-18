@@ -2,10 +2,6 @@
 
 ## 0.1.2
 
-### New features
-
-* Fix #1583 New `is-ghost` button that behaves / looks like a regular link
-
 ### Added
 
 * **box**: `.box`
