@@ -1,8 +1,3 @@
-.box {
-  padding: 1.5rem;
-  width: calc(100% - var(--shadow-distance));
-}
-
 .box,
 .btn,
 .slider,
@@ -32,7 +27,7 @@
   box-shadow: 0 0 1px rgba(255, 255, 255, 0); // to avoid jagge
   transition: var(--transition);
   // prettier-ignore
-  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0);
+  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0.1px);
 
   &::before {
     content: '';
@@ -78,6 +73,23 @@
   }
 }
 
+.box {
+  padding: 1.5rem;
+  width: calc(100% - var(--shadow-distance));
+  // prettier-ignore
+  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), -0.1px);
+
+  &::before {
+    // prettier-ignore
+    transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right) * -1), calc(var(--shadow-distance) * var(--computed-shadow-top)), -0.2px);
+  }
+
+  * {
+    transform-style: inherit;
+    z-index: 3;
+  }
+}
+
 .box:not(.disable-hover).hover,
 .btn.hover,
 .btn:hover,
@@ -89,7 +101,7 @@
   transform: translate3d(
     calc(var(--computed-shadow-right) * var(--border-width) * -1),
     calc(var(--computed-shadow-top) * var(--border-width)),
-    0
+    0.1px
   );
 
   &::before {

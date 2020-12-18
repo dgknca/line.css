@@ -10,6 +10,7 @@ const mixin = {
 </style>
 
 <form class="my-custom-form box">
+  <h2 class="text-center">Form Title</h2>
   <div class="form-row">
     <div class="field">
       <div class="field-label">
@@ -63,7 +64,7 @@ const mixin = {
       <div class="field-body">
         <select class="select" name="city">
           <option>Ankara</option>
-          <option>Istanbul</option>
+          <option selected>Istanbul</option>
           <option>Izmir</option>
         </select>
       </div>
@@ -94,6 +95,10 @@ const mixin = {
         </label>
       </div>
     </div>
+  </div>
+
+  <div class="form-row justify-center">
+    <button type="button" class="btn">Submit</button>
   </div>
 
 </form>`

@@ -1,6 +1,6 @@
 {
   "name": "line.css",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-version-updates",
@@ -13,9 +13,11 @@
   "keywords": [
     "css",
     "scss",
-    "framework"
+    "css-framework",
+    "css-library"
   ],
   "author": "Doğukan Çavuş",
+  "email" : "dgknca@gmail.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dgknca/line.css/issues"

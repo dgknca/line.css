@@ -63,6 +63,18 @@
   --dropdown-icon-size: 1.2rem;
   --dropdown-icon: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>'); }
 
+.text-center {
+  text-align: center; }
+
+.d-flex {
+  display: flex; }
+
+.justify-center {
+  justify-content: center; }
+
+.align-center {
+  align-items: center; }
+
 *, *::before, *::after {
   box-sizing: border-box; }
 
@@ -692,36 +704,6 @@ select,
 textarea {
   font-family: var(--font-family); }
 
-.size-1 {
-  font-size: 3rem; }
-
-.size-2 {
-  font-size: 2.5rem; }
-
-.size-3 {
-  font-size: 2rem; }
-
-.size-4 {
-  font-size: 1.5rem; }
-
-.size-5 {
-  font-size: 1.25rem; }
-
-.size-6 {
-  font-size: 1rem; }
-
-.size-7 {
-  font-size: 0.75rem; }
-
-.fw-400 {
-  font-weight: 400 !important; }
-
-.fw-600 {
-  font-weight: 600 !important; }
-
-.fw-700 {
-  font-weight: 700 !important; }
-
 .slider {
   width: calc(var(--slider-width, 300px) - var(--shadow-distance));
   height: var(--slider-height, 300px);
@@ -1000,10 +982,6 @@ textarea {
       height: var(--card-image-height, 200px);
       margin-bottom: 20px; }
 
-.box {
-  padding: 1.5rem;
-  width: calc(100% - var(--shadow-distance)); }
-
 .box::before,
 .btn::before,
 .slider::before,
@@ -1029,7 +1007,7 @@ textarea {
   will-change: transform;
   box-shadow: 0 0 1px rgba(255, 255, 255, 0);
   transition: var(--transition);
-  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0); }
+  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), 0.1px); }
   .box::before,
   .btn::before,
   .slider::before,
@@ -1087,6 +1065,16 @@ textarea {
     .card.no-shadow::before {
       content: none; }
 
+.box {
+  padding: 1.5rem;
+  width: calc(100% - var(--shadow-distance));
+  transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right)), calc(var(--shadow-distance) * var(--computed-shadow-top) * -1), -0.1px); }
+  .box::before {
+    transform: translate3d(calc(var(--shadow-distance) * var(--computed-shadow-right) * -1), calc(var(--shadow-distance) * var(--computed-shadow-top)), -0.2px); }
+  .box * {
+    transform-style: inherit;
+    z-index: 3; }
+
 .box:not(.disable-hover).hover,
 .btn.hover,
 .btn:hover,
@@ -1095,7 +1083,7 @@ textarea {
 .btn[disabled],
 .img:not(.disable-hover).hover,
 .img:not(.disable-hover):hover {
-  transform: translate3d(calc(var(--computed-shadow-right) * var(--border-width) * -1), calc(var(--computed-shadow-top) * var(--border-width)), 0); }
+  transform: translate3d(calc(var(--computed-shadow-right) * var(--border-width) * -1), calc(var(--computed-shadow-top) * var(--border-width)), 0.1px); }
   .box:not(.disable-hover).hover::before,
   .btn.hover::before,
   .btn:hover::before,
